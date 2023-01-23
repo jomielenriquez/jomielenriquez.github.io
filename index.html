@@ -9,11 +9,13 @@
     <link type="text/css"  href="css/custom.css" rel="stylesheet">
     <script type="text/javascript" src="js/bootstrap.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+      var pagename="aboutMe";
+    </script>
 </head>
-<body>
+<body class="aboutMe">
   <div class="render" include-html="navigation.html"></div>
   <div class="container">
-      
       <ol class="breadcrumb">
           <li class="breadcrumb-item active">Home</li>
       </ol>
@@ -32,11 +34,6 @@
             <div class="col-lg-8 col-md-7 col-sm-6">
               <h1>Jomiel</h1>
               <p class="lead">This is Jomiel Enriquez site.</p>
-            </div>
-            <div class="col-lg-4 col-md-5 col-sm-6">
-              <div class="sponsor">
-                <script async="" src="https://cdn.carbonads.com/carbon.js?serve=CKYIE23N&amp;placement=bootswatchcom" id="_carbonads_js"></script>
-              </div>
             </div>
           </div>
       </div>
@@ -79,4 +76,7 @@
   </div>  
 </body>
 <script type="text/javascript" src="js/custom.js"></script>
+<script>
+  includeHTML("aboutMe");
+</script>
 </html>
