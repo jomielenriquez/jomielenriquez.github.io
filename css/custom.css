@@ -8,6 +8,8 @@
 }
 .myimage{
     padding-top: 50px;
+    padding-right: 0;
+    margin-right: 0;
     width: 100%;
     /* --bs-gutter-x:50%;
     --bs-gutter-y:0;
@@ -39,23 +41,57 @@
 .imgMyImage::after{
     right: 0;
     width: 40% !important;
-    height: 43%;
+    height: 408.23px;
     z-index: 0;
     border-radius: 90% 0 0 0;
     position: absolute;
     /* transform: rotate(-35deg); */
 }
 .imgMyImageimage{
-    width: 29%;
+    width: 544.33px;
     padding: 0;
     margin: 0;
 }
 body{
     padding-top: 56px;
+    overflow-x: hidden;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Raleway:900&display=swap");
+
+/* body {
+    margin: 0px;
+} */
+
+#container_text {
+    position: absolute;
+    /* margin: auto; */
+    width: 500px;
+    height: 80pt;
+    left:15%;
+    top: 100px;
+    bottom: 0;
+
+    filter: url(#threshold) blur(0.6px);
+}
+
+#text1,
+#text2 {
+    position: absolute;
+    width: 100%;
+    display: inline-block;
+
+    font-family: "Raleway", sans-serif;
+    font-size: 50pt;
+
+    text-align: center;
+
+    user-select: none;
 }
 
 @media only screen and (max-width:767px){
     .imgMyImageimage{
+        padding-top:20px;
         width: 100%;
     }
     .imgMyImage::before, .imgMyImage::after{
@@ -63,5 +99,25 @@ body{
     }
     .breadcrumb{
         padding-top:20px;
+    }
+    #text1,
+    #text2{
+        font-size: 25pt  !important;
+        width: 80%;
+    } 
+    #container_text{
+        height: 40pt;
+        width: 100% !important;
+        left:0px !important;
+        top: 70px !important;
+    }
+}
+@media only screen and (max-width:840px){
+    .imgMyImage::before{
+        content: initial;
+    }
+    .imgMyImage::after{
+        /* border-radius: 80% 0 0 0; */
+        border-top-left-radius: 100% 60%;
     }
 }
