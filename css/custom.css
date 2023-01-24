@@ -81,12 +81,9 @@ body{
     position: absolute;
     width: 100%;
     display: inline-block;
-
-    font-family: "Raleway", sans-serif;
-    font-size: 50pt;
-
+    /* font-family: "Raleway", sans-serif; */
+    font-size: 52pt;
     text-align: center;
-
     user-select: none;
 }
 
@@ -109,8 +106,8 @@ body{
     #container_text{
         height: 40pt;
         width: 100% !important;
-        left:0px !important;
-        top: 70px !important;
+        left:10px !important;
+        top: 60px !important;
     }
 }
 @media only screen and (max-width:840px){
