@@ -1,3 +1,42 @@
+:root{
+    /* --bs-gutter-x:50px; */
+    --before-color:#07303a;
+}
+
 .breadcrumb{
     padding-top:70px;
+}
+.myimage{
+    padding-top: 50px;
+    width: 100%;
+    /* --bs-gutter-x:50%;
+    --bs-gutter-y:0;
+    padding-right:calc(var(--bs-gutter-x) * .5);
+    padding-left:calc(var(--bs-gutter-x) * .5);
+    margin-right:auto;margin-left:auto; */
+    background-color: white;
+}
+.imgMyImage::before, .imgMyImage::after{
+    /* content: "test"; */
+    content:"";
+    padding-right: 0px;
+    margin-left: -15px;
+    margin-right: -15px;
+    /* outline: solid var(--before-color); */
+    display: inline-block;
+    color:white;
+    background-color: var(--before-color);
+    vertical-align: bottom;
+    z-index: 3;
+}
+.imgMyImage::before{
+    left:0;
+    width: 40% !important;
+    height: 43px;
+}
+.imgMyImage::after{
+    right: 0;
+    width: 31% !important;
+    height: 200px;
+    border-radius: 29px 0 0 0;
 }
