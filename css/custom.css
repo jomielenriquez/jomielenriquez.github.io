@@ -225,7 +225,7 @@ body{
   /* The actual content */
   .contenttimeline {
     color:#073642 !important;
-    padding: 20px 30px;
+    padding: 15px 15px;
     background-color: var(--timeline-content-color);
     position: relative;
     border-radius: 6px;
