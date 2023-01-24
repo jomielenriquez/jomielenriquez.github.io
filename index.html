@@ -15,6 +15,56 @@
 </head>
 <body class="aboutMe">
   <div class="render" include-html="navigation.html"></div>
+
+  <style>
+    @import url("https://fonts.googleapis.com/css?family=Raleway:900&display=swap");
+
+    body {
+        margin: 0px;
+    }
+
+    #container_text {
+        position: absolute;
+        /* margin: auto; */
+        width: 500px;
+        height: 80pt;
+        left:250px;
+        top: 100px;
+        bottom: 0;
+
+        filter: url(#threshold) blur(0.6px);
+    }
+
+    #text1,
+    #text2 {
+        position: absolute;
+        width: 100%;
+        display: inline-block;
+
+        font-family: "Raleway", sans-serif;
+        font-size: 50pt;
+
+        text-align: center;
+
+        user-select: none;
+    }
+  </style>
+  <div id="container_text">
+    <span id="text1"></span>
+    <span id="text2"></span>
+  </div>
+
+  <!-- <svg id="filters">
+      <defs>
+          <filter id="threshold">
+              <feColorMatrix in="SourceGraphic" type="matrix" values="1 0 0 0 0
+                    0 1 0 0 0
+                    0 0 1 0 0
+                    0 0 0 255 -140" />
+          </filter>
+      </defs>
+  </svg> -->
+
   <div class="myimage">
     <div class="imgMyImage">
       <img class="imgMyImageimage" src="img/Programmer.gif"/>
@@ -79,7 +129,108 @@
             <p>Trust fund seitan letterpress, keytar raw denim keffiyeh etsy art party before they sold out master cleanse gluten-free squid scenester freegan cosby sweater. Fanny pack portland seitan DIY, art party locavore wolf cliche high life echo park Austin. Cred vinyl keffiyeh DIY salvia PBR, banh mi before they sold out farm-to-table VHS viral locavore cosby sweater.</p>
           </div>
         </div>
+        <footer id="footer">
+          <div class="row">
+            <div class="col-lg-12">
+              <ul class="list-unstyled">
+                <li class="float-end"><a href="#top">Back to top</a></li>
+                <li><a href="Blog.html">Blog</a></li>
+                <!-- <li><a href="https://blog.bootswatch.com/rss/">RSS</a></li> -->
+                <!-- <li><a href="https://twitter.com/bootswatch">Twitter</a></li> -->
+                <li><a href="https://github.com/jomieenriquez">GitHub</a></li>
+                <li><a href="../help/#api">API</a></li>
+                <li><a href="../help/#donate">Donate</a></li>
+              </ul>
+              <!-- <p>Made by <a href="https://thomaspark.co/">Thomas Park</a>.</p> -->
+              <!-- <p>Code released under the <a href="https://github.com/thomaspark/bootswatch/blob/master/LICENSE">MIT License</a>.</p>
+              <p>Based on <a href="https://getbootstrap.com/" rel="nofollow">Bootstrap</a>. Icons from <a href="https://icons.getbootstrap.com/" rel="nofollow">Bootstrap Icons</a>. Web fonts from <a href="https://fonts.google.com/" rel="nofollow">Google</a>.</p>
+       -->
+            </div>
+          </div>
+        </footer>
   </div>  
+
+<script>
+  const elts = {
+    text1: document.getElementById("text1"),
+    text2: document.getElementById("text2")
+  };
+
+  const texts = [
+      "Hello, my name is Jomiel Enriquez.",
+      "I am a Software Engineer."
+  ];
+
+  const morphTime = 1;
+  const cooldownTime = 5;
+
+  let textIndex = texts.length - 1;
+  let time = new Date();
+  let morph = 0;
+  let cooldown = cooldownTime;
+
+  elts.text1.textContent = texts[textIndex % texts.length];
+  elts.text2.textContent = texts[(textIndex + 1) % texts.length];
+
+  function doMorph() {
+      morph -= cooldown;
+      cooldown = 0;
+
+      let fraction = morph / morphTime;
+
+      if (fraction > 1) {
+          cooldown = cooldownTime;
+          fraction = 1;
+      }
+
+      setMorph(fraction);
+  }
+
+  function setMorph(fraction) {
+      elts.text2.style.filter = `blur(${Math.min(8 / fraction - 8, 100)}px)`;
+      elts.text2.style.opacity = `${Math.pow(fraction, 0.4) * 100}%`;
+
+      fraction = 1 - fraction;
+      elts.text1.style.filter = `blur(${Math.min(8 / fraction - 8, 100)}px)`;
+      elts.text1.style.opacity = `${Math.pow(fraction, 0.4) * 100}%`;
+
+      elts.text1.textContent = texts[textIndex % texts.length];
+      elts.text2.textContent = texts[(textIndex + 1) % texts.length];
+  }
+
+  function doCooldown() {
+      morph = 0;
+
+      elts.text2.style.filter = "";
+      elts.text2.style.opacity = "100%";
+
+      elts.text1.style.filter = "";
+      elts.text1.style.opacity = "0%";
+  }
+
+  function animate() {
+      requestAnimationFrame(animate);
+
+      let newTime = new Date();
+      let shouldIncrementIndex = cooldown > 0;
+      let dt = (newTime - time) / 1000;
+      time = newTime;
+
+      cooldown -= dt;
+
+      if (cooldown <= 0) {
+          if (shouldIncrementIndex) {
+              textIndex++;
+          }
+
+          doMorph();
+      } else {
+          doCooldown();
+      }
+  }
+
+  animate();
+</script>
 </body>
 <script type="text/javascript" src="js/custom.js"></script>
 <script>
