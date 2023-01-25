@@ -7,18 +7,18 @@ function includeHTML(active) {
         elmnt = z[i];
         /*search for elements with a certain atrribute:*/
         file = elmnt.getAttribute("include-html");
-        console.log(file);
+        //console.log(file);
         if (file) {
         /*make an HTTP request using the attribute value as the file name:*/
         xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function() {
             var activenew =active+"InsertActive";
-            console.log(activenew)
+            //console.log(activenew)
             var reg = new RegExp(activenew, "g");
             if (this.readyState == 4) {
             if (this.status == 200) {elmnt.innerHTML = this.responseText.split(activenew).join("active");}
             if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
-            console.log(this.responseText);
+            //console.log(this.responseText);
             /*remove the attribute, and call this function once more:*/
             elmnt.removeAttribute("include-html");
             includeHTML();
