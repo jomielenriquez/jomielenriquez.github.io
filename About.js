@@ -98,8 +98,8 @@ const about = {
                     title:"Application Specialist",
                     companyname:"Epson Precision Philippines Incorporated",
                     status:"Full-time", //Full-time or not
-                    StartDate:"10/1/2020",
-                    EndDate:"10/1/2021",
+                    StartDate:"10/19/2020",
+                    EndDate:"11/19/2021",
                     location:"Lipa, Calabarzon, Philippines",
                     RO:"Onsite", //RO means Remote or Onsite
                     Description:"-Develops software specifications for future systems.<br>-Use HTML, CSS, Xaml, Javascript, Jquery, ADO.net and C# to create user interfaces for web applications and windows forms.<br>-Develops web application backend code and Windows forms in C#/C++ and Javascript, Jquery, ADO.net.<br>-Determines the structure of the database.<br>-Uses SQL Server and pgAdmin to create database stored procedures and queries.<br>-Develops and standardize support tools.",
@@ -118,7 +118,7 @@ const about = {
                     companyname:"R Caldo Technical Consultancy Services",
                     status:"Part-time", //Full-time or not
                     StartDate:"6/1/2019",
-                    EndDate:"6/1/2020",
+                    EndDate:"6/31/2020",
                     location:"Santo Tomas, Calabarzon, Philippines",
                     RO:"Remote", //RO means Remote or Onsite
                     Description:"- Creates prototypes for various systems in accordance with the demands of the client.<br>- Utilized a variety of technologies, including JavaScript/JS (ES6/ES7/ES8), HTML, CSS/CSS3/CSS4, C#, C++, Python, and Raspberry Pi<br>- took charge of a variety of development projects, leading front-end and back-end engineers in the creation of an web application for the customer using agile methodology.",
