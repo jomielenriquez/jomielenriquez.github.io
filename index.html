@@ -131,7 +131,7 @@
 <script src="About.js"></script>
 <script>
   const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
-  "Jul", "Aug", "Sep", "Oc", "Nove", "Dec"
+  "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
 ];
   console.log(about["timeline"]);
   var isLeft = true;
@@ -150,7 +150,7 @@
           endDate = item["EndDate"]!=""?monthNames[new Date(item["EndDate"]).getMonth()] + " " + new Date(item["EndDate"]).getFullYear():"Present",
           dateEndDate = item["EndDate"]==""?new Date():new Date(item["EndDate"]),
           monthDiffe = monthDiff(new Date(item["StartDate"]),dateEndDate),
-          duration = monthDiffe>12? String(monthDiffe/12)+ " yr " + String(monthDiffe%12) + " mo":String(monthDiffe) + " mo",
+          duration = getYearsMonths(monthDiffe),
           worklocation = item["location"],
           RO = item["RO"],
           skills = item["Skills"],
@@ -178,6 +178,19 @@
             </div>`);
     })
     isLeft=!isLeft;
+  }
+  function getYearsMonths(monthDiffe){
+    var years = Math.trunc(monthDiffe/12), months = Math.trunc(monthDiffe%12);
+    var output ="";
+    output += years>0? String(years) + checkYear(years) + " " : "";
+    output += months>0?String(months)+ " " + checkMonths(months) : ""
+    return output;
+  }
+  function checkYear(years){
+    return years>1?"yrs":"yr";
+  }
+  function checkMonths(months){
+    return months>1?"mos":"mo";
   }
   function monthDiff(d1, d2) {
     var months;
