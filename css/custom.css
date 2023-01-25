@@ -197,7 +197,7 @@ body{
     top: 22px;
     width: 0;
     z-index: 1;
-    right: 30px;
+    right: 31px;
     border: medium solid #2aa198;
     border-width: 10px 0 10px 10px;
     border-color: transparent transparent transparent var(--timeline-content-color);
