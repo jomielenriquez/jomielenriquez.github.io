@@ -230,6 +230,7 @@ body{
     position: relative;
     border-radius: 6px;
     line-height: 1;
+    display: flex;
   }
   
   /* Media queries - Responsive timeline on screens less than 600px wide */
@@ -238,7 +239,9 @@ body{
     .timeline::after {
     left: 31px;
     }
-    
+    .contenttimeline{
+      display: block !important;
+    }
     /* Full-width containers */
     .containertimeline {
     width: 100%;
@@ -251,12 +254,12 @@ body{
     left: 60px;
     border: medium solid white;
     border-width: 10px 10px 10px 0;
-    border-color: transparent white transparent transparent;
+    border-color: transparent var(--timeline-content-color) transparent transparent;
     }
   
     /* Make sure all circles are at the same spot */
     .left::after, .right::after {
-    left: 15px;
+    left: 18px;
     }
     
     /* Make all right containers behave like the left ones */
