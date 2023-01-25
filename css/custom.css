@@ -109,9 +109,9 @@ body{
     } 
     #container_text{
         height: 40pt;
-        width: 100% !important;
-        left:10px !important;
-        top: 70px !important;
+        width: 80% !important;
+        left:15px !important;
+        top: 75px !important;
     }
 }
 @media only screen and (max-width:840px){
