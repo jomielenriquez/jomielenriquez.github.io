@@ -81,7 +81,6 @@ body{
     left:15%;
     top: 100px;
     bottom: 0;
-
     filter: url(#threshold) blur(0.6px);
 }
 
