@@ -167,6 +167,48 @@ const about = {
             projectLink:"",
             projectDate:"Oct 2019 - Jan 2020"
         },
+    },
+    otherProjects:{
+        0:{
+            Title:"Drums",
+            Description:"This is drums written in html, css and js",
+            imageLink:"/img/Drums.png",
+            ProjectRepoLink:"https://github.com/jomielenriquez/DrumsRepo",
+            ProjectLink:"https://ng3p8r-3000.preview.csb.app/",
+            projectDate:"Dec 2, 2022"
+        },
+        1:{
+            Title:"Js Calculator",
+            Description:"This is Calculator written in html, css and js",
+            imageLink:"/img/JSCalculator.png",
+            ProjectRepoLink:"https://github.com/jomielenriquez/JSCalculator",
+            ProjectLink:"https://443vps-3000.preview.csb.app/",
+            projectDate:"Dec 4, 2022"
+        },
+        2:{
+            Title:"25 + 5 Countdown Timer",
+            Description:"This is 25 + 5 Countdown Timer written in html, css and js",
+            imageLink:"/img/CountDownTimer.png",
+            ProjectRepoLink:"https://github.com/jomielenriquez/CountdownTimer",
+            ProjectLink:"https://id7yy3-3000.preview.csb.app/",
+            projectDate:"Dec 4, 2022"
+        },
+        3:{
+            Title:"Random Quote Machine",
+            Description:"This is Random Quote Machine written in html, css and js",
+            imageLink:"/img/RandomQuoteMachine.png",
+            ProjectRepoLink:"https://github.com/jomielenriquez/RandomQuoteMachine",
+            ProjectLink:"https://codepen.io/Jomiel/full/mdKLNPZ",
+            projectDate:"Dec 4, 2022"
+        },
+        4:{
+            Title:"Markdown Previewer",
+            Description:"This is Markdown Previewer written in html, css and js",
+            imageLink:"/img/MarkDownPreviewer.png",
+            ProjectRepoLink:"https://github.com/jomielenriquez/ReactMarkdownPreviewer",
+            ProjectLink:"https://4nekw5.csb.app/",
+            projectDate:"Nov 28, 2022"
+        }
     }
 
 }
