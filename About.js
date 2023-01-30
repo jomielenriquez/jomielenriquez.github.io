@@ -129,6 +129,44 @@ const about = {
             education:{},
             projects:{}
         },
+    },
+    Projects:{
+        0:{
+            Title:"Bulletin System using Raspberry Pi",
+            imageLink:"/img/RaspBul.jpg",
+            imageText:"Bulletin System using Raspberry Pi",
+            Description:"Jomiel developed the Raspberry Pi-based Bulletin System. He oversees the system's development and data collection,<br>and he works closely with the customer to gather the system's needs before he writes the necessary code to launch the<br>project. The Raspberry Pi, PHP, and MySQL was used in the web-based system to make it possible. By connecting the<br>network where the Raspberry Pi is linked, the system is intended to manage (Add/delete/Edit) announcements. The Raspberry Pi is connected to an LCD that shows announcements.<br><br>Major responsibilities:<br>● Front-end and back-end development<br>● Database design<br>● Programming and testing<br>● Writing of technical documents<br>● Technologies: PHP, JavaScript, Jquery, Angular, HTML, CSS, Net Core, My SQL",
+            Skills:"PHP, JavaScript, Jquery, Angular, HTML, CSS, Net Core, My SQL",
+            projectLink:"https://github.com/jomielenriquez/kiosk",
+            projectDate:"Oct 2022 - Nov 2022"
+        },
+        1:{
+            Title:"Traffic Violation Management System with Android Electronic Ticketing System",
+            imageLink:"/img/Traffic.gif",
+            imageText:"Traffic Violation Management System with Android Electronic Ticketing System",
+            Description:"Jomiel worked part-time at R Caldo Technical Consultancy Services, he was in charge of and responsible for the development of the Traffic Violation Management System with Android Electronic Ticketing System. The system is web-based and Android-based that uses the MVC.Net Framework and Xamarin Framework, and the database is powered by Microsoft SQL. The system is developed to handle the detention of those who break traffic laws. The android application is for recording and printing the citations for traffic violators using a thermal printer connected to the android terminal, while the web application was created to manage the data of the violators. Jomiel used C# MVC.Net, HTML, Javascript, CSS, Jquery, and Xamarin to construct and write the code for both the web site and the android application. He also designed all of the interfaces and functionality. Additionally, he is the one who put the system on the cloud.<br><br>Major responsibilities:<br>● Front-end and back-end development<br>● Database design<br>● Programming and testing<br>● Writing of technical documents<br>● Technologies: C#, JavaScript, Jquery, Angular, HTML, CSS, Net Core, SQL Server, ADO.net, Xamarin",
+            Skills:"C#, JavaScript, Jquery, Angular, HTML, CSS, Net Core, SQL Server, ADO.net, Xamarin",
+            projectLink:"https://github.com/jomielenriquez/CAPSTONE_Web",
+            projectDate:"Sep 2022 - Oct 2022"
+        },
+        2:{
+            Title:"Accounting Integrated Management System (AIMS)",
+            imageLink:"",
+            imageText:"Accounting Integrated Management System (AIMS)",
+            Description:"EPPI implemented an Accounting Integrated Management System (AIMS) - Purchasing purchasing system for the procurement and accounting departments, where all Quotation Requests, Purchase Requests, and Purchase Orders were inputted by the requestor to control the company's cash outflow and ensure that only necessary purchases were made.<br><br>Major responsibilities:<br>● Front-end and back-end development<br>● Database design<br>● Programming and testing<br>● Writing of technical documents<br>● Technologies: C#, JavaScript, Jquery, HTML, CSS, Net Core, SQL Server, ADO.net",
+            Skills:"C#, JavaScript, Jquery, HTML, CSS, Net Core, SQL Server, ADO.net",
+            projectLink:"",
+            projectDate:"Jan 2021 - Oct 2021"
+        },
+        3:{
+            Title:"Drowsiness Detection using Raspberry pi",
+            imageLink:"/img/Cam1.jfif",
+            imageText:"Drowsiness Detection using Raspberry pi",
+            Description:"RTCS is working on a project to identify and wake up sleepy truck drivers. It utilizes a night vision camera and a Raspberry Pi (with Python programming) to identify faces and eyes in order to determine if the driver is sleepy. It also intends to develop a wristband that the driver will wear to monitor his or her heart rate every minute and utilize the information to determine whether or not the driver is sleepy. To bring the idea to life, Jomiel has worked on data collection, hardware design, and algorithm programming. Additionally, Jomiel oversees the creation of the web application where the information gathered by the device will be posted.<br><br>Major responsibilities:<br>● Data gathering<br>● Conceptualization and hardware design<br>● Programming, Wiring and testing of wrist band for heart beat monitoring<br>● Programming and testing of drowsiness detection device using python programming<br>● Technologies: Python, Raspberry pi, Arduino, Angular, C#, JavaScript, Jquery, HTML, CSS, Net Core, SQL Server, ADO.net",
+            Skills:"Python, Raspberry pi, Arduino, Angular, C#, JavaScript, Jquery, HTML, CSS, Net Core, SQL Server, ADO.net",
+            projectLink:"",
+            projectDate:"Oct 2019 - Jan 2020"
+        },
     }
 
 }
