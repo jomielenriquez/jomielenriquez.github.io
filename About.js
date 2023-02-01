@@ -209,6 +209,45 @@ const about = {
             ProjectLink:"https://4nekw5.csb.app/",
             projectDate:"Nov 28, 2022"
         }
+    },
+    certificates:{
+        0:{
+            Title:"Responsive Web Design",
+            issueDate:"July 21, 2022",
+            issuedBy:"freeCodeCamp",
+            imageLoc:"/img/Cert1.png"
+        },
+        1:{
+            Title:"Javscript Algorithms and Data Structure",
+            issueDate:"November 24, 2022",
+            issuedBy:"freeCodeCamp",
+            imageLoc:"/img/Cert2.png"
+        },
+        2:{
+            Title:"Front End Development Libraries",
+            issueDate:"Decmber 24, 2022",
+            issuedBy:"freeCodeCamp",
+            imageLoc:"/img/Cert3.png"
+        },
+        3:{
+            Title:"Python OOP: Four Pillars of OOP in Python 3 for Beginners",
+            issueDate:"November 12, 2021",
+            issuedBy:"Udemy",
+            imageLoc:"/img/Cert4.png"
+        },
+        4:{
+            Title:"Clean Code",
+            issueDate:"September 14, 2021",
+            issuedBy:"Udemy",
+            imageLoc:"/img/Cert5.png"
+        },
+        5:{
+            Title:"Productivity and Time Management for the Overwhelmed",
+            issueDate:"July 20, 2021",
+            issuedBy:"Udemy",
+            imageLoc:"/img/Cert6.png"
+        },
+
     }
 
 }
