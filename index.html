@@ -26,18 +26,6 @@
     <span id="text2"></span>
   </div>
   
-
-  <!-- <svg id="filters">
-      <defs>
-          <filter id="threshold">
-              <feColorMatrix in="SourceGraphic" type="matrix" values="1 0 0 0 0
-                    0 1 0 0 0
-                    0 0 1 0 0
-                    0 0 0 255 -140" />
-          </filter>
-      </defs>
-  </svg> -->
-
   <div class="myimage">
     <div class="imgMyImage">
       <img class="imgMyImageimage" src="img/Programmer.gif"/>
@@ -45,64 +33,6 @@
 
   </div>
   <div class="container">
-      <!-- <ol class="breadcrumb">
-          <li class="breadcrumb-item active">Home</li>
-      </ol> -->
-      <!-- <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="#">Home</a></li>
-          <li class="breadcrumb-item active">Library</li>
-      </ol>
-      <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="#">Home</a></li>
-          <li class="breadcrumb-item"><a href="#">Library</a></li>
-          <li class="breadcrumb-item active">Data</li>
-      </ol> -->
-
-      <!-- <div class="page-header" id="banner">
-          <div class="row">
-            <div class="col-lg-8 col-md-7 col-sm-6">
-              <h1>Jomiel</h1>
-              <p class="lead">This is Jomiel Enriquez site.</p>
-            </div>
-          </div>
-      </div>
-
-      <ul class="nav nav-tabs" role="tablist">
-        <li class="nav-item" role="presentation">
-          <a class="nav-link active" data-bs-toggle="tab" href="#home" aria-selected="true" role="tab">Home</a>
-        </li>
-        <li class="nav-item" role="presentation">
-          <a class="nav-link" data-bs-toggle="tab" href="#profile" aria-selected="false" tabindex="-1" role="tab">Profile</a>
-        </li>
-        <li class="nav-item" role="presentation">
-          <a class="nav-link disabled" href="#" aria-selected="false" tabindex="-1" role="tab">Disabled</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <a class="dropdown-item" href="#">Something else here</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Separated link</a>
-          </div>
-        </li>
-      </ul>
-      <div id="myTabContent" class="tab-content">
-        <div class="tab-pane fade show active" id="home" role="tabpanel">
-          <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
-        </div>
-        <div class="tab-pane fade" id="profile" role="tabpanel">
-          <p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit.</p>
-        </div>
-        <div class="tab-pane fade" id="dropdown1">
-          <p>Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify squid 8-bit cred pitchfork.</p>
-        </div>
-        <div class="tab-pane fade" id="dropdown2">
-          <p>Trust fund seitan letterpress, keytar raw denim keffiyeh etsy art party before they sold out master cleanse gluten-free squid scenester freegan cosby sweater. Fanny pack portland seitan DIY, art party locavore wolf cliche high life echo park Austin. Cred vinyl keffiyeh DIY salvia PBR, banh mi before they sold out farm-to-table VHS viral locavore cosby sweater.</p>
-        </div>
-      </div> -->
-
       <div id="timeline" class="timeline">
         <!-- datas will be inserted using javascript code -->
       </div>
@@ -129,25 +59,23 @@
           </div>
         </div>
         <div class="row" id="div_otherProjects">
-          <!-- Projects will be inserted programmatically -->
+          <!-- Other projects will be inserted programmatically -->
         </div>
       </div>
 
-      <!-- <div class="bs-docs-section">
+      <div class="bs-docs-section">
         <div class="row">
           <div class="col-lg-12">
             <div class="page-header">
-              <h1 id="navs">Others</h1>
+              <h1 id="navs">Certificates</h1>
             </div>
           </div>
         </div>
+        <div class="row" id="div_certificates">
+          <!-- Certificates will be inserted programmatically -->
         </div>
-        </div>
-        
-      </div> -->
+      </div>      
 
-
-      
       <div class="render" include-html="footer.html"></div>
       
   </div>  
@@ -256,6 +184,33 @@
                 `+repo+`
                 <div class="card-footer text-muted">
                   `+data["projectDate"]+`
+                </div>
+              </div>
+
+            </div>
+          </div>`);
+  };
+
+   //Insert other Certificates
+   for(i=0;i<Object.keys(about["certificates"]).length;i++){
+    console.log(i);
+    var data=about["certificates"][i];
+    var title =data["imageLoc"]!=""?"": `<text x="50%" y="50%" fill="#dee2e6" dy=".3em">`+data["Title"]+`</text>`;
+    //var repo = data["ProjectRepoLink"]!=""?`<div class="card-body"><a href="`+data["ProjectRepoLink"]+`" class="card-link">`+data["Title"]+` Repo</a></div>`:""
+    $("#div_certificates").append(`<div class="col-lg-4">
+            <div class="bs-component">
+              <div class="card mb-3">
+                <h3 class="card-header">`+data["Title"]+`</h3>
+                <svg xmlns="" class="d-block user-select-none" width="100%" height="200" aria-label="Placeholder: Image cap" focusable="false" role="img" preserveAspectRatio="xMidYMid slice" viewBox="0 0 318 180" style="font-size:1.125rem;text-anchor:middle">
+                  <rect width="100%" height="100%" fill="#868e96"></rect>
+                  `+ title +`
+                  <image width="100%" height="100%" href="`+data["imageLoc"]+`">
+                </svg>
+                <div class="card-body">
+                  <p class="card-text"> Issued By: `+data["issuedBy"]+`</p>
+                </div>
+                <div class="card-footer text-muted">
+                  `+data["issueDate"]+`
                 </div>
               </div>
 
