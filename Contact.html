@@ -18,18 +18,44 @@
   <div class="render" include-html="navigation.html"></div>
   <div class="container">
     <h1></h1>
-    <ol class="breadcrumb">
+    <!-- <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="index.html">Home</a></li>
         <li class="breadcrumb-item active">Contact</li>
-    </ol>
-    <div class="page-header" id="banner">
+    </ol> -->
+    <!-- <div class="page-header" id="banner">
       <div class="row">
         <div class="col-lg-8 col-md-7 col-sm-6">
           <h1>Contact</h1>
           <p class="lead">This is all about contact.</p>
         </div>
       </div>
+    </div> -->
+    
+    <div class="card border-success mb-3" style="max-width: 40rem; margin-left: auto; margin-right: auto;">
+      <!-- <div class="card-header">Header</div> -->
+      <div class="card-body">
+        <form>
+          <fieldset>
+            <legend>Send me a message!</legend>
+            <div class="form-group">
+              <label for="exampleInputEmail1" class="form-label mt-4">Name</label>
+              <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter name">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputEmail1" class="form-label mt-4">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+            </div>
+            <div class="form-group">
+              <label for="exampleTextarea" class="form-label mt-4">Message</label>
+              <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+            </div>
+          </fieldset>
+        </form>
+        <!-- <h4 class="card-title">Success card title</h4>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+      </div>
     </div>
+
     <div class="render" include-html="footer.html"></div>
   </div>  
 </body>
