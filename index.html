@@ -33,50 +33,76 @@
 
   </div>
   <div class="container">
-      <div id="timeline" class="timeline">
-        <!-- datas will be inserted using javascript code -->
-      </div>
+    <div id="timeline" class="timeline">
+      <!-- datas will be inserted using javascript code -->
+    </div>
 
-      <div class="bs-docs-section">
-        <div class="row">
-          <div class="col-lg-12">
-            <div class="page-header">
-              <h1 id="navs">Projects</h1>
-            </div>
+    <div class="bs-docs-section">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="page-header">
+            <h1 id="navs">Projects</h1>
           </div>
         </div>
-        <div class="row" id="div_Projects">
-          <!-- Projects will be inserted programmatically -->
-        </div>
       </div>
+      <div class="row" id="div_Projects">
+        <!-- Projects will be inserted programmatically -->
+      </div>
+    </div>
 
-      <div class="bs-docs-section">
-        <div class="row">
-          <div class="col-lg-12">
-            <div class="page-header">
-              <h1 id="navs">Other Projects</h1>
-            </div>
+    <div class="bs-docs-section">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="page-header">
+            <h1 id="navs">Other Projects</h1>
           </div>
         </div>
-        <div class="row" id="div_otherProjects">
-          <!-- Other projects will be inserted programmatically -->
-        </div>
       </div>
+      <div class="row" id="div_otherProjects">
+        <!-- Other projects will be inserted programmatically -->
+      </div>
+    </div>
 
-      <div class="bs-docs-section">
-        <div class="row">
-          <div class="col-lg-12">
-            <div class="page-header">
-              <h1 id="navs">Certificates</h1>
-            </div>
+    <div class="bs-docs-section">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="page-header">
+            <h1 id="navs">Certificates</h1>
           </div>
         </div>
-        <div class="row" id="div_certificates">
-          <!-- Certificates will be inserted programmatically -->
-        </div>
-      </div>      
+      </div>
+      <div class="row" id="div_certificates">
+        <!-- Certificates will be inserted programmatically -->
+      </div>
+    </div>      
 
-      <div class="render" include-html="footer.html"></div>
+    <h1 style="margin-top: 40px;"></h1>
+    <div class="card border-success mb-3" style="max-width: 40rem; margin-left: auto; margin-right: auto;">
+      <!-- <div class="card-header">Header</div> -->
+      <div class="card-body">
+        <form>
+          <fieldset>
+            <legend>Send me a message!</legend>
+            <div class="form-group">
+              <label for="exampleInputEmail1" class="form-label mt-4">Name</label>
+              <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter name">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputEmail1" class="form-label mt-4">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+            </div>
+            <div class="form-group">
+              <label for="exampleTextarea" class="form-label mt-4">Message</label>
+              <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+            </div>
+          </fieldset>
+        </form>
+        <!-- <h4 class="card-title">Success card title</h4>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+      </div>
+    </div>
+
+    <div class="render" include-html="footer.html"></div>
       
   </div>  
 <script src="About.js"></script>
