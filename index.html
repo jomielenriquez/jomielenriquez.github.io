@@ -318,13 +318,14 @@
     wordflick();
   });
 
+  
   //Email Part
-  (function() {
-    emailjs.init("_zW92wQiEcJQD1SLb"); //please encrypted user id for malicious attacks
-  })();
-  //set the parameter as per you template parameter[https://dashboard.emailjs.com/templates]
-
   function sendEmail(){
+    (function() {
+      emailjs.init("_zW92wQiEcJQD1SLb"); //please encrypted user id for malicious attacks
+    })();
+    //set the parameter as per you template parameter[https://dashboard.emailjs.com/templates]
+    
     $("#div_container").css("display","none");
     $("#loader").css("display","");
 
