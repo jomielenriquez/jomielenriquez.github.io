@@ -15,52 +15,90 @@
     </script>
 </head>
 <body class="aboutMe">
-  <div class="render" include-html="navigation.html"></div>
-  <div class="container">
-    <h1></h1>
-    <!-- <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-        <li class="breadcrumb-item active">Contact</li>
-    </ol> -->
-    <!-- <div class="page-header" id="banner">
-      <div class="row">
-        <div class="col-lg-8 col-md-7 col-sm-6">
-          <h1>Contact</h1>
-          <p class="lead">This is all about contact.</p>
+  <div id="div_container">
+    <div class="render" include-html="navigation.html"></div>
+    <div class="container">
+      <h1></h1>
+      <!-- <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item active">Contact</li>
+      </ol> -->
+      <!-- <div class="page-header" id="banner">
+        <div class="row">
+          <div class="col-lg-8 col-md-7 col-sm-6">
+            <h1>Contact</h1>
+            <p class="lead">This is all about contact.</p>
+          </div>
+        </div>
+      </div> -->
+      
+      <div class="card border-success mb-3" style="max-width: 40rem; margin-left: auto; margin-right: auto;">
+        <!-- <div class="card-header">Header</div> -->
+        <div class="card-body">
+          <form>
+            <fieldset>
+              <legend>Send me a message!</legend>
+              <div class="form-group">
+                <label for="exampleInputEmail1" class="form-label mt-4">Name</label>
+                <input type="text" id="inputName" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter name">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputEmail1" class="form-label mt-4">Email address</label>
+                <input type="email" id="inputEmail" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+              </div>
+              <div class="form-group">
+                <label for="exampleTextarea" class="form-label mt-4">Message</label>
+                <textarea class="form-control" id="textAreaMessage" rows="3"></textarea>
+              </div>
+              <div class="form-group" style="float:right; margin-top:20px;">
+                <button type="button" class="btn btn-success" onclick="sendEmail()">Send</button>
+              </div>
+            </fieldset>
+          </form>
         </div>
       </div>
-    </div> -->
-    
-    <div class="card border-success mb-3" style="max-width: 40rem; margin-left: auto; margin-right: auto;">
-      <!-- <div class="card-header">Header</div> -->
-      <div class="card-body">
-        <form>
-          <fieldset>
-            <legend>Send me a message!</legend>
-            <div class="form-group">
-              <label for="exampleInputEmail1" class="form-label mt-4">Name</label>
-              <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter name">
-            </div>
-            <div class="form-group">
-              <label for="exampleInputEmail1" class="form-label mt-4">Email address</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-            </div>
-            <div class="form-group">
-              <label for="exampleTextarea" class="form-label mt-4">Message</label>
-              <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
-            </div>
-          </fieldset>
-        </form>
-        <!-- <h4 class="card-title">Success card title</h4>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
-      </div>
-    </div>
-
-    <div class="render" include-html="footer.html"></div>
-  </div>  
+  
+      <div class="render" include-html="footer.html"></div>
+    </div>  
+  </div>
+  <div id="loader" style="display: none;"></div>
 </body>
 <script type="text/javascript" src="js/custom.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.0/dist/email.min.js"></script>
 <script>
   includeHTML("contact");
+  
+  (function() {
+    emailjs.init("_zW92wQiEcJQD1SLb"); //please encrypted user id for malicious attacks
+  })();
+  //set the parameter as per you template parameter[https://dashboard.emailjs.com/templates]
+
+  function sendEmail(){
+    $("#div_container").css("display","none");
+    $("#loader").css("display","");
+
+    var templateParams = {
+      to_name: 'enriquez.jliquigan@gmail.com',
+      from_name: document.getElementById("inputName").value,
+      from_email: document.getElementById("inputEmail").value,
+      message: document.getElementById("textAreaMessage").value
+    };
+  
+    emailjs.send('service_56grgiw', 'template_yh72mwq', templateParams)
+      .then(function(response) {
+        $("#div_container").css("display","");
+        $("#loader").css("display","none");
+        alert("Email Sent!!");
+        document.getElementById("inputName").value = "";
+        document.getElementById("inputEmail").value = "";
+        document.getElementById("textAreaMessage").value = "";
+
+        console.log('SUCCESS!', response.status, response.text);
+      }, function(error) {
+        console.log('FAILED...', error);
+      });
+
+  }
+
 </script>
 </html>
