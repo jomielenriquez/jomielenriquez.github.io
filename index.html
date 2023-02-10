@@ -8,6 +8,7 @@
     <link type="text/css"  href="css/default_bootstrap.css" rel="stylesheet">
     <link type="text/css"  href="css/default_bootstrap.min.css" rel="stylesheet">
     <link type="text/css"  href="css/custom.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script type="text/javascript" src="js/bootstrap.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>
@@ -102,9 +103,14 @@
       </div>
     <div class="render" include-html="footer.html"></div>
   </div>
-    
-  </div>  
-  <div id="loader" style="display: none;"></div>
+  
+  
+</div>  
+<div id="loader" style="display: none;"></div>
+<div class="imageView" id="imageView" style="display:none">
+  <i class="fa fa-times imageViewClose" onclick='closeImageView()'></i>
+  <img id="imageViewImg"/>
+</div>
 
 <script src="About.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.0/dist/email.min.js"></script>
@@ -172,7 +178,7 @@
                 <svg xmlns="" class="d-block user-select-none" width="100%" height="200" aria-label="Placeholder: Image cap" focusable="false" role="img" preserveAspectRatio="xMidYMid slice" viewBox="0 0 318 180" style="font-size:1.125rem;text-anchor:middle">
                   <rect width="100%" height="100%" fill="#868e96"></rect>
                   `+ title +`
-                  <image width="100%" height="100%" href="`+data["imageLink"]+`">
+                  <image width="100%" height="100%" href="`+data["imageLink"]+`" onclick='openImageView(this)'>
                 </svg>
                 <div class="card-body">
                   <p class="card-text">`+data["Description"]+`</p>
@@ -203,7 +209,7 @@
                 <svg xmlns="" class="d-block user-select-none" width="100%" height="200" aria-label="Placeholder: Image cap" focusable="false" role="img" preserveAspectRatio="xMidYMid slice" viewBox="0 0 318 180" style="font-size:1.125rem;text-anchor:middle">
                   <rect width="100%" height="100%" fill="#868e96"></rect>
                   `+ title +`
-                  <image width="100%" height="100%" href="`+data["imageLink"]+`">
+                  <image width="100%" height="100%" href="`+data["imageLink"]+`" onclick='openImageView(this)'>
                 </svg>
                 <div class="card-body">
                   <p class="card-text">`+data["Description"]+`</p>
@@ -232,7 +238,7 @@
                 <svg xmlns="" class="d-block user-select-none" width="100%" height="200" aria-label="Placeholder: Image cap" focusable="false" role="img" preserveAspectRatio="xMidYMid slice" viewBox="0 0 318 180" style="font-size:1.125rem;text-anchor:middle">
                   <rect width="100%" height="100%" fill="#868e96"></rect>
                   `+ title +`
-                  <image width="100%" height="100%" href="`+data["imageLoc"]+`">
+                  <image width="100%" height="100%" href="`+data["imageLoc"]+`" onclick='openImageView(this)'>
                 </svg>
                 <div class="card-body">
                   <p class="card-text"> Issued By: `+data["issuedBy"]+`</p>
@@ -352,6 +358,32 @@
 
   }
   //End Email Part
+
+  function closeImageView(){
+    $("#imageView").css("display","none");
+  }
+  function openImageView(thisImage){
+    var image = $(thisImage).attr("href");
+    $("#imageViewImg").attr("src",$(thisImage).attr("href"));
+    
+    $("#imageView").css("display","");
+
+    var imageViewH=$("#imageView").height();
+    var imageViewW=$("#imageView").width();
+
+    // if(imageViewH>imageViewW){
+    //   $("#imageViewImg").css("height","700px");
+    //   $("#imageViewImg").css("width","auto");
+    // }
+    // else{
+    //   $("#imageViewImg").css("height","auto");
+    //   $("#imageViewImg").css("width","100%");
+    // }
+    console.log($(thisImage).height());
+    console.log($(thisImage).width());
+    console.log($("#imageView").height());
+    console.log($("#imageView").width());
+  }
 </script>
 </body>
 <script type="text/javascript" src="js/custom.js"></script>
