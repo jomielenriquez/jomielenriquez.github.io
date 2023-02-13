@@ -10,6 +10,8 @@
     <link type="text/css"  href="css/custom.css" rel="stylesheet">
     <script type="text/javascript" src="js/bootstrap.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script type="text/javascript" src="blog/testblog.js"></script>
+    <script type="text/javascript" src="blog/ListOfBlog.js"></script>
     <script>
       var pagename="aboutMe";
     </script>
@@ -22,13 +24,22 @@
         <li class="breadcrumb-item"><a href="index.html">Home</a></li>
         <li class="breadcrumb-item active">Blog</li>
     </ol>
-    <div class="page-header" id="banner">
+    <!-- <div class="page-header" id="banner">
         <div class="row">
           <div class="col-lg-8 col-md-7 col-sm-6">
             <h1>Blog (Page is under construction)</h1>
             <p class="lead"></p>
           </div>
         </div>
+    </div> -->
+    <div class="row">
+      <div class="col-lg-2" style="overflow-y: auto; max-height: 500px;" id="div_List">
+        <!-- Blog list will automatically inserted here  -->
+        
+      </div>
+      <div class="col-lg-10" id="div_content">
+
+      </div>
     </div>
       
     <div class="render" include-html="footer.html"></div>
@@ -37,5 +48,13 @@
 <script type="text/javascript" src="js/custom.js"></script>
 <script>
   includeHTML("blog");
+  $("#div_content").html(testblog)
+  for(i=0;i<ListOfBlog.length;i++){
+    console.log(ListOfBlog[i]);
+    $("#div_List").append(`<ol class="breadcrumb">
+          <li class="breadcrumb-item">`+ListOfBlog[i]["name"]+`</li>
+        </ol>`);
+  }
+
 </script>
 </html>
