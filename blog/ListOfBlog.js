@@ -1,6 +1,6 @@
 const ListOfBlog = [
     {
-        no: 1,
+        no: 0,
         name: "Test Blog",
         blog: `
             <h1>This is just a testing blog<h1>
@@ -17,7 +17,7 @@ const ListOfBlog = [
         `
     },
     {
-        no: 2,
+        no: 1,
         name: "First blog",
         blog: `
             <h1>This is the title<h1>

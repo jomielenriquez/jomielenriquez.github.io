@@ -48,20 +48,33 @@
 <script type="text/javascript" src="js/custom.js"></script>
 <script>
   includeHTML("blog");
-  $("#div_content").html(ListOfBlog[0]['blog'])
+  // Making the first item visible in the blog section
+  $("#div_content").html(ListOfBlog[0]['blog']);
+
+  // Getting all the blog and listing it in the left pane
   for(i=0;i<ListOfBlog.length;i++){
-    console.log(ListOfBlog[i]);
+    // Making the first item active
+    var isActive = ListOfBlog[i]["no"]==0?"active":" ";
+    console.log(isActive)
     $("#div_List").append(`<ol class="breadcrumb blogItems" onclick="blog_click(this)" id="blog_no_`+ListOfBlog[i]["no"]+`">
-          <li class="breadcrumb-item">`+ListOfBlog[i]["name"]+`</li>
+          <li class="breadcrumb-item `+isActive+`">`+ListOfBlog[i]["name"]+`</li>
         </ol>`);
   }
 
+  // if the blog list in the left pane was clicked, this function will be triggered
+  // This will show the content of the blog to the blog section and setting the selected blog active
   function blog_click(item){
-    console.log($(item).attr("id"));
+    // getting the blog number of the seleted blog "Blog_no_#"
     var this_id = $(item).attr("id");
     const split_id = String(this_id).split("_");
-    $("#div_content").html(ListOfBlog[(split_id[2]-1)]['blog']);
+
+    // making the selected blog visible in the blog section
+    $("#div_content").html(ListOfBlog[(split_id[2])]['blog']);
+
+    // all blog in the left pane will not be active
     $("#div_List ol li").removeClass("active");
+
+    // setting the selected blog active
     $(item).find("li").addClass("active");
   }
 </script>
