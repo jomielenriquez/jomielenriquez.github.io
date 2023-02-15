@@ -48,13 +48,21 @@
 <script type="text/javascript" src="js/custom.js"></script>
 <script>
   includeHTML("blog");
-  $("#div_content").html(testblog)
+  $("#div_content").html(ListOfBlog[0]['blog'])
   for(i=0;i<ListOfBlog.length;i++){
     console.log(ListOfBlog[i]);
-    $("#div_List").append(`<ol class="breadcrumb">
+    $("#div_List").append(`<ol class="breadcrumb blogItems" onclick="blog_click(this)" id="blog_no_`+ListOfBlog[i]["no"]+`">
           <li class="breadcrumb-item">`+ListOfBlog[i]["name"]+`</li>
         </ol>`);
   }
 
+  function blog_click(item){
+    console.log($(item).attr("id"));
+    var this_id = $(item).attr("id");
+    const split_id = String(this_id).split("_");
+    $("#div_content").html(ListOfBlog[(split_id[2]-1)]['blog']);
+    $("#div_List ol li").removeClass("active");
+    $(item).find("li").addClass("active");
+  }
 </script>
 </html>

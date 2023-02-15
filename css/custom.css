@@ -375,3 +375,11 @@ body{
     margin-left: auto;
     margin-right: auto;
   }
+
+  .blogItems:hover{
+    opacity: 0.5;
+  }
+
+  .blogItems{
+    cursor: pointer;
+  }
