@@ -296,6 +296,12 @@ body{
     .word {
       font: 700 normal 2em 'tahoma';
     }
+    #imageViewImg{
+      width: 600px !important;
+      margin-left: 0 !important;
+      height: auto !important;
+      display: auto;
+    }
   }
 
   /* loading */
