@@ -1,26 +1,28 @@
 const ListOfBlog = [
     {
         no: 0,
-        name: "Test Blog",
+        name: "God Mode",
         blog: `
-            <h1>This is just a testing blog<h1>
-
-            <figure>
-            <blockquote class="blockquote">
-                <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+            <h1>"God Mode" in any windows system<h1>
+            <img src="./blog/images/GodMode[1].png" class="img-fluid"/>
+            <br/>
+            <br/>
+            <div>
+                If you want to have access in every settings in windows as you can see in the image above, you should follow these steps.
+                <br/>
+                <p> Create a new folder and set its name to <strong>GodMode.{ED7BA470-8E54-465E-825C-99712043E01C}</strong>.</p>
+            </div>
             
-            </blockquote>
-            <figcaption class="blockquote-footer">
-                Someone famous in <cite title="Source Title">Source Title</cite>
-            </figcaption>
-            </figure>
+            
+            
+
         `
     },
-    {
-        no: 1,
-        name: "First blog",
-        blog: `
-            <h1>This is the title<h1>
-        `
-    }
+    // {
+    //     no: 1,
+    //     name: "First blog",
+    //     blog: `
+    //         <h1>This is the title<h1>
+    //     `
+    // }
 ]
