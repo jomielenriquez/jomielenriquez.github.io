@@ -174,7 +174,7 @@ const about = {
             Description:"This is drums written in html, css and js",
             imageLink:"/img/Drums.png",
             ProjectRepoLink:"https://github.com/jomielenriquez/DrumsRepo",
-            ProjectLink:"https://ng3p8r-3000.preview.csb.app/",
+            ProjectLink:"https://jomielenriquez.github.io/DrumsRepo/",
             projectDate:"Dec 2, 2022"
         },
         1:{
