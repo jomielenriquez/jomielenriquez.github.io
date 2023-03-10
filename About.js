@@ -182,7 +182,7 @@ const about = {
             Description:"This is Calculator written in html, css and js",
             imageLink:"/img/JSCalculator.png",
             ProjectRepoLink:"https://github.com/jomielenriquez/JSCalculator",
-            ProjectLink:"https://443vps-3000.preview.csb.app/",
+            ProjectLink:"https://jomielenriquez.github.io/JSCalculator/",
             projectDate:"Dec 4, 2022"
         },
         2:{
