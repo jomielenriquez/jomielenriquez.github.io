@@ -190,7 +190,7 @@ const about = {
             Description:"This is 25 + 5 Countdown Timer written in html, css and js",
             imageLink:"/img/CountDownTimer.png",
             ProjectRepoLink:"https://github.com/jomielenriquez/CountdownTimer",
-            ProjectLink:"https://id7yy3-3000.preview.csb.app/",
+            ProjectLink:"https://jomielenriquez.github.io/CountdownTimer/",
             projectDate:"Dec 4, 2022"
         },
         3:{
@@ -198,7 +198,7 @@ const about = {
             Description:"This is Random Quote Machine written in html, css and js",
             imageLink:"/img/RandomQuoteMachine.png",
             ProjectRepoLink:"https://github.com/jomielenriquez/RandomQuoteMachine",
-            ProjectLink:"https://codepen.io/Jomiel/full/mdKLNPZ",
+            ProjectLink:"https://jomielenriquez.github.io/RandomQuoteMachine/",
             projectDate:"Dec 4, 2022"
         },
         4:{
@@ -206,7 +206,7 @@ const about = {
             Description:"This is Markdown Previewer written in html, css and js",
             imageLink:"/img/MarkDownPreviewer.png",
             ProjectRepoLink:"https://github.com/jomielenriquez/ReactMarkdownPreviewer",
-            ProjectLink:"https://4nekw5.csb.app/",
+            ProjectLink:"https://jomielenriquez.github.io/ReactMarkdownPreviewer/",
             projectDate:"Nov 28, 2022"
         }
     },
