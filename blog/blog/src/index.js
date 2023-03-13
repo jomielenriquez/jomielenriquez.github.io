@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import {marked} from "marked";
 
-import "./styles.css";
+//import "./styles.css";
 
 // Allows line breaks with return button
 marked.setOptions({
@@ -28,7 +28,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <h1 class="title">React Markdown Previewer</h1>
+        {/* <h1 class="title">React Markdown Previewer</h1>
         <div class="card border-primary mb-3 editor">
           <div class="card-header">
             <i class="fa-solid fa-pen-to-square"></i>Editor{" "}
@@ -45,9 +45,9 @@ class App extends React.Component {
             <i class="fa-solid fa-pen-to-square"></i>Editor{" "}
           </div>
           <div class="card-body">
-            <Previewer markdown={this.state.markdown} />
           </div>
-        </div>
+        </div> */}
+        <Previewer markdown={this.state.markdown} />
       </div>
     );
   }
@@ -131,5 +131,5 @@ And if you want to get really crazy, even tables:
 ![React Logo w/ Text](https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg)
 `;
 
-const rootElement = document.getElementById("root");
+const rootElement = document.getElementById("div_content");
 ReactDOM.render(<App />, rootElement);
