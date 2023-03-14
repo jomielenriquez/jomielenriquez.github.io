@@ -81,9 +81,10 @@ const Previewer = (props) => {
   );
 };
 
-const placeholder = `# Welcome to my React Markdown Previewer!
+const placeholder = `
+# Welcome to my Blog!
 
-## This is a sub-heading...
+## This section is created using react.js with marked installed
 ### And here's some other cool stuff:
   
 Heres some code, \`<div></div>\`, between 2 backticks.
