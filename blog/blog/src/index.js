@@ -2,6 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom";
 import {marked} from "marked";
 
+import "../node_modules/github-markdown-css/github-markdown.css"
+
 //import "./styles.css";
 
 // Allows line breaks with return button
