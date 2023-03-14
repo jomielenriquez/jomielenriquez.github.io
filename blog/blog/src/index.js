@@ -2,6 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom";
 import {marked} from "marked";
 
+import {blogdata} from "./blogdata"
+
 import "../node_modules/github-markdown-css/github-markdown.css"
 
 //import "./styles.css";
@@ -10,7 +12,9 @@ import "../node_modules/github-markdown-css/github-markdown.css"
 marked.setOptions({
   breaks: true
 });
-
+console.log("Testingan");
+console.log({blogdata});
+console.log({blogdata}["blogdata"][0]["blog"]);
 // Set a function to be used by the marked Renderer, the bit that takes markdown and translates it to html.
 const renderer = new marked.Renderer();
 
@@ -18,7 +22,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      markdown: placeholder
+      markdown: {blogdata}["blogdata"][0]["blog"]
     };
     this.handleChange = this.handleChange.bind(this);
   }
@@ -29,30 +33,34 @@ class App extends React.Component {
   }
   render() {
     return (
-      <div>
-        {/* <h1 class="title">React Markdown Previewer</h1>
-        <div class="card border-primary mb-3 editor">
-          <div class="card-header">
-            <i class="fa-solid fa-pen-to-square"></i>Editor{" "}
-          </div>
-          <div class="card-body">
-            <Editor
-              markdown={this.state.markdown}
-              onChange={this.handleChange}
-            />
-          </div>
+      <div class="row">
+        <Breadcrumb></Breadcrumb>
+
+        <div class="col-lg-10">
+          <Previewer markdown={this.state.markdown} />
         </div>
-        <div class="card border-primary mb-3 editor">
-          <div class="card-header">
-            <i class="fa-solid fa-pen-to-square"></i>Editor{" "}
-          </div>
-          <div class="card-body">
-          </div>
-        </div> */}
-        <Previewer markdown={this.state.markdown} />
+
       </div>
     );
   }
+}
+
+function Breadcrumb(){
+  const data = {blogdata}["blogdata"];
+  
+  const listItems =data.map((data,index) =>
+    // <li>{number}</li>
+    //console.log("index:"+ index + "\n" + data["name"])
+    <ol class="breadcrumb blogItems">
+      <li class="breadcrumb-item">{data['name']}</li>
+    </ol>      
+  );
+  return (
+    <div class="col-lg-2 breadcrumblog">
+      {listItems}
+    </div>
+    
+  );
 }
 
 const Toolbar = (props) => {
@@ -80,59 +88,6 @@ const Previewer = (props) => {
     />
   );
 };
-
-const placeholder = `
-# Welcome to my Blog!
-
-## This section is created using react.js with marked installed
-### And here's some other cool stuff:
-  
-Heres some code, \`<div></div>\`, between 2 backticks.
-
-\`\`\`
-// this is multi-line code:
-
-function anotherExample(firstLine, lastLine) {
-  if (firstLine == '\`\`\`' && lastLine == '\`\`\`') {
-    return multiLineCode;
-  }
-}
-\`\`\`
-  
-You can also make text **bold**... whoa!
-Or _italic_.
-Or... wait for it... **_both!_**
-And feel free to go crazy ~~crossing stuff out~~.
-
-There's also [links](https://libormarko.github.io/), and
-> Block Quotes!
-
-And if you want to get really crazy, even tables:
-
-||Table Name|Type|Comment|
-|:--:|:--:|:--:|:--:|
-||CID|INT(11)||
-||FILETYPE|VARCHAR(10)|IMG - image, VID - video, TXT - text|
-||FILELOCATION|VARCHAR(250)|location of the file|
-||TEXTHEADER|VARCHAR(50)|Announcement header if text|
-||TEXTCONTENT|VARCHAR(50)|Announcement content if text|
-||BC|VARCHAR(50)|Background color of text|
-||ORDER|INT(11)|Ordering of the announcements|
-
-- And of course there are lists.
-  - Some are bulleted.
-     - With different indentation levels.
-        - That look like this.
-
-
-1. And there are numbererd lists too.
-1. Use just 1s if you want! 
-1. But the list goes on...
-- Even if you use dashes or asterisks.
-* And last but not least, let's not forget embedded images:
-
-![React Logo w/ Text](https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg)
-`;
 
 const rootElement = document.getElementById("div_content");
 ReactDOM.render(<App />, rootElement);
