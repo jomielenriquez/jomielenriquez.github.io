@@ -113,7 +113,7 @@ const about = {
         2019:{
             work:{
                 1:{
-                    logo:"https://zenprospect-production.s3.amazonaws.com/uploads/pictures/634e61c4f1ec570001ab1d1a/picture",
+                    logo:"/img/RTCS.jpg",
                     title:"Information Technology Specialist",
                     companyname:"R Caldo Technical Consultancy Services",
                     status:"Part-time", //Full-time or not
