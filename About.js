@@ -113,7 +113,7 @@ const about = {
         2019:{
             work:{
                 1:{
-                    logo:"https://scontent.fmnl3-4.fna.fbcdn.net/v/t31.18172-8/19144145_1820576598258463_5979975764224552815_o.jpg?_nc_cat=106&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeGRhwEuIHBQIscmMWHXbMhzWQ-3csVj2nNZD7dyxWPacysyQJwmUvH1cmlLOO218Pq3xQXlElL1Lf9U1j7nW15J&_nc_ohc=qh6qPKZNt5EAX_R1eBF&_nc_ht=scontent.fmnl3-4.fna&oh=00_AfAfCM4vsh-wlCWbw5DVhM0shMdUFKqPy3Uw8o0NGHB5vg&oe=63F75F33",
+                    logo:"https://zenprospect-production.s3.amazonaws.com/uploads/pictures/634e61c4f1ec570001ab1d1a/picture",
                     title:"Information Technology Specialist",
                     companyname:"R Caldo Technical Consultancy Services",
                     status:"Part-time", //Full-time or not
