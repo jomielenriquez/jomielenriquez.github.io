@@ -68,6 +68,11 @@ body{
     overflow-x: hidden;
 }
 
+
+.breadcrumblog{
+  overflow-y: auto; max-height: 500px;
+}
+
 @import url("https://fonts.googleapis.com/css?family=Raleway:900&display=swap");
 
 /* body {
