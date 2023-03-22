@@ -14,4 +14,7 @@ I also made little side projects for fun. Some of those will be shown in the sec
 The certificate section shows a few of my certificates. These are my software development-related certificates.
 
 
+```
+npm run build
+```
 
