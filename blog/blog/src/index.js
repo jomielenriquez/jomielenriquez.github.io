@@ -91,3 +91,17 @@ const Previewer = (props) => {
 
 const rootElement = document.getElementById("div_content");
 ReactDOM.render(<App />, rootElement);
+
+
+// function getReadme(user, repo) {
+//   fetch(`https://api.github.com/repos/${user}/${repo}/contents/README.md`) // Fetch the file from GitHub's api
+//       .then(response => response.json())
+//       .then(data => {
+//           const content = atob(data.content); // Convert from base64 to readable text
+               
+//           console.log(content); // Log the content to the console
+//       })
+//       .catch(error => console.log(error)); // Catch any errors
+// }
+
+// getReadme("jomielenriquez", "jomielenriquez.github.io");
