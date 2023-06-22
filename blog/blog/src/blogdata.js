@@ -73,6 +73,26 @@ And if you want to get really crazy, even tables:
 
         `
     },
+    {
+        no: 1,
+        name: "Installing and Using Mongoose",
+        blog: `### This blog is all about installing and using mongoose
+const mongoose = require('mongoose');
+const mySecretURI = process.env['MONGO_URI']
+
+let Person;
+
+const connect = () => {
+  mongoose.connect(mySecretURI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useFindAndModify: false,
+    useCreateIndex: true
+  });
+}
+
+        `
+    },
     // {
     //     no: 1,
     //     name: "First blog",
