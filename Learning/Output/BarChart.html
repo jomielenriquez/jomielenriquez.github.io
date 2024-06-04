@@ -1,7 +1,10 @@
 <!DOCTYPE html>
+<html lang="en">
 <html>
     <head>
-        <script src="https://d3js.org/d3.v6.min.js"></script>
+        <meta charset="UTF-8">
+        <!-- <script src="https://d3js.org/d3.v6.min.js"></script> -->
+        <script src="https://d3js.org/d3.v7.min.js"></script>
         <script src="jquery-3.7.1.min.js"></script>
         <style>
             .graph{
@@ -61,17 +64,6 @@
                 const padding = 60;
                 const dataLength = data.data.length;
 
-                const minYear = d3.min(data.data, (d) => new Date(d[0]).getFullYear());
-                const maxYear = d3.max(data.data, (d) => new Date(d[0]).getFullYear());
-                console.log(minYear);
-                const xScale = d3.scaleLinear()
-                                 .domain([minYear, maxYear])
-                                 .range([padding, w - padding]);
-
-                const yScale = d3.scaleLinear()
-                                 .domain([0, d3.max(data.data, (d) => d[1])])
-                                 .range([h - padding, padding]);
-
                 const svg = d3.select("svg")
                               .attr("width", w)
                               .attr("height", h);
@@ -105,7 +97,6 @@
                         var q = Math.ceil(dataDate.getMonth() / 3);
                         var year = dataDate.getFullYear();
 
-                        console.log(className);
                         d3.select("#tooltip")
                         .style("opacity", 1)
                         .html(`${year} Q${q}<br>${USDollar.format(d[1])}`)
@@ -129,16 +120,31 @@
                    .attr("class", (d,i) => "info" + i)
                    .attr("display","none")
 
-                const xAxis = d3.axisBottom(xScale);
+                const minYear = d3.min(data.data, (d) => new Date(d[0]));
+                const maxYear = d3.max(data.data, (d) => new Date(d[0]));
+
+                const xScale = d3.scaleTime()
+                                .domain([d3.min(data.data, (d) => new Date(d[0])), d3.max(data.data, (d) => new Date(d[0]))])
+                                .range([padding, w - padding]);
+
+                const yScale = d3.scaleLinear()
+                                .domain([0, d3.max(data.data, (d) => d[1])])
+                                .range([h - padding, padding]);
+
+                const xAxis = d3.axisBottom(xScale)
+                    .ticks(d3.timeYear.every(5))
+                    .tickFormat(d3.timeFormat("%Y"));
 
                 const yAxis = d3.axisLeft(yScale);
 
                 svg.append("g")
                    .attr("transform","translate(0," + (h - padding) + ")")
+                   .attr("id","x-axis")
                    .call(xAxis);
 
                 svg.append("g")
                    .attr("transform","translate(" + padding + ",0)")
+                   .attr("id","y-axis")
                    .call(yAxis);
                 
                 svg.append("text")
