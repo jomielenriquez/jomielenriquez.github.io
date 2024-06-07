@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <script src="https://d3js.org/d3.v7.min.js"></script>
+        <!-- <script src="jquery-3.7.1.min.js"></script> -->
+        <title>ScatterPlot</title>
+        <style>
+            .graph{
+                margin-top:20px;
+                width: 800px;
+                margin-left: auto;
+                margin-right: auto;
+                background-color: white;
+                border-radius: 10px;
+                padding-top:10px
+            }
+            .graph > h1, .graph > h2{
+                text-align: center;
+            }
+            .graph > h1{
+                margin-bottom: 0px;
+            }
+            .graph > h2{
+                margin-top: 0px;
+            }
+            body{
+                background-color: gray !important;
+            }
+            .blue{
+                fill:rgba(62, 137, 250, 0.874);
+                opacity: 0.5;
+            }
+            .orange{
+                fill:orange;
+                opacity: 0.5;
+            }
+            .tooltip {
+                position: absolute;
+                text-align: left;
+                width: auto;
+                height: auto;
+                padding: 5px;
+                font: 12px sans-serif;
+                background: lightsteelblue;
+                border: 0px;
+                border-radius: 8px;
+                pointer-events: none;
+                opacity: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="graph">
+            <h1 class="title">Doping in Professional Bicycle Racing</h1>
+            <h2 class="title">35 Fastest times up Alpe d'Huez</h2>
+            <svg></svg>
+            <div id="tooltip" class="tooltip"></div>
+        </div>
+        <script>
+            document.addEventListener('DOMContentLoaded', function(){
+                fetch('https://raw.githubusercontent.com/freeCodeCamp/ProjectReferenceData/master/cyclist-data.json')
+                .then(response => response.json())
+                .then(data => {
+                    console.log(data);
+                    GenerateChart(data);
+                });
+            });
+
+            function MinToSec(time){
+                const min = time.split(":");
+                return (parseInt(min[0]) * 60) + parseInt(min[1]);
+            }
+
+            function GenerateChart(data){
+                const w = 800;
+                const h = 500;
+                const padding = 60;
+                
+                const svg = d3.select("svg").attr("width", w).attr("height", h);
+                
+                const maxYear = d3.max(data, (d) => d.Year);
+                const minYear = d3.min(data, (d) => d.Year);
+
+                const xMaxRange = maxYear - minYear;
+                
+                console.log(xMaxRange);
+                
+                const maxTime = d3.max(data, (d) => MinToSec(d.Time));
+                const minTime = d3.min(data, (d) => MinToSec(d.Time));
+
+                const yMaxRange = maxTime - minTime;
+                
+                svg.selectAll("circle")
+                   .data(data)
+                   .enter()
+                   .append("circle")
+                   .attr("cy", (d, i) => 60 + ((MinToSec(d.Time) - minTime)/yMaxRange) * (h - (padding * 2)))
+                   .attr("cx", (d, i) => 60 + ((d.Year - minYear)/xMaxRange) * (w - (padding * 2)))
+                   .attr("r", 7)
+                   .attr("class", (d) => d.Doping == "" ? "orange" : "blue")
+                   .attr("stroke","black")
+                   .attr("stroke-width","1")
+                   .on("mouseover", function(event, d){
+                        d3.select("#tooltip")
+                            .style("opacity", 1)
+                            .html(`${d.Name}: ${d.Nationality}<br>Year: ${d.Year}, Time: ${d.Time}<br><br>${d.Doping}`)
+                            .style("left", (event.pageX + 10) + "px")
+                            .style("top", (event.pageY - 28) + "px");
+                   })
+                   .on("mouseout", function(event, d) {
+                        d3.select("#tooltip")
+                            .style("opacity", 0);
+                    });
+
+                const xScale = d3.scaleTime()
+                            .domain([new Date(minYear,1,1), new Date(maxYear,1,1)])
+                            .range([padding, w - padding]);
+
+                const xAxis = d3.axisBottom(xScale)
+                                .ticks(d3.timeYear.every(1))
+                                .tickFormat(d3.timeFormat("%Y"));
+
+                svg.append("g")
+                   .attr("transform","translate(0," + (h - padding) + ")")
+                   .attr("id","x-axis")
+                   .call(xAxis);
+                
+                const yScale = d3.scaleLinear()
+                            .domain([minTime, maxTime])
+                            .range([h - padding, padding]);
+                
+                const yAxis = d3.axisLeft(yScale)
+                                .ticks(15) // Number of ticks
+                                .tickFormat(formatTime);
+                
+                svg.append("g")
+                   .attr("transform","translate(" + padding + ",0)")
+                   .attr("id","y-axis")
+                   .call(yAxis);
+                
+                svg.append("text")
+                   .attr("transform","rotate(-90)")
+                   .attr("x", -190)
+                   .attr("y", 0)
+                   .attr("dy", "1em")
+                   .style("text-anchor", "middle")
+                   .style("font-weight", "bold")
+                   .style("font-size", "20px")
+                   .text("Time in Minutes")
+                
+                svg.append("text")
+                   .attr("x", w - 200)
+                   .attr("y", 100)
+                   .attr("dy", "1em")
+                   .style("text-anchor", "right")
+                   .style("font-size", "12px")
+                   .style("width", "300px")
+                   .style("text-align", "right")
+                   .text("No doping allegations")
+                
+                svg.append("text")
+                   .attr("x", w - 240)
+                   .attr("y", 130)
+                   .attr("dy", "1em")
+                   .style("text-anchor", "right")
+                   .style("font-size", "12px")
+                   .style("width", "300px")
+                   .style("text-align", "right")
+                   .text("Riders with doping allegations")
+                
+                svg.append("rect")
+                   .attr("x", w - 90)
+                   .attr("y", 100)
+                   .attr("height", 20)
+                   .attr("width", 20)
+                   .style("fill","orange");
+
+                svg.append("rect")
+                   .attr("x", w - 90)
+                   .attr("y", 130)
+                   .attr("height", 20)
+                   .attr("width", 20)
+                   .style("fill","lightsteelblue");
+            }
+
+            function formatTime(d){
+                const min = d/60;
+                const sec = d%60;
+                return `${parseInt(min)}:${sec.toString().length == 1 ? '0' + sec : sec}`;
+            }
+        </script>
+    </body>
+</html>

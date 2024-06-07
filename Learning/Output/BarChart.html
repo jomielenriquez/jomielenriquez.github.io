@@ -3,7 +3,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <!-- <script src="https://d3js.org/d3.v6.min.js"></script> -->
+        <title>Bar Graph</title>
         <script src="https://d3js.org/d3.v7.min.js"></script>
         <script src="jquery-3.7.1.min.js"></script>
         <style>
@@ -35,6 +35,9 @@
                 pointer-events: none;
                 opacity: 0;
             }
+            rect:hover{
+                fill:gray;
+            }
         </style>
     </head>
     <body>
@@ -43,17 +46,11 @@
             <svg></svg>
             <div id="tooltip" class="tooltip"></div>
         </div>
-        <style>
-            rect:hover{
-                fill:gray;
-            }
-        </style>
         <script>
             document.addEventListener('DOMContentLoaded', function(){
                 fetch('https://raw.githubusercontent.com/freeCodeCamp/ProjectReferenceData/master/GDP-data.json')
                 .then(response => response.json())
                 .then(data => {
-                    console.log(data);
                     GenerateChart(data);
                 });
             });
@@ -69,10 +66,8 @@
                               .attr("height", h);
 
                 const distance = (w-(padding * 2))/dataLength;
-                console.log(distance);
 
                 const yMax = d3.max(data.data, (d) => d[1]);
-                console.log(d3.max(data.data, (d) => d[1]));
 
                 svg.selectAll("rect")
                    .data(data.data)
