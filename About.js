@@ -46,7 +46,7 @@ const about = {
                     location:"Taguig, National Capital Region, Philippines",
                     RO:"Remote", //RO means Remote or Onsite
                     Description:"",
-                    Skills:"Git · SQL Server Management Studio · Jira · Microsoft Azure · ASP.NET · C# · .NET Framework"
+                    Skills:"dotnetcore,Git,ssms,Jira,azure,asp,csharp,dotnetframework,vue,nodejs,jquery,react,oracle,confluence,css,html,azuredevops,aspdotnet,javascript,visualstudio,vscode"
                 },
             },
             certification:{1:{},},
@@ -65,7 +65,7 @@ const about = {
                     location:"Manila, National Capital Region, Philippines",
                     RO:"Hybrid", //RO means Remote or Onsite
                     Description:"- Maintains/Troubleshoots the company's supply chain management system. <br>- Creates bug fixes for the front and back ends of the system using HTML, CSS/CSS3/CSS4, JavaScript, JS (ES6/ES7/ES8), C#.<br>- Maintains/Manages the codes using different kinds of technology like TFS/Azure Dev Ops, GIT.<br>- Maintains the client's database using different kinds of database management system like SQL Server and Oracle DB",
-                    Skills:"CSS3 · CSS4 · Microsoft Azure · Azure DevOps · ASP.NET AJAX · Kendo · Kendo Ui · PL/SQL · HTML5 · Cascading Style Sheets (CSS) · ASP.NET MVC · jQuery · Bootstrap · HTML · .NET Framework · JavaScript · AJAX"
+                    Skills:"dotnetcore,git,csharp,CSS,azure,azuredevops,aspdotnet,jQuery,Bootstrap,html,dotnetframework,javascript,visualstudio,vscode"
                 },
             },
             certification:{1:{},},
@@ -84,7 +84,7 @@ const about = {
                     location:"Makati, National Capital Region, Philippines",
                     RO:"Remote", //RO means Remote or Onsite
                     Description:"",
-                    Skills:"CSS3 · CSS4 · Microsoft Azure · Azure DevOps · PL/SQL · Oracle SQL Developer · HTML5 · Cascading Style Sheets (CSS) · Microsoft SQL Server · SQL · ASP.NET · C# · AngularJS · HTML · .NET Framework"
+                    Skills:"visualstudio,vscode,dotnetcore,CSS3,azure,azuredevops,PL/SQL,git,oracle,HTML5,Cascading Style Sheets (CSS),Microsoft SQL Server,SQL,ASP.NET,csharp,angular,HTML,dotnetframework"
                 },
             },
             certification:{1:{},},
@@ -103,7 +103,7 @@ const about = {
                     location:"Lipa, Calabarzon, Philippines",
                     RO:"Onsite", //RO means Remote or Onsite
                     Description:"-Develops software specifications for future systems.<br>-Use HTML, CSS, Xaml, Javascript, Jquery, ADO.net and C# to create user interfaces for web applications and windows forms.<br>-Develops web application backend code and Windows forms in C#/C++ and Javascript, Jquery, ADO.net.<br>-Determines the structure of the database.<br>-Uses SQL Server and pgAdmin to create database stored procedures and queries.<br>-Develops and standardize support tools.",
-                    Skills:"HTML5 · Cascading Style Sheets (CSS) · Microsoft SQL Server · SQL · ASP.NET MVC · jQuery · Bootstrap · ASP.NET · HTML · JavaScript"
+                    Skills:"visualstudio,dotnetcore,HTML5,Cascading Style Sheets (CSS),ssms,SQL,ASP.NET MVC,jQuery,Bootstrap,ASP.NET,HTML,JavaScript,csharp,dotnetframework"
                 },
             },
             certification:{1:{},},
@@ -122,7 +122,7 @@ const about = {
                     location:"Santo Tomas, Calabarzon, Philippines",
                     RO:"Remote", //RO means Remote or Onsite
                     Description:"- Creates prototypes for various systems in accordance with the demands of the client.<br>- Utilized a variety of technologies, including JavaScript/JS (ES6/ES7/ES8), HTML, CSS/CSS3/CSS4, C#, C++, Python, and Raspberry Pi<br>- took charge of a variety of development projects, leading front-end and back-end engineers in the creation of an web application for the customer using agile methodology.",
-                    Skills:"ASP · ASP.NET Web API · ASP.NET AJAX · C++ · Cascading Style Sheets (CSS) · ASP.NET MVC · ASP.NET · C# · HTML · Python (Programming Language) · JavaScript"
+                    Skills:"visualstudio,dotnetframework,ASP,ASP.NET Web API,ASP.NET AJAX,C++,Cascading Style Sheets (CSS),ASP.NET MVC,ASP.NET,csharp,HTML,Python (Programming Language),JavaScript"
                 },
             },
             certification:{1:{},},

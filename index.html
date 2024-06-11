@@ -104,7 +104,6 @@
     <div class="render" include-html="blog/blog/build/footer.html"></div>
   </div>
   
-  
 </div>  
 <div id="loader" style="display: none;"></div>
 <div class="imageView" id="imageView" style="display:none">
@@ -115,6 +114,37 @@
 <script src="About.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.0/dist/email.min.js"></script>
 <script>
+  function displaySkills(skills){
+    console.log(skills);
+    var retSkills = "";
+    const arrayOfSkills = skills.split(",");
+    arrayOfSkills.forEach(function(skill){
+      if(skill.toLowerCase() == "git") retSkills += `<img class="zoom" src="/img/techstackImages/git.png"/>`;
+      if(skill.toLowerCase() == "ssms") retSkills += `<img class="zoom" src="/img/techstackImages/ssms.png"/>`;
+      if(skill.toLowerCase() == "jira") retSkills += `<img class="zoom" src="/img/techstackImages/jira.png"/>`;
+      if(skill.toLowerCase() == "azure") retSkills += `<img class="zoom" src="/img/techstackImages/azure.png"/>`;
+      if(skill.toLowerCase() == "asp") retSkills += `<img class="zoom" src="/img/techstackImages/asp.png"/>`;
+      if(skill.toLowerCase() == "csharp") retSkills += `<img class="zoom" src="/img/techstackImages/csharp.png"/>`;
+      if(skill.toLowerCase() == "dotnetframework") retSkills += `<img class="zoom" src="/img/techstackImages/dotnetframework.png"/>`;
+      if(skill.toLowerCase() == "vue") retSkills += `<img class="zoom" src="/img/techstackImages/vue.png"/>`;
+      if(skill.toLowerCase() == "nodejs") retSkills += `<img class="zoom" src="/img/techstackImages/nodejs.png"/>`;
+      if(skill.toLowerCase() == "react") retSkills += `<img class="zoom" src="/img/techstackImages/react.png"/>`;
+      if(skill.toLowerCase() == "oracle") retSkills += `<img class="zoom" src="/img/techstackImages/oracle.png"/>`;
+      if(skill.toLowerCase() == "confluence") retSkills += `<img class="zoom" src="/img/techstackImages/confluence.png"/>`;
+      if(skill.toLowerCase() == "css") retSkills += `<img class="zoom" src="/img/techstackImages/css3.png"/>`;
+      if(skill.toLowerCase() == "azuredevops") retSkills += `<img class="zoom" src="/img/techstackImages/azuredevops.png"/>`;
+      if(skill.toLowerCase() == "aspdotnet") retSkills += `<img class="zoom" src="/img/techstackImages/aspdotnet.png"/>`;
+      if(skill.toLowerCase() == "javascript") retSkills += `<img class="zoom" src="/img/techstackImages/javascript.png"/>`;
+      if(skill.toLowerCase() == "html") retSkills += `<img class="zoom" src="/img/techstackImages/html.png"/>`;
+      if(skill.toLowerCase() == "dotnetcore") retSkills += `<img class="zoom" src="/img/techstackImages/dotnetcore.png"/>`;
+      if(skill.toLowerCase() == "angular") retSkills += `<img class="zoom" src="/img/techstackImages/angular.png"/>`;
+      if(skill.toLowerCase() == "jquery") retSkills += `<img class="zoom" src="/img/techstackImages/jquery.png"/>`;
+      if(skill.toLowerCase() == "bootstrap") retSkills += `<img class="zoom" src="/img/techstackImages/bootstrap.png"/>`;
+      if(skill.toLowerCase() == "visualstudio") retSkills += `<img class="zoom" src="/img/techstackImages/visualstudio.png"/>`;
+      if(skill.toLowerCase() == "vscode") retSkills += `<img class="zoom" src="/img/techstackImages/vscode.png"/>`;
+    })
+    return retSkills;
+  }
   const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
   "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
 ];
@@ -155,9 +185,9 @@
                     `+companyname +  status + ` <br>
                     `+startDate+` - `+endDate+` <b class="middleDot">&#183;</b> `+duration+` <br>
                     `+worklocation+` <b class="middleDot">&#183;</b> `+RO+` <br> <br>`+description+`
-                    <b>Skills: `+skills+`</b>
+                    
+                    <br>` + displaySkills(skills) + `
                   </p>
-                  
                 </div>
               </div>
             </div>`);
