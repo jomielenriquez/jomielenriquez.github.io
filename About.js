@@ -1,5 +1,5 @@
 const about = {
-    name:"Jomiel L. Enrique",
+    name:"Jomiel L. Enriquez",
     title:["Programmer","Software Engineer","Software Developer"],
     about:[
         "Analytical programmer with extensive experience in .Net, C++/ C#, HTML, CSS, Jquey, ADO.net, and Javascript development. Acquires new software and hardware innovations quickly.",
@@ -34,6 +34,25 @@ const about = {
         },
     },
     timeline:{
+        2025:{
+            work:{
+                1:{
+                    logo:"https://deltainsurance.co.nz/hs-fs/hubfs/Photos%20-%20hero%20images/0238_Delta_WebsiteGraphics_HeroForeground_1.png?width=1674&height=1419&name=0238_Delta_WebsiteGraphics_HeroForeground_1.png",
+                    title:"Senior Developer",
+                    companyname:"Delta Insurance",
+                    status:"Full-time", //Fulltime or not
+                    StartDate:"07/01/2024",
+                    EndDate:"",
+                    location:"New Zealand",
+                    RO:"Remote", //RO means Remote or Onsite
+                    Description:"●	Lead the development of both BAU (Business-as-Usual) tickets and new feature initiatives across the insurance platform.<br>●	Design and build backend and frontend solutions using C#, .NET (MVC), AWS, MSSQL, and React.<br>●	Develop RESTful APIs and microservices following modern architectural standards.<br>●	Responsible for the migration of source code repositories from SVN to GitHub to enhance version control and collaboration.<br>●	Implement CI/CD pipelines to streamline deployment processes and ensure rapid, reliable releases.<br>●	Manage and execute production deployments for system enhancements and fixes.<br>●	Create and maintain technical documentation in Confluence to support team knowledge sharing.",
+                    Skills:"dotnetcore,Git,ssms,Jira,azure,aws,asp,csharp,dotnetframework,nodejs,jquery,react,oracle,confluence,css,html,azuredevops,aspdotnet,javascript,visualstudio,vscode"
+                },
+            },
+            certification:{1:{},},
+            education:{},
+            projects:{}
+        },
         2023:{
             work:{
                 1:{
@@ -42,10 +61,10 @@ const about = {
                     companyname:"Beeline",
                     status:"Full-time", //Fulltime or not
                     StartDate:"12/12/2022",
-                    EndDate:"",
+                    EndDate:"06/30/2024",
                     location:"Taguig, National Capital Region, Philippines",
                     RO:"Remote", //RO means Remote or Onsite
-                    Description:"",
+                    Description:"●	Utilizing the newest Azure and C#.NET technologies, create and develop new features for the company's contingent workforce management system using the latest technology of C# .Net, MVC, MSSQL, NodeJS, Vue, and Oracle.<br>●	Design and implement API for the company’s contingent workforce management system background check feature using C# .NET, MVC, and MSSQL.<br>●	Responsible in the vue 3 migration of the company’s resource verification system using vue 3 and oracle.<br>●	Create documentation using confluence.",
                     Skills:"dotnetcore,Git,ssms,Jira,azure,asp,csharp,dotnetframework,vue,nodejs,jquery,react,oracle,confluence,css,html,azuredevops,aspdotnet,javascript,visualstudio,vscode"
                 },
             },
