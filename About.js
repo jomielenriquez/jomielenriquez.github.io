@@ -46,7 +46,7 @@ const about = {
                     location:"New Zealand",
                     RO:"Remote", //RO means Remote or Onsite
                     Description:"●	Lead the development of both BAU (Business-as-Usual) tickets and new feature initiatives across the insurance platform.<br>●	Design and build backend and frontend solutions using C#, .NET (MVC), AWS, MSSQL, and React.<br>●	Develop RESTful APIs and microservices following modern architectural standards.<br>●	Responsible for the migration of source code repositories from SVN to GitHub to enhance version control and collaboration.<br>●	Implement CI/CD pipelines to streamline deployment processes and ensure rapid, reliable releases.<br>●	Manage and execute production deployments for system enhancements and fixes.<br>●	Create and maintain technical documentation in Confluence to support team knowledge sharing.",
-                    Skills:"dotnetcore,Git,ssms,Jira,azure,aws,asp,csharp,dotnetframework,nodejs,jquery,react,oracle,confluence,css,html,azuredevops,aspdotnet,javascript,visualstudio,vscode"
+                    Skills:"dotnetcore,Git,ssms,Jira,azure,asp,csharp,dotnetframework,nodejs,jquery,react,aws,confluence,css,html,azuredevops,aspdotnet,javascript,visualstudio,vscode"
                 },
             },
             certification:{1:{},},
