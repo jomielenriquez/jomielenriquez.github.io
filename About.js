@@ -34,7 +34,7 @@ const about = {
         },
     },
     timeline:{
-        2025:{
+        2024:{
             work:{
                 1:{
                     logo:"https://deltainsurance.co.nz/hs-fs/hubfs/Photos%20-%20hero%20images/0238_Delta_WebsiteGraphics_HeroForeground_1.png?width=1674&height=1419&name=0238_Delta_WebsiteGraphics_HeroForeground_1.png",
