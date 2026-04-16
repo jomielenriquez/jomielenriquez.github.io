@@ -1,423 +1,570 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <link rel="icon" type="image/x-icon" href="img/icon_blue.png">
-    <title>Jomiel</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link type="text/css"  href="css/default_bootstrap.css" rel="stylesheet">
-    <link type="text/css"  href="css/default_bootstrap.min.css" rel="stylesheet">
-    <link type="text/css"  href="css/custom.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script type="text/javascript" src="js/bootstrap.js"></script>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script>
-      var pagename="aboutMe";
-    </script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jomiel Enriquez — Software Engineer</title>
+  <link rel="icon" type="image/x-icon" href="img/icon_blue.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --primary: #0f172a;
+      --accent:  #0e7490;
+      --accent-light: #e0f2fe;
+      --text:   #1e293b;
+      --muted:  #64748b;
+      --border: #e2e8f0;
+      --bg:     #f1f5f9;
+      --card:   #ffffff;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      font-size: 14px;
+    }
+
+    /* ── Page wrapper ── */
+    .page {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 36px 20px 48px;
+    }
+
+    /* ── Header ── */
+    .cv-header {
+      background: var(--primary);
+      color: #fff;
+      padding: 36px 44px;
+      border-radius: 12px;
+      margin-bottom: 28px;
+    }
+
+    .cv-header h1 {
+      font-size: 34px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      margin-bottom: 4px;
+    }
+
+    .cv-header .headline {
+      font-size: 15px;
+      color: #94a3b8;
+      margin-bottom: 20px;
+    }
+
+    .contact-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 13px;
+      color: #cbd5e1;
+    }
+
+    .contact-item a {
+      color: #7dd3fc;
+      text-decoration: none;
+    }
+    .contact-item a:hover { text-decoration: underline; }
+
+    /* ── Two-column body ── */
+    .cv-body {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 20px;
+      align-items: start;
+    }
+
+    /* ── Card / section ── */
+    .section {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 22px 24px;
+      margin-bottom: 20px;
+    }
+
+    .section-title {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1.8px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 14px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    /* ── About / summary ── */
+    .summary-text {
+      font-size: 13px;
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    /* ── Skills ── */
+    .skills-group { margin-bottom: 14px; }
+    .skills-group:last-child { margin-bottom: 0; }
+
+    .skills-label {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.6px;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 5px;
+    }
+
+    .skill-tags { display: flex; flex-wrap: wrap; gap: 4px; }
+
+    .skill-tag {
+      background: var(--accent-light);
+      color: var(--accent);
+      font-size: 11px;
+      font-weight: 500;
+      padding: 2px 8px;
+      border-radius: 4px;
+    }
+
+    /* ── Contact form ── */
+    .form-group { margin-bottom: 12px; }
+
+    label {
+      display: block;
+      font-size: 11px;
+      font-weight: 500;
+      color: var(--muted);
+      margin-bottom: 4px;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 8px 10px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      font-size: 13px;
+      font-family: inherit;
+      color: var(--text);
+      background: #fff;
+      transition: border-color 0.15s;
+    }
+    input:focus, textarea:focus { outline: none; border-color: var(--accent); }
+    textarea { height: 80px; resize: vertical; }
+
+    .btn {
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      padding: 8px 18px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 500;
+      cursor: pointer;
+      font-family: inherit;
+      transition: background 0.15s;
+    }
+    .btn:hover { background: #0c6882; }
+
+    /* ── Experience items ── */
+    .exp-item {
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+      border-bottom: 1px solid var(--border);
+    }
+    .exp-item:last-child { border-bottom: none; padding-bottom: 0; margin-bottom: 0; }
+
+    .exp-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 6px;
+    }
+
+    .exp-logo {
+      width: 36px;
+      height: 36px;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+      object-fit: contain;
+      flex-shrink: 0;
+      background: #fff;
+    }
+
+    .exp-title { font-weight: 600; font-size: 14px; }
+    .exp-company { font-size: 12px; color: var(--muted); }
+
+    .exp-meta {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+      margin: 6px 0 10px;
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .badge {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 1px 7px;
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    .exp-desc { font-size: 13px; line-height: 1.65; }
+    .exp-desc ul { padding-left: 16px; }
+    .exp-desc li { margin-bottom: 3px; }
+
+    /* ── Project items ── */
+    .project-item {
+      padding-bottom: 14px;
+      margin-bottom: 14px;
+      border-bottom: 1px solid var(--border);
+    }
+    .project-item:last-child { border-bottom: none; padding-bottom: 0; margin-bottom: 0; }
+
+    .project-name {
+      font-weight: 600;
+      font-size: 13px;
+      margin-bottom: 3px;
+    }
+    .project-name a { color: var(--accent); text-decoration: none; }
+    .project-name a:hover { text-decoration: underline; }
+
+    .project-date { font-size: 11px; color: var(--muted); font-weight: 400; }
+
+    .project-desc {
+      font-size: 12px;
+      color: var(--muted);
+      margin: 4px 0;
+      line-height: 1.5;
+    }
+
+    .project-stack { font-size: 11px; color: var(--muted); }
+    .project-stack strong { color: var(--text); }
+
+    /* ── Cert items ── */
+    .cert-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 10px;
+      padding-bottom: 10px;
+      margin-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+    }
+    .cert-item:last-child { border-bottom: none; padding-bottom: 0; margin-bottom: 0; }
+
+    .cert-name { font-size: 13px; font-weight: 500; }
+    .cert-issuer { font-size: 11px; color: var(--muted); margin-top: 2px; }
+    .cert-date { font-size: 11px; color: var(--muted); white-space: nowrap; }
+
+    /* ── Footer ── */
+    .cv-footer {
+      text-align: center;
+      font-size: 12px;
+      color: var(--muted);
+      margin-top: 20px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+    }
+
+    /* ── Loader ── */
+    #loader {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 36px;
+      height: 36px;
+      border: 3px solid var(--border);
+      border-top-color: var(--accent);
+      border-radius: 50%;
+      animation: spin 0.7s linear infinite;
+      z-index: 999;
+    }
+    @keyframes spin { to { transform: translate(-50%, -50%) rotate(360deg); } }
+
+    /* ── Responsive ── */
+    @media (max-width: 680px) {
+      .cv-body { grid-template-columns: 1fr; }
+      .cv-header { padding: 24px 22px; }
+      .cv-header h1 { font-size: 26px; }
+    }
+  </style>
 </head>
-<body class="aboutMe">
-  <div id="div_container">
-    <div class="render" include-html="blog/blog/build/navigation.html"></div>
-  
-    <div id="container_text">
-      <div class="word"></div>
-      <span id="text1"></span>
-      <span id="text2"></span>
+<body>
+
+<div class="page" id="page">
+
+  <!-- ── Header ── -->
+  <header class="cv-header">
+    <h1>Jomiel L. Enriquez</h1>
+    <p class="headline">Senior Software Engineer &nbsp;·&nbsp; Full-Stack &nbsp;·&nbsp; .NET / React / Vue / AWS</p>
+    <div class="contact-row">
+      <span class="contact-item">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,12 2,6"/></svg>
+        <a href="mailto:enriquez.jliquigan@gmail.com">enriquez.jliquigan@gmail.com</a>
+      </span>
+      <span class="contact-item">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        Tanauan City, Batangas, Philippines
+      </span>
+      <span class="contact-item">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+        <a href="https://github.com/jomielenriquez" target="_blank" rel="noopener">github.com/jomielenriquez</a>
+      </span>
     </div>
-    
-    <div class="myimage">
-      <div class="imgMyImage">
-        <img class="imgMyImageimage" src="img/Programmer.gif"/>
+  </header>
+
+  <div class="cv-body">
+
+    <!-- ── Sidebar ── -->
+    <aside>
+
+      <!-- About -->
+      <div class="section">
+        <h2 class="section-title">About</h2>
+        <p class="summary-text">
+          Analytical software engineer with 5+ years building full-stack enterprise applications.
+          Strong background in C#&nbsp;/.NET, modern JavaScript frameworks, cloud infrastructure,
+          and SQL/NoSQL databases. Fast learner with a track record of delivering reliable,
+          maintainable systems across remote and hybrid environments.
+        </p>
       </div>
-  
-    </div>
-    <div class="container">
-      <div id="timeline" class="timeline">
-        <!-- datas will be inserted using javascript code -->
-      </div>
-  
-      <div class="bs-docs-section">
-        <div class="row">
-          <div class="col-lg-12">
-            <div class="page-header">
-              <h1 id="navs">Projects</h1>
-            </div>
+
+      <!-- Skills -->
+      <div class="section">
+        <h2 class="section-title">Skills</h2>
+        <div class="skills-group">
+          <div class="skills-label">Languages</div>
+          <div class="skill-tags">
+            <span class="skill-tag">C#</span>
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">TypeScript</span>
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">HTML</span>
+            <span class="skill-tag">CSS</span>
+            <span class="skill-tag">SQL</span>
           </div>
         </div>
-        <div class="row" id="div_Projects">
-          <!-- Projects will be inserted programmatically -->
-        </div>
-      </div>
-  
-      <div class="bs-docs-section">
-        <div class="row">
-          <div class="col-lg-12">
-            <div class="page-header">
-              <h1 id="navs">Other Projects</h1>
-            </div>
+        <div class="skills-group">
+          <div class="skills-label">Frameworks</div>
+          <div class="skill-tags">
+            <span class="skill-tag">.NET / ASP.NET MVC</span>
+            <span class="skill-tag">React</span>
+            <span class="skill-tag">Vue 3</span>
+            <span class="skill-tag">Angular</span>
+            <span class="skill-tag">Node.js</span>
+            <span class="skill-tag">jQuery</span>
           </div>
         </div>
-        <div class="row" id="div_otherProjects">
-          <!-- Other projects will be inserted programmatically -->
-        </div>
-      </div>
-  
-      <div class="bs-docs-section">
-        <div class="row">
-          <div class="col-lg-12">
-            <div class="page-header">
-              <h1 id="navs">Certificates</h1>
-            </div>
+        <div class="skills-group">
+          <div class="skills-label">Cloud &amp; DevOps</div>
+          <div class="skill-tags">
+            <span class="skill-tag">AWS</span>
+            <span class="skill-tag">Azure</span>
+            <span class="skill-tag">Azure DevOps</span>
+            <span class="skill-tag">CI/CD</span>
+            <span class="skill-tag">Git / GitHub</span>
           </div>
         </div>
-        <div class="row" id="div_certificates">
-          <!-- Certificates will be inserted programmatically -->
-        </div>
-      </div>      
-  
-      <h1 style="margin-top: 40px;"></h1>
-      <div class="card border-success mb-3" style="max-width: 40rem; margin-left: auto; margin-right: auto;">
-        <!-- <div class="card-header">Header</div> -->
-        <div class="card-body">
-          <form>
-            <fieldset>
-              <legend>Send me a message!</legend>
-              <div class="form-group">
-                <label for="exampleInputEmail1" class="form-label mt-4">Name</label>
-                <input type="text" id="inputName" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter name">
-              </div>
-              <div class="form-group">
-                <label for="exampleInputEmail1" class="form-label mt-4">Email address</label>
-                <input type="email" id="inputEmail" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-              </div>
-              <div class="form-group">
-                <label for="exampleTextarea" class="form-label mt-4">Message</label>
-                <textarea class="form-control" id="textAreaMessage" rows="3"></textarea>
-              </div>
-              <div class="form-group" style="float:right; margin-top:20px;">
-                <button type="button" class="btn btn-success" onclick="sendEmail()">Send</button>
-              </div>
-            </fieldset>
-          </form>
+        <div class="skills-group">
+          <div class="skills-label">Databases</div>
+          <div class="skill-tags">
+            <span class="skill-tag">MS SQL Server</span>
+            <span class="skill-tag">Oracle SQL</span>
+            <span class="skill-tag">MySQL</span>
+            <span class="skill-tag">PostgreSQL</span>
+          </div>
         </div>
       </div>
-    <div class="render" include-html="blog/blog/build/footer.html"></div>
+
+      <!-- Contact form -->
+      <div class="section">
+        <h2 class="section-title">Get in Touch</h2>
+        <div class="form-group">
+          <label for="inputName">Name</label>
+          <input type="text" id="inputName" placeholder="Your name">
+        </div>
+        <div class="form-group">
+          <label for="inputEmail">Email</label>
+          <input type="email" id="inputEmail" placeholder="your@email.com">
+        </div>
+        <div class="form-group">
+          <label for="textAreaMessage">Message</label>
+          <textarea id="textAreaMessage" placeholder="Your message…"></textarea>
+        </div>
+        <button class="btn" onclick="sendEmail()">Send Message</button>
+      </div>
+
+    </aside>
+
+    <!-- ── Main content ── -->
+    <main>
+
+      <!-- Experience -->
+      <div class="section">
+        <h2 class="section-title">Experience</h2>
+        <div id="experience-list"></div>
+      </div>
+
+      <!-- Projects -->
+      <div class="section">
+        <h2 class="section-title">Projects</h2>
+        <div id="projects-list"></div>
+      </div>
+
+      <!-- Certifications -->
+      <div class="section">
+        <h2 class="section-title">Certifications</h2>
+        <div id="certs-list"></div>
+      </div>
+
+    </main>
   </div>
-  
-</div>  
-<div id="loader" style="display: none;"></div>
-<div class="imageView" id="imageView" style="display:none">
-  <i class="fa fa-times imageViewClose" onclick='closeImageView()'></i>
-  <img id="imageViewImg"/>
+
+  <footer class="cv-footer">
+    Jomiel L. Enriquez &mdash; enriquez.jliquigan@gmail.com
+  </footer>
 </div>
 
+<div id="loader"></div>
+
 <script src="About.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.0/dist/email.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.0/dist/email.min.js"></script>
 <script>
-  function displaySkills(skills){
-    console.log(skills);
-    var retSkills = "";
-    const arrayOfSkills = skills.split(",");
-    arrayOfSkills.forEach(function(skill){
-      if(skill.toLowerCase() == "git") retSkills += `<img class="zoom" src="/img/techstackImages/git.png"/>`;
-      if(skill.toLowerCase() == "ssms") retSkills += `<img class="zoom" src="/img/techstackImages/ssms.png"/>`;
-      if(skill.toLowerCase() == "jira") retSkills += `<img class="zoom" src="/img/techstackImages/jira.png"/>`;
-      if(skill.toLowerCase() == "azure") retSkills += `<img class="zoom" src="/img/techstackImages/azure.png"/>`;
-      if(skill.toLowerCase() == "asp") retSkills += `<img class="zoom" src="/img/techstackImages/asp.png"/>`;
-      if(skill.toLowerCase() == "csharp") retSkills += `<img class="zoom" src="/img/techstackImages/csharp.png"/>`;
-      if(skill.toLowerCase() == "dotnetframework") retSkills += `<img class="zoom" src="/img/techstackImages/dotnetframework.png"/>`;
-      if(skill.toLowerCase() == "vue") retSkills += `<img class="zoom" src="/img/techstackImages/vue.png"/>`;
-      if(skill.toLowerCase() == "nodejs") retSkills += `<img class="zoom" src="/img/techstackImages/nodejs.png"/>`;
-      if(skill.toLowerCase() == "react") retSkills += `<img class="zoom" src="/img/techstackImages/react.png"/>`;
-      if(skill.toLowerCase() == "oracle") retSkills += `<img class="zoom" src="/img/techstackImages/oracle.png"/>`;
-      if(skill.toLowerCase() == "confluence") retSkills += `<img class="zoom" src="/img/techstackImages/confluence.png"/>`;
-      if(skill.toLowerCase() == "css") retSkills += `<img class="zoom" src="/img/techstackImages/css3.png"/>`;
-      if(skill.toLowerCase() == "azuredevops") retSkills += `<img class="zoom" src="/img/techstackImages/azuredevops.png"/>`;
-      if(skill.toLowerCase() == "aspdotnet") retSkills += `<img class="zoom" src="/img/techstackImages/aspdotnet.png"/>`;
-      if(skill.toLowerCase() == "javascript") retSkills += `<img class="zoom" src="/img/techstackImages/javascript.png"/>`;
-      if(skill.toLowerCase() == "html") retSkills += `<img class="zoom" src="/img/techstackImages/html.png"/>`;
-      if(skill.toLowerCase() == "dotnetcore") retSkills += `<img class="zoom" src="/img/techstackImages/dotnetcore.png"/>`;
-      if(skill.toLowerCase() == "angular") retSkills += `<img class="zoom" src="/img/techstackImages/angular.png"/>`;
-      if(skill.toLowerCase() == "jquery") retSkills += `<img class="zoom" src="/img/techstackImages/jquery.png"/>`;
-      if(skill.toLowerCase() == "bootstrap") retSkills += `<img class="zoom" src="/img/techstackImages/bootstrap.png"/>`;
-      if(skill.toLowerCase() == "visualstudio") retSkills += `<img class="zoom" src="/img/techstackImages/visualstudio.png"/>`;
-      if(skill.toLowerCase() == "vscode") retSkills += `<img class="zoom" src="/img/techstackImages/vscode.png"/>`;
-    })
-    return retSkills;
-  }
-  const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
-  "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
-];
-  console.log(about["timeline"]);
-  var isLeft = true;
-  for(i=2024;i>2000;i--){
-    year = about["timeline"][i];
-    if(year==null) break;
-    var work = year["work"];
-    Object.keys(work).forEach(key=>{
-      var item = work[key];
-      var logo = item["logo"],
-          year = i,
-          title= item["title"],
-          companyname = item["companyname"]
-          status = item["status"]!= "" ? ` <b class="middleDot">&#183;</b> `+item["status"]:""
-          startDate = monthNames[new Date(item["StartDate"]).getMonth()] + " " + new Date(item["StartDate"]).getFullYear()
-          endDate = item["EndDate"]!=""?monthNames[new Date(item["EndDate"]).getMonth()] + " " + new Date(item["EndDate"]).getFullYear():"Present",
-          dateEndDate = item["EndDate"]==""?new Date():new Date(item["EndDate"]),
-          monthDiffe = monthDiff(new Date(item["StartDate"]),dateEndDate),
-          duration = getYearsMonths(monthDiffe),
-          worklocation = item["location"],
-          RO = item["RO"],
-          skills = item["Skills"],
-          description = item["Description"]==""?"":item["Description"]+"<br><br>",
-          timelineLocation = isLeft?"left":"right";
+  const MONTHS = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
 
-      $("#timeline").append(`<div class="containertimeline `+timelineLocation+`">
-              <div class="contenttimeline">
-                <div style="margin-right:5px;">
-                  <img class="timelineImage" src="`+logo+`">
-    
-                </div>
-                <div>
-                  <h2>`+year+`</h2>
-                  <p>
-                    <b>`+title+`</b> <br>
-                    `+companyname +  status + ` <br>
-                    `+startDate+` - `+endDate+` <b class="middleDot">&#183;</b> `+duration+` <br>
-                    `+worklocation+` <b class="middleDot">&#183;</b> `+RO+` <br> <br>`+description+`
-                    
-                    <br>` + displaySkills(skills) + `
-                  </p>
-                </div>
-              </div>
-            </div>`);
-    })
-    isLeft=!isLeft;
+  function fmtDate(s) {
+    if (!s) return "Present";
+    const d = new Date(s);
+    return MONTHS[d.getMonth()] + " " + d.getFullYear();
   }
 
-  //Insert projects
-  for(i=0;i<Object.keys(about["Projects"]).length;i++){
-    console.log(i);
-    var data=about["Projects"][i];
-    var title =data["imageLink"]!=""?"": `<text x="50%" y="50%" fill="#dee2e6" dy=".3em">`+data["Title"]+`</text>`;
-    var repo = data["projectLink"]!=""?`<div class="card-body"><a href="`+data["projectLink"]+`" class="card-link">`+data["Title"]+` Repo</a></div>`:""
-    $("#div_Projects").append(`<div class="col-lg-4">
-            <div class="bs-component">
-              <div class="card mb-3">
-                <h3 class="card-header">`+data["Title"]+`</h3>
-                <svg xmlns="" class="d-block user-select-none" width="100%" height="200" aria-label="Placeholder: Image cap" focusable="false" role="img" preserveAspectRatio="xMidYMid slice" viewBox="0 0 318 180" style="font-size:1.125rem;text-anchor:middle">
-                  <rect width="100%" height="100%" fill="#868e96"></rect>
-                  `+ title +`
-                  <image width="100%" height="100%" href="`+data["imageLink"]+`" onclick='openImageView(this)'>
-                </svg>
-                <div class="card-body">
-                  <p class="card-text">`+data["Description"]+`</p>
-                </div>
-                <ul class="list-group list-group-flush">
-                  <li class="list-group-item">Skills: `+data["Skills"]+`</li>
-                </ul>
-                `+repo+`
-                <div class="card-footer text-muted">
-                  `+data["projectDate"]+`
-                </div>
-              </div>
-
-            </div>
-          </div>`);
-  };
-
-  //Insert other Projects
-  for(i=0;i<Object.keys(about["otherProjects"]).length;i++){
-    console.log(i);
-    var data=about["otherProjects"][i];
-    var title =data["imageLink"]!=""?"": `<text x="50%" y="50%" fill="#dee2e6" dy=".3em">`+data["Title"]+`</text>`;
-    var repo = data["ProjectRepoLink"]!=""?`<div class="card-body"><a href="`+data["ProjectRepoLink"]+`" class="card-link">`+data["Title"]+` Repo</a></div>`:""
-    $("#div_otherProjects").append(`<div class="col-lg-4">
-            <div class="bs-component">
-              <div class="card mb-3">
-                <h3 class="card-header">`+data["Title"]+`</h3>
-                <svg xmlns="" class="d-block user-select-none" width="100%" height="200" aria-label="Placeholder: Image cap" focusable="false" role="img" preserveAspectRatio="xMidYMid slice" viewBox="0 0 318 180" style="font-size:1.125rem;text-anchor:middle">
-                  <rect width="100%" height="100%" fill="#868e96"></rect>
-                  `+ title +`
-                  <image width="100%" height="100%" href="`+data["imageLink"]+`" onclick='openImageView(this)'>
-                </svg>
-                <div class="card-body">
-                  <p class="card-text">`+data["Description"]+`</p>
-                </div>
-                <div class="card-body"><a href="`+data["ProjectLink"]+`" class="card-link">`+data["Title"]+` Link</a></div>
-                `+repo+`
-                <div class="card-footer text-muted">
-                  `+data["projectDate"]+`
-                </div>
-              </div>
-
-            </div>
-          </div>`);
-  };
-
-   //Insert other Certificates
-   for(i=0;i<Object.keys(about["certificates"]).length;i++){
-    console.log(i);
-    var data=about["certificates"][i];
-    var title =data["imageLoc"]!=""?"": `<text x="50%" y="50%" fill="#dee2e6" dy=".3em">`+data["Title"]+`</text>`;
-    //var repo = data["ProjectRepoLink"]!=""?`<div class="card-body"><a href="`+data["ProjectRepoLink"]+`" class="card-link">`+data["Title"]+` Repo</a></div>`:""
-    $("#div_certificates").append(`<div class="col-lg-4">
-            <div class="bs-component">
-              <div class="card mb-3">
-                <h3 class="card-header">`+data["Title"]+`</h3>
-                <svg xmlns="" class="d-block user-select-none" width="100%" height="200" aria-label="Placeholder: Image cap" focusable="false" role="img" preserveAspectRatio="xMidYMid slice" viewBox="0 0 318 180" style="font-size:1.125rem;text-anchor:middle">
-                  <rect width="100%" height="100%" fill="#868e96"></rect>
-                  `+ title +`
-                  <image width="100%" height="100%" href="`+data["imageLoc"]+`" onclick='openImageView(this)'>
-                </svg>
-                <div class="card-body">
-                  <p class="card-text"> Issued By: `+data["issuedBy"]+`</p>
-                </div>
-                <div class="card-footer text-muted">
-                  `+data["issueDate"]+`
-                </div>
-              </div>
-
-            </div>
-          </div>`);
-  };
-
-  function getYearsMonths(monthDiffe){
-    var years = Math.trunc(monthDiffe/12), months = Math.trunc(monthDiffe%12);
-    var output ="";
-    output += years>0? String(years) + checkYear(years) + " " : "";
-    output += months>0?String(months)+ " " + checkMonths(months) : ""
-    return output;
-  }
-  function checkYear(years){
-    return years>1?"yrs":"yr";
-  }
-  function checkMonths(months){
-    return months>1?"mos":"mo";
-  }
   function monthDiff(d1, d2) {
-    var months;
-    months = (d2.getFullYear() - d1.getFullYear()) * 12;
-    months -= d1.getMonth();
-    months += d2.getMonth();
-    return months <= 0 ? 0 : months;
+    let m = (d2.getFullYear() - d1.getFullYear()) * 12;
+    m -= d1.getMonth();
+    m += d2.getMonth();
+    return m <= 0 ? 0 : m;
   }
-  
-  //Text Effect
-  var words = [
-    'Hello, I am Jomiel Enriquez..',
-    'I am a Software Engineer..', 
-    'I really enjoy programming..'],
-    part,
-    i = 0,
-    offset = 0,
-    len = words.length,
-    forwards = true,
-    skip_count = 0,
-    skip_delay = 15,
-    speed = 70;
-  var wordflick = function () {
-    setInterval(function () {
-      if (forwards) {
-        if (offset >= words[i].length) {
-          ++skip_count;
-          if (skip_count == skip_delay) {
-            forwards = false;
-            skip_count = 0;
-          }
-        }
-      }
-      else {
-        if (offset == 0) {
-          forwards = true;
-          i++;
-          offset = 0;
-          if (i >= len) {
-            i = 0;
-          }
-        }
-      }
-      part = words[i].substr(0, offset);
-      if (skip_count == 0) {
-        if (forwards) {
-          offset++;
-        }
-        else {
-          offset--;
-        }
-      }
-      $('.word').text(part);
-    },speed);
-  };
 
-  $(document).ready(function () {
-    wordflick();
+  function duration(start, end) {
+    const diff = monthDiff(new Date(start), end ? new Date(end) : new Date());
+    const y = Math.trunc(diff / 12), mo = Math.trunc(diff % 12);
+    return [(y > 0 ? y + (y > 1 ? " yrs" : " yr") : ""), (mo > 0 ? mo + (mo > 1 ? " mos" : " mo") : "")]
+      .filter(Boolean).join(" ");
+  }
+
+  function stripHtml(s) {
+    return s.replace(/<br\s*\/?>/gi, "\n").replace(/<[^>]+>/g, "");
+  }
+
+  function descToList(raw) {
+    if (!raw) return "";
+    const lines = stripHtml(raw).split("\n").map(l => l.trim()).filter(Boolean);
+    return "<ul>" + lines.map(l => `<li>${l.replace(/^[●\-\*]\s*/, "")}</li>`).join("") + "</ul>";
+  }
+
+  // ── Experience ──
+  const expEl = document.getElementById("experience-list");
+  Object.keys(about.timeline)
+    .sort((a, b) => b - a)
+    .forEach(year => {
+      const work = about.timeline[year].work;
+      Object.keys(work).forEach(key => {
+        const item = work[key];
+        if (!item.title) return;
+        expEl.innerHTML += `
+          <div class="exp-item">
+            <div class="exp-header">
+              <img class="exp-logo" src="${item.logo}" alt="${item.companyname}" onerror="this.style.display='none'">
+              <div>
+                <div class="exp-title">${item.title}</div>
+                <div class="exp-company">${item.companyname}${item.status ? " · " + item.status : ""}</div>
+              </div>
+            </div>
+            <div class="exp-meta">
+              <span>${fmtDate(item.StartDate)} – ${fmtDate(item.EndDate)} · ${duration(item.StartDate, item.EndDate)}</span>
+              <span>${item.location}</span>
+              <span class="badge">${item.RO}</span>
+            </div>
+            ${item.Description ? `<div class="exp-desc">${descToList(item.Description)}</div>` : ""}
+          </div>`;
+      });
+    });
+
+  // ── Projects ──
+  const projEl = document.getElementById("projects-list");
+  Object.keys(about.Projects).forEach(key => {
+    const p = about.Projects[key];
+    const nameHtml = p.projectLink
+      ? `<a href="${p.projectLink}" target="_blank" rel="noopener">${p.Title}</a>`
+      : p.Title;
+    // Trim description to just the first paragraph before "Major responsibilities"
+    const shortDesc = stripHtml(p.Description).split("Major responsibilities:")[0].trim();
+    projEl.innerHTML += `
+      <div class="project-item">
+        <div class="project-name">${nameHtml} <span class="project-date">· ${p.projectDate}</span></div>
+        <div class="project-desc">${shortDesc}</div>
+        <div class="project-stack"><strong>Stack:</strong> ${p.Skills}</div>
+      </div>`;
   });
 
-  
-  //Email Part
-  function sendEmail(){
-    (function() {
-      emailjs.init("_zW92wQiEcJQD1SLb"); //please encrypted user id for malicious attacks
-    })();
-    //set the parameter as per you template parameter[https://dashboard.emailjs.com/templates]
-    
-    $("#div_container").css("display","none");
-    $("#loader").css("display","");
+  // ── Certifications ──
+  const certsEl = document.getElementById("certs-list");
+  Object.keys(about.certificates).forEach(key => {
+    const c = about.certificates[key];
+    certsEl.innerHTML += `
+      <div class="cert-item">
+        <div>
+          <div class="cert-name">${c.Title}</div>
+          <div class="cert-issuer">${c.issuedBy}</div>
+        </div>
+        <div class="cert-date">${c.issueDate}</div>
+      </div>`;
+  });
 
-    var templateParams = {
-      to_name: 'enriquez.jliquigan@gmail.com',
-      from_name: document.getElementById("inputName").value,
+  // ── Email ──
+  function sendEmail() {
+    (function() { emailjs.init("_zW92wQiEcJQD1SLb"); })();
+    const page = document.getElementById("page");
+    const loader = document.getElementById("loader");
+    page.style.opacity = "0.4";
+    page.style.pointerEvents = "none";
+    loader.style.display = "block";
+
+    emailjs.send("service_56grgiw", "template_yh72mwq", {
+      to_name:   "enriquez.jliquigan@gmail.com",
+      from_name:  document.getElementById("inputName").value,
       from_email: document.getElementById("inputEmail").value,
-      message: document.getElementById("textAreaMessage").value
-    };
-  
-    emailjs.send('service_56grgiw', 'template_yh72mwq', templateParams)
-      .then(function(response) {
-        $("#div_container").css("display","");
-        $("#loader").css("display","none");
-        alert("Email Sent!!");
-        document.getElementById("inputName").value = "";
-        document.getElementById("inputEmail").value = "";
-        document.getElementById("textAreaMessage").value = "";
-
-        console.log('SUCCESS!', response.status, response.text);
-      }, function(error) {
-        console.log('FAILED...', error);
-      });
-
-  }
-  //End Email Part
-
-  function closeImageView(){
-    $("#imageView").css("display","none");
-  }
-  function openImageView(thisImage){
-    var image = $(thisImage).attr("href");
-    $("#imageViewImg").attr("src",$(thisImage).attr("href"));
-    
-    $("#imageView").css("display","");
-
-    var imageViewH=$("#imageView").height();
-    var imageViewW=$("#imageView").width();
-
-    // if(imageViewH>imageViewW){
-    //   $("#imageViewImg").css("height","700px");
-    //   $("#imageViewImg").css("width","auto");
-    // }
-    // else{
-    //   $("#imageViewImg").css("height","auto");
-    //   $("#imageViewImg").css("width","100%");
-    // }
-    console.log($(thisImage).height());
-    console.log($(thisImage).width());
-    console.log($("#imageView").height());
-    console.log($("#imageView").width());
+      message:    document.getElementById("textAreaMessage").value
+    }).then(() => {
+      page.style.opacity = "";
+      page.style.pointerEvents = "";
+      loader.style.display = "none";
+      alert("Message sent!");
+      ["inputName","inputEmail","textAreaMessage"].forEach(id => document.getElementById(id).value = "");
+    }, err => {
+      console.error(err);
+      page.style.opacity = "";
+      page.style.pointerEvents = "";
+      loader.style.display = "none";
+    });
   }
 </script>
 </body>
-<script type="text/javascript" src="js/custom.js"></script>
-<script>
-  includeHTML("aboutMe");
-</script>
 </html>
