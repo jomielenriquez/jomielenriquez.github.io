@@ -443,11 +443,27 @@
       justify-content: space-between;
       align-items: flex-start;
       gap: 10px;
-      padding-bottom: 10px;
-      margin-bottom: 10px;
+      padding: 8px 10px;
+      margin: 0 -10px;
+      border-radius: 6px;
       border-bottom: 1px solid var(--border);
+      text-decoration: none;
+      color: inherit;
+      transition: background 0.15s;
     }
-    .cert-item:last-child { border-bottom: none; padding-bottom: 0; margin-bottom: 0; }
+    .cert-item:last-child { border-bottom: none; }
+    .cert-item[href]:hover {
+      background: var(--accent-light);
+      cursor: pointer;
+    }
+    .cert-item[href] .cert-name {
+      color: var(--accent);
+    }
+    .cert-item[href] .cert-name::after {
+      content: " ↗";
+      font-size: 10px;
+      opacity: 0.7;
+    }
 
     .cert-name { font-size: 13px; font-weight: 500; }
     .cert-issuer { font-size: 11px; color: var(--muted); margin-top: 2px; }
@@ -939,14 +955,16 @@
   const certsEl = document.getElementById("certs-list");
   Object.keys(about.certificates).forEach(key => {
     const c = about.certificates[key];
+    const tag   = c.link ? "a" : "div";
+    const attrs = c.link ? `href="${c.link}" target="_blank" rel="noopener"` : "";
     certsEl.innerHTML += `
-      <div class="cert-item">
+      <${tag} class="cert-item" ${attrs}>
         <div>
           <div class="cert-name">${c.Title}</div>
           <div class="cert-issuer">${c.issuedBy}</div>
         </div>
         <div class="cert-date">${c.issueDate}</div>
-      </div>`;
+      </${tag}>`;
   });
 
   // ── Certificate gallery ──

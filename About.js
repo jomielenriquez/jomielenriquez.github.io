@@ -256,79 +256,99 @@ const about = {
             Title: "Legacy Full Stack Developer Certification",
             issueDate: "June 24, 2024",
             issuedBy: "freeCodeCamp",
-            imageLoc: "/img/LegacyFullStackDeveloper.png"
+            imageLoc: "/img/LegacyFullStackDeveloper.png",
+            link: "https://www.freecodecamp.org/certification/jomiel/full-stack"
         },
         1: {
             Title: "Back End Development and APIs",
             issueDate: "June 23, 2023",
             issuedBy: "freeCodeCamp",
-            imageLoc: "/img/BackEndDevelopmentAPIs.png"
+            imageLoc: "/img/BackEndDevelopmentAPIs.png",
+            link: "https://www.freecodecamp.org/certification/jomiel/back-end-development-and-apis"
         },
         2: {
             Title: "Data Visualization",
             issueDate: "June 9, 2024",
             issuedBy: "freeCodeCamp",
-            imageLoc: "/img/DataVisualization.png"
+            imageLoc: "/img/DataVisualization.png",
+            link: "https://www.freecodecamp.org/certification/jomiel/data-visualization"
         },
         3: {
             Title: "Foundational C# with Microsoft",
             issueDate: "May 21, 2024",
             issuedBy: "freeCodeCamp & Microsoft",
-            imageLoc: "/img/FoundationalCsharpWithMicrosoft.png"
+            imageLoc: "/img/FoundationalCsharpWithMicrosoft.png",
+            link: "https://www.freecodecamp.org/certification/jomiel/foundational-c-sharp-with-microsoft"
         },
         4: {
-            Title: "Legacy Information Security and Quality Assurance",
-            issueDate: "June 24, 2024",
-            issuedBy: "freeCodeCamp",
-            imageLoc: "/img/LegacyInformationSecurityAndQualityAssurance.png"
-        },
-        5: {
-            Title: "Legacy JavaScript Algorithms and Data Structures",
-            issueDate: "November 24, 2022",
-            issuedBy: "freeCodeCamp",
-            imageLoc: "/img/LegacyJavaScripAlgorithmsAndDataStructure.png"
-        },
-        6: {
             Title: "Quality Assurance",
             issueDate: "June 24, 2024",
             issuedBy: "freeCodeCamp",
-            imageLoc: "/img/QualityAssurance.png"
+            imageLoc: "/img/QualityAssurance.png",
+            link: "https://www.freecodecamp.org/certification/jomiel/quality-assurance-v7"
+        },
+        5: {
+            Title: "Information Security",
+            issueDate: "June 24, 2024",
+            issuedBy: "freeCodeCamp",
+            imageLoc: "",
+            link: "https://www.freecodecamp.org/certification/jomiel/information-security-v7"
+        },
+        6: {
+            Title: "Legacy Information Security and Quality Assurance",
+            issueDate: "June 24, 2024",
+            issuedBy: "freeCodeCamp",
+            imageLoc: "/img/LegacyInformationSecurityAndQualityAssurance.png",
+            link: "https://www.freecodecamp.org/certification/jomiel/information-security-and-quality-assurance"
         },
         7: {
-            Title: "Responsive Web Design",
-            issueDate: "July 21, 2022",
-            issuedBy: "freeCodeCamp",
-            imageLoc: "/img/Cert1.png"
-        },
-        8: {
             Title: "JavaScript Algorithms and Data Structures",
             issueDate: "November 24, 2022",
             issuedBy: "freeCodeCamp",
-            imageLoc: "/img/Cert2.png"
+            imageLoc: "/img/Cert2.png",
+            link: "https://www.freecodecamp.org/certification/jomiel/javascript-algorithms-and-data-structures"
+        },
+        8: {
+            Title: "Legacy JavaScript Algorithms and Data Structures",
+            issueDate: "November 24, 2022",
+            issuedBy: "freeCodeCamp",
+            imageLoc: "/img/LegacyJavaScripAlgorithmsAndDataStructure.png",
+            link: "https://www.freecodecamp.org/certification/jomiel/javascript-algorithms-and-data-structures"
         },
         9: {
             Title: "Front End Development Libraries",
             issueDate: "December 24, 2022",
             issuedBy: "freeCodeCamp",
-            imageLoc: "/img/Cert3.png"
+            imageLoc: "/img/Cert3.png",
+            link: "https://www.freecodecamp.org/certification/jomiel/front-end-development-libraries"
         },
         10: {
+            Title: "Responsive Web Design",
+            issueDate: "July 21, 2022",
+            issuedBy: "freeCodeCamp",
+            imageLoc: "/img/Cert1.png",
+            link: "https://www.freecodecamp.org/certification/jomiel/responsive-web-design"
+        },
+        11: {
             Title: "Python OOP: Four Pillars of OOP in Python 3",
             issueDate: "November 12, 2021",
             issuedBy: "Udemy",
-            imageLoc: "/img/Cert4.png"
+            imageLoc: "/img/Cert4.png",
+            link: ""
         },
-        11: {
+        12: {
             Title: "Clean Code",
             issueDate: "September 14, 2021",
             issuedBy: "Udemy",
-            imageLoc: "/img/Cert5.png"
+            imageLoc: "/img/Cert5.png",
+            link: ""
         },
-        12: {
+        13: {
             Title: "Productivity and Time Management for the Overwhelmed",
             issueDate: "July 20, 2021",
             issuedBy: "Udemy",
-            imageLoc: "/img/Cert6.png"
+            imageLoc: "/img/Cert6.png",
+            link: ""
         }
     }
 }
