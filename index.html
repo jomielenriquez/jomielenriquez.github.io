@@ -143,6 +143,87 @@
       border-radius: 4px;
     }
 
+    /* ── Certificate gallery ── */
+    .cert-gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 14px;
+    }
+
+    .cert-card {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+      background: var(--card);
+      cursor: pointer;
+      transition: box-shadow 0.15s, transform 0.15s;
+    }
+    .cert-card:hover {
+      box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+      transform: translateY(-2px);
+    }
+
+    .cert-card img {
+      width: 100%;
+      aspect-ratio: 16/11;
+      object-fit: cover;
+      display: block;
+      background: var(--bg);
+    }
+
+    .cert-card-body {
+      padding: 10px 12px;
+    }
+
+    .cert-card-title {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 2px;
+      line-height: 1.4;
+    }
+
+    .cert-card-meta {
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    /* ── Lightbox ── */
+    .lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.82);
+      z-index: 1000;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+    .lightbox.open { display: flex; }
+
+    .lightbox img {
+      max-width: min(860px, 100%);
+      max-height: 88vh;
+      object-fit: contain;
+      border-radius: 6px;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.5);
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: 16px;
+      right: 20px;
+      background: none;
+      border: none;
+      color: #fff;
+      font-size: 28px;
+      cursor: pointer;
+      line-height: 1;
+      opacity: 0.8;
+      font-family: inherit;
+    }
+    .lightbox-close:hover { opacity: 1; }
+
     /* ── Contact form ── */
     .form-group { margin-bottom: 12px; }
 
@@ -614,9 +695,21 @@
     </main>
   </div>
 
+  <!-- ── Certificate Gallery (screen only, excluded from resume PDF) ── -->
+  <div class="section no-print" style="margin-top:20px;">
+    <h2 class="section-title">Certificate Gallery</h2>
+    <div class="cert-gallery-grid" id="cert-gallery"></div>
+  </div>
+
   <footer class="cv-footer">
     Jomiel L. Enriquez &mdash; enriquez.jliquigan@gmail.com
   </footer>
+</div>
+
+<!-- Lightbox -->
+<div class="lightbox no-print" id="lightbox" onclick="closeLightbox(event)">
+  <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+  <img id="lightbox-img" src="" alt="">
 </div>
 
 <div id="loader"></div>
@@ -716,6 +809,39 @@
         <div class="cert-date">${c.issueDate}</div>
       </div>`;
   });
+
+  // ── Certificate gallery ──
+  const galleryEl = document.getElementById("cert-gallery");
+  Object.keys(about.certificates).forEach(key => {
+    const c = about.certificates[key];
+    if (!c.imageLoc) return;
+    const card = document.createElement("div");
+    card.className = "cert-card";
+    card.innerHTML = `
+      <img src="${c.imageLoc}" alt="${c.Title}" loading="lazy" onerror="this.closest('.cert-card').style.display='none'">
+      <div class="cert-card-body">
+        <div class="cert-card-title">${c.Title}</div>
+        <div class="cert-card-meta">${c.issuedBy} &middot; ${c.issueDate}</div>
+      </div>`;
+    card.querySelector("img").addEventListener("click", () => openLightbox(c.imageLoc, c.Title));
+    galleryEl.appendChild(card);
+  });
+
+  function openLightbox(src, alt) {
+    const lb = document.getElementById("lightbox");
+    document.getElementById("lightbox-img").src = src;
+    document.getElementById("lightbox-img").alt = alt;
+    lb.classList.add("open");
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeLightbox(e) {
+    if (e && e.target !== e.currentTarget && !e.target.classList.contains("lightbox-close")) return;
+    document.getElementById("lightbox").classList.remove("open");
+    document.body.style.overflow = "";
+  }
+
+  document.addEventListener("keydown", e => { if (e.key === "Escape") closeLightbox(); });
 
   // ── Generate & download ATS-friendly Resume PDF via pdfmake ──
   function generateResume() {
