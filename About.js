@@ -146,6 +146,33 @@ const about = {
     },
     Projects: {
         0: {
+            Title: "Colegio De Laurel Enrollment System",
+            imageLink: "",
+            imageText: "Colegio De Laurel Online Enrollment System",
+            Description: "Developed a full-stack online enrollment system for Colegio De Laurel with a React front-end and .NET Core REST API back-end. The system handles student enrollment, subject selection, and schedule management, replacing the school's manual enrollment process and deployed to AWS with automated pipelines.<br><br>Major responsibilities:<br>● React front-end development with API integration<br>● .NET Core REST API design and implementation<br>● MSSQL database schema and stored procedure authoring<br>● AWS deployment and GitHub Actions CI/CD pipeline setup<br>Technologies: React, .NET Core, REST API, MSSQL, AWS, GitHub Actions",
+            Skills: "React, .NET Core, REST API, MSSQL, AWS, GitHub Actions",
+            projectLink: "https://enrollment.colegiodelaurel.edu.ph/",
+            projectDate: "2026"
+        },
+        1: {
+            Title: "Colegio De Laurel Admission System",
+            imageLink: "",
+            imageText: "Colegio De Laurel Online Admission System",
+            Description: "Built an end-to-end online admission system for Colegio De Laurel, enabling prospective students to submit applications, upload documents, and track admission status entirely online — eliminating paper-based processes and reducing administrative workload.<br><br>Major responsibilities:<br>● Full-stack development using .NET Core and MSSQL<br>● Application workflow and status tracking implementation<br>● Cloud deployment on AWS with GitHub Actions CI/CD<br>● Data security and form validation<br>Technologies: .NET Core, MSSQL, AWS, GitHub Actions",
+            Skills: ".NET Core, MSSQL, AWS, GitHub Actions",
+            projectLink: "https://admission.colegiodelaurel.edu.ph/",
+            projectDate: "2025"
+        },
+        2: {
+            Title: "Colegio De Laurel Website",
+            imageLink: "",
+            imageText: "Colegio De Laurel Official Website",
+            Description: "Designed and developed the official website for Colegio De Laurel, a private educational institution in the Philippines. Built a performant, responsive public-facing site serving prospective students, parents, and faculty, deployed to AWS with automated CI/CD via GitHub Actions.<br><br>Major responsibilities:<br>● Full-stack development using .NET Core and MSSQL<br>● Cloud infrastructure setup and deployment on AWS<br>● CI/CD pipeline configuration with GitHub Actions<br>● Performance optimization and cross-browser compatibility<br>Technologies: .NET Core, MSSQL, AWS, GitHub Actions",
+            Skills: ".NET Core, MSSQL, AWS, GitHub Actions",
+            projectLink: "https://colegiodelaurel.edu.ph/",
+            projectDate: "2024"
+        },
+        3: {
             Title: "Bulletin System using Raspberry Pi",
             imageLink: "/img/RaspBul.jpg",
             imageText: "Bulletin System using Raspberry Pi",
@@ -154,7 +181,7 @@ const about = {
             projectLink: "https://github.com/jomielenriquez/kiosk",
             projectDate: "Oct 2022 – Nov 2022"
         },
-        1: {
+        4: {
             Title: "Traffic Violation Management System",
             imageLink: "/img/Traffic.gif",
             imageText: "Traffic Violation Management System with Android Electronic Ticketing",
@@ -163,7 +190,7 @@ const about = {
             projectLink: "https://github.com/jomielenriquez/CAPSTONE_Web",
             projectDate: "Sep 2022 – Oct 2022"
         },
-        2: {
+        5: {
             Title: "Accounting Integrated Management System (AIMS)",
             imageLink: "",
             imageText: "Accounting Integrated Management System",
@@ -172,7 +199,7 @@ const about = {
             projectLink: "",
             projectDate: "Jan 2021 – Oct 2021"
         },
-        3: {
+        6: {
             Title: "Drowsiness Detection System",
             imageLink: "/img/Cam1.jfif",
             imageText: "Drowsiness Detection using Raspberry Pi",
