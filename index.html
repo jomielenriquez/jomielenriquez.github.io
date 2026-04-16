@@ -43,7 +43,13 @@
       padding: 36px 44px;
       border-radius: 12px;
       margin-bottom: 28px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 16px;
     }
+
+    .cv-header-left { flex: 1; min-width: 0; }
 
     .cv-header h1 {
       font-size: 34px;
@@ -298,6 +304,171 @@
     }
     @keyframes spin { to { transform: translate(-50%, -50%) rotate(360deg); } }
 
+    /* ── Download button ── */
+    .download-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255,255,255,0.12);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.3);
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 500;
+      font-family: inherit;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.15s;
+      flex-shrink: 0;
+    }
+    .download-btn:hover { background: rgba(255,255,255,0.22); }
+
+    /* ── Print / ATS-friendly PDF ── */
+    @media print {
+      @page {
+        size: A4;
+        margin: 14mm 16mm 14mm 16mm;
+      }
+
+      /* Reset everything to clean black-on-white */
+      *, *::before, *::after {
+        background: #fff !important;
+        color: #000 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+        border-color: #bbb !important;
+      }
+
+      body { font-size: 10.5pt; line-height: 1.5; }
+
+      .page { padding: 0; max-width: 100%; }
+
+      /* ── Header: plain text, no dark background ── */
+      .cv-header {
+        display: block !important;
+        border-radius: 0 !important;
+        padding: 0 0 10pt !important;
+        margin-bottom: 12pt !important;
+        border-bottom: 2pt solid #000 !important;
+      }
+
+      .cv-header-left { display: block !important; }
+
+      .cv-header h1 {
+        font-size: 20pt !important;
+        margin-bottom: 2pt !important;
+      }
+
+      .cv-header .headline {
+        font-size: 10.5pt !important;
+        margin-bottom: 5pt !important;
+      }
+
+      .contact-row { gap: 10px !important; }
+
+      /* hide inline SVG icons — ATS doesn't need them */
+      .contact-item svg, .download-btn svg { display: none !important; }
+
+      /* underline links so they're readable without colour */
+      a { text-decoration: underline !important; }
+
+      /* ── Download button: hidden in PDF ── */
+      .download-btn { display: none !important; }
+
+      /* ── Two-column → single column ── */
+      .cv-body {
+        display: block !important;
+        gap: 0 !important;
+      }
+
+      /* ── Cards: strip all decoration ── */
+      .section {
+        border: none !important;
+        border-radius: 0 !important;
+        padding: 0 !important;
+        margin-bottom: 10pt !important;
+        page-break-inside: avoid;
+      }
+
+      .section-title {
+        font-size: 8.5pt !important;
+        border-bottom: 1pt solid #000 !important;
+        border-top: none !important;
+        padding-bottom: 2pt !important;
+        margin-bottom: 7pt !important;
+        letter-spacing: 1.5px;
+      }
+
+      /* ── Hide contact form ── */
+      .no-print { display: none !important; }
+
+      /* ── Skills: plain comma-separated inline text ── */
+      .skills-group { margin-bottom: 5pt !important; }
+      .skills-label {
+        display: inline;
+        font-weight: 600;
+        font-size: 9pt !important;
+      }
+      .skills-label::after { content: ": "; }
+      .skill-tags { display: inline !important; }
+      .skill-tag {
+        background: none !important;
+        color: #000 !important;
+        padding: 0 !important;
+        border-radius: 0 !important;
+        font-size: 9.5pt !important;
+      }
+      .skill-tag::after { content: ", "; }
+      .skill-tag:last-child::after { content: ""; }
+
+      /* ── Experience ── */
+      .exp-logo { display: none !important; }    /* images confuse ATS */
+      .exp-header { gap: 0 !important; }
+      .exp-item {
+        margin-bottom: 9pt !important;
+        padding-bottom: 9pt !important;
+        page-break-inside: avoid;
+      }
+      .exp-title { font-size: 10.5pt !important; }
+      .exp-company { font-size: 9.5pt !important; }
+      .exp-meta { font-size: 9pt !important; margin: 3pt 0 5pt !important; }
+      .badge {
+        background: none !important;
+        border: none !important;
+        padding: 0 !important;
+      }
+      .exp-desc { font-size: 9.5pt !important; }
+      .exp-desc li { margin-bottom: 1pt !important; }
+
+      /* ── Projects ── */
+      .project-item {
+        margin-bottom: 7pt !important;
+        padding-bottom: 7pt !important;
+        page-break-inside: avoid;
+      }
+      .project-name { font-size: 10pt !important; }
+      .project-desc { font-size: 9.5pt !important; }
+      .project-stack { font-size: 9pt !important; }
+
+      /* ── Certifications ── */
+      .cert-item {
+        margin-bottom: 5pt !important;
+        padding-bottom: 5pt !important;
+        page-break-inside: avoid;
+      }
+      .cert-name { font-size: 10pt !important; }
+      .cert-issuer, .cert-date { font-size: 9pt !important; }
+
+      /* ── Footer ── */
+      .cv-footer {
+        border-top: 0.5pt solid #ccc !important;
+        margin-top: 10pt !important;
+        padding-top: 6pt !important;
+        font-size: 8pt !important;
+      }
+    }
+
     /* ── Responsive ── */
     @media (max-width: 680px) {
       .cv-body { grid-template-columns: 1fr; }
@@ -312,22 +483,28 @@
 
   <!-- ── Header ── -->
   <header class="cv-header">
-    <h1>Jomiel L. Enriquez</h1>
-    <p class="headline">Senior Software Engineer &nbsp;·&nbsp; Full-Stack &nbsp;·&nbsp; .NET / React / Vue / AWS</p>
-    <div class="contact-row">
-      <span class="contact-item">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,12 2,6"/></svg>
-        <a href="mailto:enriquez.jliquigan@gmail.com">enriquez.jliquigan@gmail.com</a>
-      </span>
-      <span class="contact-item">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-        Tanauan City, Batangas, Philippines
-      </span>
-      <span class="contact-item">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-        <a href="https://github.com/jomielenriquez" target="_blank" rel="noopener">github.com/jomielenriquez</a>
-      </span>
+    <div class="cv-header-left">
+      <h1>Jomiel L. Enriquez</h1>
+      <p class="headline">Senior Software Engineer &nbsp;·&nbsp; Full-Stack &nbsp;·&nbsp; .NET / React / Vue / AWS</p>
+      <div class="contact-row">
+        <span class="contact-item">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,12 2,6"/></svg>
+          <a href="mailto:enriquez.jliquigan@gmail.com">enriquez.jliquigan@gmail.com</a>
+        </span>
+        <span class="contact-item">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Tanauan City, Batangas, Philippines
+        </span>
+        <span class="contact-item">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+          <a href="https://github.com/jomielenriquez" target="_blank" rel="noopener">github.com/jomielenriquez</a>
+        </span>
+      </div>
     </div>
+    <button class="download-btn" onclick="generateResume()" title="Download ATS-friendly Resume PDF">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      Download Resume
+    </button>
   </header>
 
   <div class="cv-body">
@@ -394,7 +571,7 @@
       </div>
 
       <!-- Contact form -->
-      <div class="section">
+      <div class="section no-print">
         <h2 class="section-title">Get in Touch</h2>
         <div class="form-group">
           <label for="inputName">Name</label>
@@ -445,6 +622,8 @@
 <div id="loader"></div>
 
 <script src="About.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.10/pdfmake.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.10/vfs_fonts.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.0/dist/email.min.js"></script>
 <script>
   const MONTHS = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
@@ -537,6 +716,172 @@
         <div class="cert-date">${c.issueDate}</div>
       </div>`;
   });
+
+  // ── Generate & download ATS-friendly Resume PDF via pdfmake ──
+  function generateResume() {
+
+    function stripHtml(s) {
+      if (!s) return "";
+      return s.replace(/<br\s*\/?>/gi, "\n").replace(/<[^>]+>/g, "");
+    }
+
+    function sectionDivider() {
+      return {
+        canvas: [{ type: 'line', x1: 0, y1: 0, x2: 515, y2: 0, lineWidth: 0.5, lineColor: '#94a3b8' }],
+        margin: [0, 2, 0, 7]
+      };
+    }
+
+    // ── Experience ──
+    const expContent = [];
+    Object.keys(about.timeline).sort((a, b) => b - a).forEach(year => {
+      const work = about.timeline[year].work;
+      Object.keys(work).forEach(key => {
+        const item = work[key];
+        if (!item.title) return;
+
+        const startDate = fmtDate(item.StartDate);
+        const endDate   = item.EndDate ? fmtDate(item.EndDate) : "Present";
+        const dur       = duration(item.StartDate, item.EndDate);
+
+        expContent.push({
+          stack: [
+            {
+              columns: [
+                { text: item.title,                   style: 'jobTitle',  width: '*'    },
+                { text: `${startDate} – ${endDate}`,  style: 'dateText',  width: 'auto' }
+              ]
+            },
+            {
+              text: `${item.companyname}${item.status ? ' · ' + item.status : ''} · ${item.location} · ${item.RO} · ${dur}`,
+              style: 'jobMeta',
+              margin: [0, 2, 0, 4]
+            }
+          ]
+        });
+
+        if (item.Description) {
+          const bullets = stripHtml(item.Description)
+            .split("\n").map(l => l.trim()).filter(Boolean)
+            .map(l => l.replace(/^[●\-\*]\s*/, ""));
+          if (bullets.length) {
+            expContent.push({ ul: bullets, style: 'bodyText', margin: [0, 0, 0, 10] });
+          }
+        } else {
+          expContent.push({ text: '', margin: [0, 0, 0, 8] });
+        }
+      });
+    });
+
+    // ── Projects ──
+    const projContent = [];
+    Object.keys(about.Projects).forEach(key => {
+      const p = about.Projects[key];
+      const shortDesc = stripHtml(p.Description).split("Major responsibilities:")[0].trim();
+      projContent.push({
+        stack: [
+          {
+            columns: [
+              { text: p.Title,         style: 'jobTitle', width: '*'    },
+              { text: p.projectDate,   style: 'dateText', width: 'auto' }
+            ]
+          },
+          { text: shortDesc,           style: 'bodyText', margin: [0, 2, 0, 2] },
+          { text: `Stack: ${p.Skills}`, style: 'skillMeta', margin: [0, 0, 0, 9] }
+        ]
+      });
+    });
+
+    // ── Certifications ──
+    const certsContent = [];
+    Object.keys(about.certificates).forEach(key => {
+      const c = about.certificates[key];
+      certsContent.push({
+        columns: [
+          {
+            stack: [
+              { text: c.Title,     style: 'certName'   },
+              { text: c.issuedBy,  style: 'certIssuer' }
+            ],
+            width: '*'
+          },
+          { text: c.issueDate, style: 'dateText', width: 'auto' }
+        ],
+        margin: [0, 0, 0, 6]
+      });
+    });
+
+    // ── Document definition ──
+    const dd = {
+      pageSize: 'A4',
+      pageMargins: [42, 42, 42, 42],
+
+      content: [
+        // Header
+        { text: 'Jomiel L. Enriquez', style: 'name' },
+        { text: 'Senior Software Engineer  ·  Full-Stack  ·  .NET / React / Vue / AWS', style: 'headline' },
+        {
+          text: 'enriquez.jliquigan@gmail.com  |  Tanauan City, Batangas, Philippines  |  github.com/jomielenriquez',
+          style: 'contactRow',
+          margin: [0, 0, 0, 6]
+        },
+        {
+          canvas: [{ type: 'line', x1: 0, y1: 0, x2: 511, y2: 0, lineWidth: 2, lineColor: '#0f172a' }],
+          margin: [0, 0, 0, 12]
+        },
+
+        // Summary
+        { text: 'SUMMARY', style: 'sectionTitle' },
+        sectionDivider(),
+        {
+          text: 'Analytical software engineer with 5+ years building full-stack enterprise applications. Strong background in C# / .NET, modern JavaScript frameworks, cloud infrastructure, and SQL/NoSQL databases. Fast learner with a track record of delivering reliable, maintainable systems across remote and hybrid environments.',
+          style: 'bodyText',
+          margin: [0, 0, 0, 13]
+        },
+
+        // Skills
+        { text: 'SKILLS', style: 'sectionTitle' },
+        sectionDivider(),
+        { columns: [ { text: 'Languages:',    bold: true, fontSize: 10, width: 90 }, { text: 'C#, JavaScript, TypeScript, Python, HTML, CSS, SQL',              fontSize: 10, width: '*' } ], margin: [0, 0, 0, 3] },
+        { columns: [ { text: 'Frameworks:',   bold: true, fontSize: 10, width: 90 }, { text: '.NET / ASP.NET MVC, React, Vue 3, Angular, Node.js, jQuery',     fontSize: 10, width: '*' } ], margin: [0, 0, 0, 3] },
+        { columns: [ { text: 'Cloud & Ops:',  bold: true, fontSize: 10, width: 90 }, { text: 'AWS, Azure, Azure DevOps, CI/CD, Git / GitHub',                  fontSize: 10, width: '*' } ], margin: [0, 0, 0, 3] },
+        { columns: [ { text: 'Databases:',    bold: true, fontSize: 10, width: 90 }, { text: 'MS SQL Server, Oracle SQL, MySQL, PostgreSQL',                   fontSize: 10, width: '*' } ], margin: [0, 0, 0, 13] },
+
+        // Experience
+        { text: 'EXPERIENCE', style: 'sectionTitle' },
+        sectionDivider(),
+        ...expContent,
+
+        // Projects
+        { text: 'PROJECTS', style: 'sectionTitle' },
+        sectionDivider(),
+        ...projContent,
+
+        // Certifications
+        { text: 'CERTIFICATIONS', style: 'sectionTitle' },
+        sectionDivider(),
+        ...certsContent
+      ],
+
+      styles: {
+        name:        { fontSize: 24, bold: true,  color: '#0f172a', margin: [0, 0, 0, 4] },
+        headline:    { fontSize: 11,               color: '#475569', margin: [0, 0, 0, 5] },
+        contactRow:  { fontSize: 10,               color: '#334155' },
+        sectionTitle:{ fontSize: 9,  bold: true,  color: '#0e7490', characterSpacing: 1.4, margin: [0, 0, 0, 0] },
+        jobTitle:    { fontSize: 11, bold: true,  color: '#0f172a' },
+        jobMeta:     { fontSize: 10,               color: '#475569' },
+        dateText:    { fontSize: 10,               color: '#64748b', alignment: 'right' },
+        bodyText:    { fontSize: 10,               color: '#1e293b', lineHeight: 1.4 },
+        skillMeta:   { fontSize: 9,                color: '#64748b' },
+        certName:    { fontSize: 10, bold: true,  color: '#0f172a' },
+        certIssuer:  { fontSize: 9,                color: '#64748b' }
+      },
+
+      defaultStyle: { font: 'Roboto' }
+    };
+
+    pdfMake.createPdf(dd).download('Jomiel_Enriquez_Resume.pdf');
+  }
 
   // ── Email ──
   function sendEmail() {
