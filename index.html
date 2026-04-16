@@ -469,6 +469,56 @@
     .cert-issuer { font-size: 11px; color: var(--muted); margin-top: 2px; }
     .cert-date { font-size: 11px; color: var(--muted); white-space: nowrap; }
 
+    /* ── Stats bar ── */
+    .stats-bar {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 12px;
+      background: var(--primary);
+      border-radius: 10px;
+      padding: 18px 24px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .stat-item { min-width: 80px; }
+    .stat-number {
+      font-size: 26px;
+      font-weight: 700;
+      color: var(--accent);
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+    .stat-label {
+      font-size: 11px;
+      color: #94a3b8;
+      letter-spacing: 0.4px;
+    }
+
+    /* ── Education items ── */
+    .edu-item {
+      padding-bottom: 12px;
+      margin-bottom: 12px;
+      border-bottom: 1px solid var(--border);
+    }
+    .edu-item:last-child { border-bottom: none; padding-bottom: 0; margin-bottom: 0; }
+    .edu-degree { font-weight: 600; font-size: 13px; line-height: 1.4; }
+    .edu-school { font-size: 12px; color: var(--muted); margin-top: 2px; }
+    .edu-years { font-size: 11px; color: var(--muted); margin-top: 2px; }
+
+    /* ── GitHub stats ── */
+    .github-stats-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      justify-content: center;
+    }
+    .github-stats-wrap img {
+      max-width: 100%;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+    }
+
     /* ── Footer ── */
     .cv-footer {
       text-align: center;
@@ -691,6 +741,10 @@
           <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
           <a href="https://github.com/jomielenriquez" target="_blank" rel="noopener">github.com/jomielenriquez</a>
         </span>
+        <span class="contact-item">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          <a href="https://www.linkedin.com/in/jomiel-enriquez-75643614a/" target="_blank" rel="noopener">LinkedIn</a>
+        </span>
       </div>
     </div>
     <button class="download-btn" onclick="generateResume()" title="Download ATS-friendly Resume PDF">
@@ -713,6 +767,12 @@
           and SQL/NoSQL databases. Fast learner with a track record of delivering reliable,
           maintainable systems across remote and hybrid environments.
         </p>
+      </div>
+
+      <!-- Education -->
+      <div class="section">
+        <h2 class="section-title">Education</h2>
+        <div id="education-list"></div>
       </div>
 
       <!-- Skills -->
@@ -758,6 +818,29 @@
             <span class="skill-tag">Oracle SQL</span>
             <span class="skill-tag">MySQL</span>
             <span class="skill-tag">PostgreSQL</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Key Numbers -->
+      <div class="section">
+        <h2 class="section-title">At a Glance</h2>
+        <div class="stats-bar" style="flex-direction:column;gap:10px;padding:0;background:none;border-radius:0;">
+          <div class="stat-item" style="display:flex;align-items:center;gap:10px;text-align:left;">
+            <div class="stat-number" style="font-size:22px;min-width:40px;">7+</div>
+            <div class="stat-label" style="font-size:12px;color:var(--muted);">Years Experience</div>
+          </div>
+          <div class="stat-item" style="display:flex;align-items:center;gap:10px;text-align:left;">
+            <div class="stat-number" style="font-size:22px;min-width:40px;">10+</div>
+            <div class="stat-label" style="font-size:12px;color:var(--muted);">Projects Shipped</div>
+          </div>
+          <div class="stat-item" style="display:flex;align-items:center;gap:10px;text-align:left;">
+            <div class="stat-number" style="font-size:22px;min-width:40px;">6</div>
+            <div class="stat-label" style="font-size:12px;color:var(--muted);">Companies</div>
+          </div>
+          <div class="stat-item" style="display:flex;align-items:center;gap:10px;text-align:left;">
+            <div class="stat-number" style="font-size:22px;min-width:40px;">14</div>
+            <div class="stat-label" style="font-size:12px;color:var(--muted);">Certifications</div>
           </div>
         </div>
       </div>
@@ -824,6 +907,15 @@
     </div>
   </div>
 
+  <!-- ── GitHub Stats (screen only) ── -->
+  <div class="section no-print" style="margin-top:20px;">
+    <h2 class="section-title" style="margin-bottom:16px;">GitHub Stats</h2>
+    <div class="github-stats-wrap">
+      <img id="github-stats-img" src="" alt="GitHub Stats">
+      <img id="github-langs-img" src="" alt="Top Languages">
+    </div>
+  </div>
+
   <footer class="cv-footer">
     Jomiel L. Enriquez &mdash; enriquez.jliquigan@gmail.com
   </footer>
@@ -864,15 +956,30 @@
     document.getElementById("theme-icon").textContent = dark ? "☀️" : "🌙";
   }
 
+  function updateGithubStats() {
+    const dark = document.documentElement.getAttribute("data-theme") === "dark";
+    const statsImg = document.getElementById("github-stats-img");
+    const langsImg = document.getElementById("github-langs-img");
+    if (!statsImg) return;
+    const bg    = dark ? "0f172a" : "ffffff";
+    const title = dark ? "22d3ee" : "0e7490";
+    const text  = dark ? "e2e8f0" : "1e293b";
+    const icon  = dark ? "22d3ee" : "0e7490";
+    statsImg.src = `https://github-readme-stats.vercel.app/api?username=jomielenriquez&show_icons=true&hide_border=true&bg_color=${bg}&title_color=${title}&icon_color=${icon}&text_color=${text}`;
+    langsImg.src = `https://github-readme-stats.vercel.app/api/top-langs/?username=jomielenriquez&layout=compact&hide_border=true&bg_color=${bg}&title_color=${title}&text_color=${text}`;
+  }
+
   function toggleTheme() {
     const isDark = document.documentElement.getAttribute("data-theme") === "dark";
     document.documentElement.setAttribute("data-theme", isDark ? "light" : "dark");
     localStorage.setItem("theme", isDark ? "light" : "dark");
     syncThemeIcon();
+    updateGithubStats();
   }
 
   // Sync icon on initial load
   syncThemeIcon();
+  updateGithubStats();
 
   const MONTHS = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
 
@@ -904,6 +1011,19 @@
     if (!raw) return "";
     const lines = stripHtml(raw).split("\n").map(l => l.trim()).filter(Boolean);
     return "<ul>" + lines.map(l => `<li>${l.replace(/^[●\-\*]\s*/, "")}</li>`).join("") + "</ul>";
+  }
+
+  // ── Education ──
+  const eduEl = document.getElementById("education-list");
+  if (about.education) {
+    about.education.forEach(e => {
+      eduEl.innerHTML += `
+        <div class="edu-item">
+          <div class="edu-degree">${e.degree}</div>
+          <div class="edu-school">${e.school}</div>
+          <div class="edu-years">${e.from} – ${e.to}</div>
+        </div>`;
+    });
   }
 
   // ── Experience ──

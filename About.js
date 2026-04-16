@@ -9,8 +9,12 @@ const about = {
     birthDate: "02/25/1998",
     address: "Tanauan City, Batangas, Philippines",
     email: "enriquez.jliquigan@gmail.com",
-    linkedIn: "",
+    linkedIn: "https://www.linkedin.com/in/jomiel-enriquez-75643614a/",
     gitHub: "https://github.com/jomielenriquez",
+    education: [
+        { degree: "Bachelor of Science in Computer Engineering", school: "Tanauan City College", from: "2016", to: "2020" },
+        { degree: "Mechatronics Servicing (NC II)", school: "Tanauan City College", from: "2014", to: "2016" }
+    ],
     certifications: {},
     experience: {
         1: {
