@@ -48,6 +48,12 @@
     }
 
     /* Dark mode: fix hardcoded input backgrounds */
+    /* Invert chart lightness in dark mode so empty boxes go dark;
+       hue-rotate(180deg) swings the inverted magenta back to green */
+    [data-theme="dark"] #github-contrib-img {
+      filter: invert(1) hue-rotate(180deg);
+    }
+
     [data-theme="dark"] input,
     [data-theme="dark"] textarea {
       background: #1e293b;
@@ -914,6 +920,9 @@
       <img id="github-stats-img" src="" alt="GitHub Stats">
       <img id="github-langs-img" src="" alt="Top Languages">
     </div>
+    <div style="margin-top:14px;">
+      <img id="github-contrib-img" src="" alt="GitHub Contribution Graph" style="width:100%;border-radius:8px;">
+    </div>
   </div>
 
   <footer class="cv-footer">
@@ -958,15 +967,17 @@
 
   function updateGithubStats() {
     const dark = document.documentElement.getAttribute("data-theme") === "dark";
-    const statsImg = document.getElementById("github-stats-img");
-    const langsImg = document.getElementById("github-langs-img");
+    const statsImg  = document.getElementById("github-stats-img");
+    const langsImg  = document.getElementById("github-langs-img");
+    const contribImg = document.getElementById("github-contrib-img");
     if (!statsImg) return;
     const bg    = dark ? "0f172a" : "ffffff";
     const title = dark ? "22d3ee" : "0e7490";
     const text  = dark ? "e2e8f0" : "1e293b";
     const icon  = dark ? "22d3ee" : "0e7490";
-    statsImg.src = `https://github-readme-stats.vercel.app/api?username=jomielenriquez&show_icons=true&hide_border=true&bg_color=${bg}&title_color=${title}&icon_color=${icon}&text_color=${text}`;
-    langsImg.src = `https://github-readme-stats.vercel.app/api/top-langs/?username=jomielenriquez&layout=compact&hide_border=true&bg_color=${bg}&title_color=${title}&text_color=${text}`;
+    statsImg.src   = `https://github-readme-stats.vercel.app/api?username=jomielenriquez&show_icons=true&hide_border=true&bg_color=${bg}&title_color=${title}&icon_color=${icon}&text_color=${text}`;
+    langsImg.src   = `https://github-readme-stats.vercel.app/api/top-langs/?username=jomielenriquez&layout=compact&hide_border=true&bg_color=${bg}&title_color=${title}&text_color=${text}`;
+    contribImg.src = `https://ghchart.rshah.org/${dark ? "39d353" : "216e39"}/jomielenriquez`;
   }
 
   function toggleTheme() {
