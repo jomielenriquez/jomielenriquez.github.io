@@ -61,7 +61,7 @@ const about = {
                     EndDate: "",
                     location: "New Zealand",
                     RO: "Remote",
-                    Description: "● Spearheaded the design and delivery of high-priority insurance features using C#, .NET Core, and React, maintaining 100% adherence to delivery timelines.<br>● Modernized engineering workflows by migrating legacy SVN repositories to GitHub, improving team development velocity by an estimated 30%.<br>● Engineered automated CI/CD pipelines via Azure DevOps, reducing production deployment errors and streamlining release cycles.<br>● Mentored junior engineers on Clean Architecture and best practices to ensure code maintainability across distributed systems.<br>● Authored comprehensive technical documentation in Confluence to accelerate onboarding and knowledge sharing.",
+                    Description: "● Spearheaded the design and delivery of high-priority insurance features using C#, .NET Core, and React, maintaining 100% adherence to delivery timelines.<br>● Modernized engineering workflows by migrating legacy SVN repositories to GitHub, improving team development velocity by an estimated 30%.<br>● Engineered automated CI/CD pipelines via Azure DevOps, reducing production deployment errors and streamlining release cycles.<br>● Authored comprehensive technical documentation in Confluence to accelerate onboarding and knowledge sharing.",
                     Skills: "csharp,dotnetcore,react,aws,ssms,git,azuredevops,microservices,restapi,javascript,typescript,sqlserver"
                 },
                 2: {
