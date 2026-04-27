@@ -15,8 +15,10 @@ const about = {
     linkedIn: "https://www.linkedin.com/in/jomiel-enriquez-75643614a/",
     gitHub: "https://github.com/jomielenriquez",
     skills: [
-        "C# | .NET | ASP.NET | MVC | React | Vue 3 | Angular | Node.js | React Native | Python | JavaScript | TypeScript | HTML | CSS | SQL | Git | GitHub | TensorFlow | Unity",
-        "AWS | Azure | Azure DevOps | CI/CD | MS SQL Server | Oracle | PostgreSQL | MySQL | REST API | Microservices | Clean Architecture | OOP | Agile | Jira | Arduino | Raspberry Pi"
+        { label: "Languages",   items: "C#, JavaScript, TypeScript, Python, HTML, CSS, SQL" },
+        { label: "Frameworks",  items: ".NET / ASP.NET MVC, React, Vue 3, Angular, Node.js, React Native, jQuery" },
+        { label: "Cloud & Ops", items: "AWS, Azure, Azure DevOps, CI/CD, Git / GitHub, Microservices, REST API, Agile / Jira" },
+        { label: "Databases",   items: "MS SQL Server, Oracle SQL, MySQL, PostgreSQL" }
     ],
     education: [
         { 

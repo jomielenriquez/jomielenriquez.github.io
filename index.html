@@ -1170,14 +1170,19 @@
       ];
     }
 
+    const BLUE = '#1155CC';
+    const SEP  = { text: '  •  ', color: '#555555' };
+
     // ── Skills ──
-    const skillsContent = (about.skills || []).map(line => ({
-      text: '• ' + line,
-      style: 'bodyText',
-      margin: [0, 0, 0, 2]
+    const skillsContent = (about.skills || []).map((s, i) => ({
+      columns: [
+        { text: s.label + ':', bold: true, fontSize: 10, width: 80 },
+        { text: s.items,                   fontSize: 10, width: '*' }
+      ],
+      margin: [0, 0, 0, i < about.skills.length - 1 ? 3 : 0]
     }));
 
-    // ── Experience ──
+    // ── Experience (ATS-friendly: title+date row 1, company+location row 2) ──
     const expContent = [];
     Object.keys(about.timeline).sort((a, b) => b - a).forEach(year => {
       const work = about.timeline[year].work;
@@ -1186,16 +1191,27 @@
         if (!item.title) return;
         const startDate = fmtDate(item.StartDate);
         const endDate   = item.EndDate ? fmtDate(item.EndDate) : "Present";
+
         expContent.push({
-          columns: [
-            { text: item.title,        bold: true,  fontSize: 10, width: 'auto'                        },
-            { text: item.companyname,  bold: true,  fontSize: 10, decoration: 'underline', width: '*', alignment: 'center' },
-            { text: item.location,     italics: true, fontSize: 10, width: '*',            alignment: 'center' },
-            { text: `${startDate} to ${endDate}`, bold: true, fontSize: 10, width: 'auto'              }
+          stack: [
+            {
+              columns: [
+                { text: item.title, bold: true, fontSize: 10, width: '*' },
+                { text: `${startDate} to ${endDate}`, bold: true, fontSize: 10, width: 'auto', alignment: 'right' }
+              ]
+            },
+            {
+              text: [
+                { text: item.companyname, bold: true },
+                `  |  ${item.location}  |  ${item.RO}${item.status ? '  |  ' + item.status : ''}`
+              ],
+              fontSize: 10,
+              margin: [0, 1, 0, 3]
+            }
           ],
-          columnGap: 4,
-          margin: [0, 8, 0, 3]
+          margin: [0, 8, 0, 0]
         });
+
         if (item.Description) {
           const bullets = stripHtmlLocal(item.Description)
             .split("\n").map(l => l.trim()).filter(Boolean)
@@ -1207,14 +1223,18 @@
       });
     });
 
-    // ── Education ──
+    // ── Education (ATS-friendly: degree+date row 1, school row 2) ──
     const eduContent = (about.education || []).map(e => ({
-      columns: [
-        { text: e.degree,              bold: true, fontSize: 10, width: '*'    },
-        { text: e.school,              bold: true, fontSize: 10, width: '*',   alignment: 'center' },
-        { text: `${e.from} - ${e.to}`, bold: true, fontSize: 10, width: 'auto'                    }
+      stack: [
+        {
+          columns: [
+            { text: e.degree, bold: true, fontSize: 10, width: '*' },
+            { text: `${e.from} - ${e.to}`, bold: true, fontSize: 10, width: 'auto', alignment: 'right' }
+          ]
+        },
+        { text: e.school, fontSize: 10, margin: [0, 1, 0, 0] }
       ],
-      margin: [0, 0, 0, 5]
+      margin: [0, 0, 0, 6]
     }));
 
     // ── Key Projects ──
@@ -1225,27 +1245,23 @@
       projContent.push({
         stack: [
           {
-            text: `${p.Title}  (${p.projectDate})`,
-            bold: true, fontSize: 10, decoration: 'underline',
-            margin: [0, 8, 0, 2]
+            columns: [
+              { text: p.Title, bold: true, fontSize: 10, width: '*' },
+              { text: p.projectDate, fontSize: 10, width: 'auto', alignment: 'right' }
+            ],
+            margin: [0, 8, 0, 1]
           },
           { text: desc, style: 'bodyText', margin: [0, 0, 0, 2] },
-          {
-            text: [
-              { text: 'Technologies: ', fontSize: 10, decoration: 'underline' },
-              { text: p.Skills,         fontSize: 10 }
-            ],
-            margin: [0, 0, 0, 0]
-          }
+          { text: 'Technologies: ' + p.Skills, fontSize: 10, italics: true }
         ]
       });
     });
 
     // ── Contact helpers ──
-    const emailLink   = about.email;
-    const linkedInUrl = about.linkedIn || '';
-    const githubUrl   = about.gitHub   || '';
-    const websiteUrl  = about.website  || '';
+    const emailLink     = about.email;
+    const linkedInUrl   = about.linkedIn || '';
+    const githubUrl     = about.gitHub   || '';
+    const websiteUrl    = about.website  || '';
     const linkedInShort = linkedInUrl.replace('https://www.', '').replace('https://', '');
     const githubShort   = githubUrl.replace('https://', '');
     const websiteShort  = websiteUrl.replace('https://', '');
@@ -1261,11 +1277,11 @@
         // ── Contact row 1: email · phone · LinkedIn ──
         {
           text: [
-            { text: emailLink,     link: `mailto:${emailLink}` },
-            '  •  ',
-            { text: about.phone || '' },
-            '  •  ',
-            { text: linkedInShort, link: linkedInUrl }
+            { text: emailLink,         link: `mailto:${emailLink}`, color: BLUE },
+            SEP,
+            { text: about.phone || '', color: BLUE },
+            SEP,
+            { text: linkedInShort,     link: linkedInUrl, color: BLUE }
           ],
           style: 'contactRow',
           alignment: 'center',
@@ -1275,9 +1291,9 @@
         // ── Contact row 2: website · GitHub ──
         {
           text: [
-            { text: websiteShort, link: websiteUrl },
-            '  •  ',
-            { text: githubShort,  link: githubUrl  }
+            { text: websiteShort, link: websiteUrl, color: BLUE },
+            SEP,
+            { text: githubShort,  link: githubUrl,  color: BLUE }
           ],
           style: 'contactRow',
           alignment: 'center',
