@@ -1,11 +1,10 @@
 const about = {
     name: "Jomiel L. Enriquez",
-    // Titles optimized for Senior-level SEO and specific stack expertise
-    title: ["Senior Software Engineer", "Full-Stack .NET & React Specialist", "Cloud Solutions Architect"],
+    title: ["Software Engineer", "Full-Stack Developer", "Senior Developer"],
     about: [
-        "Senior Software Engineer with over 7 years of cumulative technical experience (5+ years professional) specializing in building scalable enterprise applications within the Insurance, Fintech, and Supply Chain sectors.",
-        "Expert in the .NET ecosystem (Core, MVC, Web API) and modern frontend frameworks (React, Vue 3). Proven track record in leading digital transformations, including migrating legacy architectures to cloud-native environments (AWS/Azure) and implementing automated CI/CD pipelines.",
-        "A strong advocate for Clean Architecture and SOLID principles, focused on delivering high-performance systems that maintain 99.9% uptime and support global business operations."
+        "Results-driven software engineer with 7+ years of experience designing and delivering full-stack enterprise applications across insurance, workforce management, supply chain, and manufacturing domains.",
+        "Proficient in C# / .NET (MVC, Core, Framework), React, Vue 3, Angular, Node.js, and SQL/NoSQL databases. Experienced with AWS and Azure cloud platforms, CI/CD pipelines, and Agile/Scrum methodologies.",
+        "Holds a Bachelor's degree in Computer Engineering. Certified in full-stack development, back-end APIs, C#, data visualization, and quality assurance through freeCodeCamp and Microsoft."
     ],
     birthDate: "02/25/1998",
     address: "Tanauan City, Batangas, Philippines",
@@ -13,40 +12,31 @@ const about = {
     linkedIn: "https://www.linkedin.com/in/jomiel-enriquez-75643614a/",
     gitHub: "https://github.com/jomielenriquez",
     education: [
-        { 
-            degree: "Bachelor of Science in Computer Engineering", 
-            school: "Tanauan City College", 
-            from: "2016", 
-            to: "2020" 
-        },
-        { 
-            degree: "Mechatronics Servicing (NC II)", 
-            school: "Tanauan City College", 
-            from: "2014", 
-            to: "2016" 
-        }
+        { degree: "Bachelor of Science in Computer Engineering", school: "Tanauan City College", from: "2016", to: "2020" },
+        { degree: "Mechatronics Servicing (NC II)", school: "Tanauan City College", from: "2014", to: "2016" }
     ],
+    certifications: {},
     experience: {
         1: {
             company: "Anotoys Labs",
             location: "Remote",
             dateFrom: "November 2025",
             dateTo: "Present",
-            description: "Architecting a high-performance React Native mobile ecosystem featuring AI-driven image processing and real-time visual data analysis."
+            description: "Contractor Full Stack Developer building a React Native mobile app (Android/iOS) with image processing capabilities."
         },
         2: {
             company: "Delta Insurance",
             location: "New Zealand (Remote)",
             dateFrom: "July 2024",
             dateTo: "Present",
-            description: "Leading technical initiatives for a major NZ insurance provider; modernized deployment workflows and improved system reliability through AWS integration."
+            description: "Lead full-stack development of new features and BAU initiatives for a production insurance platform using C#, .NET MVC, React, AWS, and MSSQL."
         },
         3: {
             company: "Beeline",
             location: "Taguig, Philippines (Remote)",
             dateFrom: "December 2022",
             dateTo: "June 2024",
-            description: "Engineered scalable features for a global workforce management platform, focusing on API performance and modernizing frontend architecture."
+            description: "Developed and maintained features for a contingent workforce management system using C# .NET, Vue 3, Oracle, and Node.js."
         }
     },
     timeline: {
@@ -61,8 +51,8 @@ const about = {
                     EndDate: "",
                     location: "New Zealand",
                     RO: "Remote",
-                    Description: "● Spearheaded the design and delivery of high-priority insurance features using C#, .NET Core, and React, maintaining 100% adherence to delivery timelines.<br>● Modernized engineering workflows by migrating legacy SVN repositories to GitHub, improving team development velocity by an estimated 30%.<br>● Engineered automated CI/CD pipelines via Azure DevOps, reducing production deployment errors and streamlining release cycles.<br>● Mentored junior engineers on Clean Architecture and best practices to ensure code maintainability across distributed systems.<br>● Authored comprehensive technical documentation in Confluence to accelerate onboarding and knowledge sharing.",
-                    Skills: "csharp,dotnetcore,react,aws,ssms,git,azuredevops,microservices,restapi,javascript,typescript,sqlserver"
+                    Description: "● Lead development of BAU tickets and new feature initiatives across the insurance platform, collaborating with cross-functional teams to deliver solutions on schedule.<br>● Design and build full-stack features using C#, .NET MVC, React, AWS, and MSSQL, adhering to clean architecture and coding best practices.<br>● Develop and maintain RESTful APIs and microservices to support scalable, distributed system architecture.<br>● Migrated source code repositories from SVN to GitHub, improving version control workflows and team collaboration efficiency.<br>● Implemented CI/CD pipelines using Azure DevOps, streamlining deployments and ensuring consistent, reliable release cycles.<br>● Manage and execute production deployments for system enhancements and critical fixes with minimal downtime.<br>● Author and maintain technical documentation in Confluence to support knowledge sharing and accelerate team onboarding.",
+                    Skills: "csharp,dotnetcore,aspdotnet,react,aws,ssms,git,azuredevops,azure,jira,confluence,javascript,html,css,nodejs,jquery,vscode,visualstudio"
                 },
                 2: {
                     logo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABqElEQVR4AYXSAWQCYRwF8AVotE0iDJkwMSMMkRAQFmSENCZgBYOYBMAQgosai4KNFUQCGWAZFDObDckRiiWJrby9P45v17Y9ftC97/lytwZgzZRtOqVLuqMBjSlrLspZ84CVdILT6YTf70csFoPP55OSOCDJ+m8DMUKlUoGa0WgEq9UqxWuS2H4baDocDiwWC5iTSCSk+EFbtG6xWFYGNukzlUrhp7TbbSmKY9qw2WwrA0eEVqsFI7PZDEaWyyXsdruUNdpxuVwrA5r8z/l8DiOlUglqotGolB8p5PV6Vwaew+Ew1GiaBjW1Wk3KSzoJhULfBvYJ+Xwef4W3M95GOR6Pfxs4JzSbTfyXQCAgB96TyeSWOnBL6Ha7UNPr9TAYDKAmnU5Dutls9lAdeCT0+30YmUwm4LtGJpOBmnq9DunmcrkzdWBKGA6HMDIej+UBIpEI1Oi6Dvm9UCgU1YFn8w2m06k8gMfjgTlutxvFYvFGHXgjVKtVyBXL5bJcXR5AyPfQ6XTQaDTkIPgRIRgMXqgDu1SnV3qiB7qjJFVJpyG90D1d0Z6c/QKv8S9ALkvbLQAAAABJRU5ErkJggg==",
@@ -73,10 +63,19 @@ const about = {
                     EndDate: "",
                     location: "Remote",
                     RO: "Remote",
-                    Description: "● Developed a cross-platform React Native application (Android/iOS) with complex image processing capabilities for real-time analysis.<br>● Translated stakeholder business requirements into production-ready features within a fast-paced startup environment.<br>● Optimized mobile performance and ensured code reusability through modular component-based architecture.",
-                    Skills: "reactnative,javascript,typescript,react,nodejs,git,ai-integration,image-processing"
+                    Description: "● Develop and maintain a cross-platform React Native mobile application for Android and iOS, delivering a smooth and responsive user experience.<br>● Implement image processing features within the mobile app, enabling real-time analysis and manipulation of visual data.<br>● Collaborate directly with stakeholders to translate product requirements into functional, production-ready mobile features.<br>● Ensure code quality through component-based architecture, reusable UI patterns, and thorough testing across both platforms.",
+                    Skills: "reactnative,javascript,typescript,react,nodejs,git,vscode"
                 }
-            }
+            },
+            certification: {},
+            education: {},
+            projects: {}
+        },
+        2024: {
+            work: {},
+            certification: { 1: {} },
+            education: {},
+            projects: {}
         },
         2023: {
             work: {
@@ -89,10 +88,13 @@ const about = {
                     EndDate: "06/30/2024",
                     location: "Taguig, Metro Manila, Philippines",
                     RO: "Remote",
-                    Description: "● Optimized a global contingent workforce system by leading the Vue 3 migration, resulting in a 25% increase in frontend rendering performance.<br>● Engineered a secure RESTful API for background check integrations, handling sensitive data for global enterprise clients.<br>● Collaborated with cross-functional Agile teams to deliver scalable solutions across a complex Oracle and SQL Server database landscape.",
-                    Skills: "csharp,aspdotnet,vue,nodejs,oracle,sqlserver,git,azuredevops,api-design,agile"
+                    Description: "● Developed and delivered new features for a contingent workforce management system using C# .NET MVC, MSSQL, Node.js, Vue 3, and Oracle, supporting enterprise clients globally.<br>● Designed and implemented a RESTful API for the platform's background check feature, enabling seamless integration with third-party verification providers.<br>● Led the Vue 3 migration of the company's resource verification system, improving application performance, maintainability, and developer experience.<br>● Collaborated with product managers and QA engineers to define acceptance criteria, perform code reviews, and ensure delivery meets functional and quality standards.<br>● Created and maintained technical documentation in Confluence to support ongoing development and knowledge transfer across teams.",
+                    Skills: "csharp,dotnetcore,aspdotnet,vue,nodejs,oracle,ssms,git,azuredevops,azure,jira,confluence,javascript,html,css,jquery,vscode,visualstudio"
                 }
-            }
+            },
+            certification: { 1: {} },
+            education: {},
+            projects: {}
         },
         2022: {
             work: {
@@ -132,21 +134,24 @@ const about = {
             education: {},
             projects: {}
         },
-        2021: {
+        2020: {
             work: {
                 1: {
                     logo: "data:image/jpeg;base64,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slSmzHSrOtViygnhqxxx4z97LuEr7buHpsHWjaU6TspBAqGqW05Hbj+0DJbdICVaZq09nX701LAulKmV9EkNj4zjjBnTbH2nSu6KXFJtVOoMqcEHng5B5EEGVvuNZbSqbPLW15TpqXr6EahqYNrb/nr4ZPbp4eM63o3akdm2xpIUTSeBOTr1MHJOBklsnl2wJK225Te6q2Wh1q0UWplgul0bkUwxJweByBxmq+9VFTeDRUI2aoeqwC4b0NZVPS4sACDnHHtkNvvXFjdWm1DwprrtrggEnq3GqmTjsDqfeJp7PtGTYd3XqDFa9pXN1U83Ryg49yaeHZA6G73to06FvXWlVdr4K1CiqqarZUNxGrSMKck54eMy7E3mS5qtbNRq29xTUO1KqFDFCcakKkhlzwzOQNO1qWuyKVWrVt6xoo1vcIVUU3FFNSszcPSHIduPfKbC2hdU9ofAa1eldaqLVBWSmqVaYD+pU0nGDnhy49kCc2fvVbVrZ7z0qdGizq5qAAgocMQFLZGeXae6Rg39pqEq1bO5o21UgLXqIoQZ9VmAYsinhgkdonF0aDPsOuQpdad29Sog5vSWupce7j7J2m+O3LRtm1mFVHS5pslJVIJqOwwgUDjnJHZwx2YgSO397LaxqW9Ktr/ayVR1ClFIKjLktkD0xxAM3L3bNOlcULUq5e6FQoQF0jQAW1EnI9YYwDOE2tsnrK2xbO4GrVb3FKqCcnULRQxye0EZz3iYNlXVZdp2NjX1GtYLdJrP/e0GRepfPaSqkHxUwLYiIgIiICRO0d37O5cVK9tSquAFDOiswUEkDJHLJPvktECGTdmwVGpLZ0BTqFS6imoViudJYYwcZOM983b/AGdRuE6urSSomQdLqGXI5HBm5ECM2psS1ugor29OoF9XUoJX6J5j2TNabOo0afU06SJSwRpVQq4PPgBg57e+bsQIH/o3Zf8A4fbf0k/KbV/sK0uNPXW1Kp1Y0prRW0rw4DI4DgPdJSIEXs/YNpbFjQtqVIuMMURV1DuOBxE1k3R2apDLYWwI4g9UnA9/KTsQPAJrXtlSrALUpq4UhwGAIDjkwzyI75tRAw1qSupRlDKwwQQCpHaCDzEjdnbtWNs/WUbSjTc59JUUMM8wD2DwEmIgR+09kW10oWvQSqo4gOobB7xnkfKe7N2XQtV6uhRSkuckIoUE95xzPiZvxA1LGxpUFFOlTWmgJIVAFUEnJOB3mLCxpW6CnSprTRckKihVBJycAeM24gal/Y0rhDTq01qI2CVdQVJByMg+M/Ve0pvTaiyKabKUK49EoRgrgdmOE2YgRlbYtrUorbNQRqNMBVRlDKoAwuAeWByMbK2La2oIoW9Olqxq0KAW7snmeZ5yTiBo7P2ZRt0NOlTVEZmYqORZvWPHvmla7r2FKp11OzoLUByGWmoIPeOHonxEm4gadaxpO6VWpq1Sjq6tyoLJqGG0nmMjgcTyps6i1Ra7UkNVAVVyoLqpzkBuYHE++bsQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERA//Z",
                     title: "Application Specialist",
-                    companyname: "Epson Precision Philippines",
+                    companyname: "Epson Precision Philippines Incorporated",
                     status: "Full-time",
                     StartDate: "10/19/2020",
                     EndDate: "11/19/2021",
-                    location: "Lipa City, Philippines",
+                    location: "Lipa, Calabarzon, Philippines",
                     RO: "Onsite",
-                    Description: "● Developed and launched the 'Accounting Integrated Management System' (AIMS), fully digitizing the procurement lifecycle for 100+ internal users.<br>● Reduced manual financial processing errors by 40% through automated validation logic and optimized SQL stored procedures.<br>● Built custom internal tools using C# WinForms to automate repetitive operational workflows for the engineering department.",
-                    Skills: "csharp,aspdotnet,ssms,postgresql,javascript,jquery,winforms,ado.net"
+                    Description: "● Developed the company's Accounting Integrated Management System (AIMS), digitizing the full purchase request and order lifecycle for procurement and accounting departments, reducing manual processing and improving financial controls.<br>● Built front-end interfaces and back-end logic for internal web applications using HTML, CSS, JavaScript, jQuery, ASP.NET MVC, and C#.<br>● Designed database schemas and authored stored procedures and optimized queries using SQL Server and pgAdmin to support business reporting and data integrity.<br>● Developed Windows Forms applications using C# and ADO.NET to automate internal operational workflows.<br>● Standardized and maintained internal development and support tools to improve team productivity and reduce recurring incidents.<br>● Authored software specifications and technical documentation for planned and in-progress systems.",
+                    Skills: "csharp,dotnetcore,aspdotnet,ssms,git,javascript,html,css,jquery,bootstrap,dotnetframework,visualstudio,vscode"
                 }
-            }
+            },
+            certification: { 1: {} },
+            education: {},
+            projects: {}
         },
         2019: {
             work: {
@@ -170,48 +175,209 @@ const about = {
     },
     Projects: {
         0: {
-            Title: "Higher Education Digital Transformation Ecosystem",
-            Description: "Directed the end-to-end digital overhaul for Colegio De Laurel, designing three interconnected systems (Admission, Enrollment, and Public Portal). Migrated the institution from manual, paper-based processes to a secure, cloud-native infrastructure on AWS with automated CI/CD pipelines.",
-            Skills: "React, .NET Core, AWS, GitHub Actions, MSSQL, REST API",
+            Title: "Colegio De Laurel Enrollment System",
+            imageLink: "",
+            imageText: "Colegio De Laurel Online Enrollment System",
+            Description: "Developed a full-stack online enrollment system for Colegio De Laurel with a React front-end and .NET Core REST API back-end. The system handles student enrollment, subject selection, and schedule management, replacing the school's manual enrollment process and deployed to AWS with automated pipelines.<br><br>Major responsibilities:<br>● React front-end development with API integration<br>● .NET Core REST API design and implementation<br>● MSSQL database schema and stored procedure authoring<br>● AWS deployment and GitHub Actions CI/CD pipeline setup<br>Technologies: React, .NET Core, REST API, MSSQL, AWS, GitHub Actions",
+            Skills: "React, .NET Core, REST API, MSSQL, AWS, GitHub Actions",
             projectLink: "https://enrollment.colegiodelaurel.edu.ph/",
-            projectDate: "2024 - 2026"
+            projectDate: "2026"
         },
         1: {
-            Title: "IoT Drowsiness Detection & Telemetry System",
-            Description: "Developed an IoT safety prototype using Raspberry Pi and OpenCV (Python) for real-time facial/eye tracking. Integrated hardware sensors (Arduino) for biometrics and built a .NET-based dashboard for real-time telemetry reporting.",
-            Skills: "Python, OpenCV, Raspberry Pi, Arduino, .NET Core, SQL Server",
+            Title: "Colegio De Laurel Admission System",
+            imageLink: "",
+            imageText: "Colegio De Laurel Online Admission System",
+            Description: "Built an end-to-end online admission system for Colegio De Laurel, enabling prospective students to submit applications, upload documents, and track admission status entirely online — eliminating paper-based processes and reducing administrative workload.<br><br>Major responsibilities:<br>● Full-stack development using .NET Core and MSSQL<br>● Application workflow and status tracking implementation<br>● Cloud deployment on AWS with GitHub Actions CI/CD<br>● Data security and form validation<br>Technologies: .NET Core, MSSQL, AWS, GitHub Actions",
+            Skills: ".NET Core, MSSQL, AWS, GitHub Actions",
+            projectLink: "https://admission.colegiodelaurel.edu.ph/",
+            projectDate: "2025"
+        },
+        2: {
+            Title: "Colegio De Laurel Website",
+            imageLink: "",
+            imageText: "Colegio De Laurel Official Website",
+            Description: "Designed and developed the official website for Colegio De Laurel, a private educational institution in the Philippines. Built a performant, responsive public-facing site serving prospective students, parents, and faculty, deployed to AWS with automated CI/CD via GitHub Actions.<br><br>Major responsibilities:<br>● Full-stack development using .NET Core and MSSQL<br>● Cloud infrastructure setup and deployment on AWS<br>● CI/CD pipeline configuration with GitHub Actions<br>● Performance optimization and cross-browser compatibility<br>Technologies: .NET Core, MSSQL, AWS, GitHub Actions",
+            Skills: ".NET Core, MSSQL, AWS, GitHub Actions",
+            projectLink: "https://colegiodelaurel.edu.ph/",
+            projectDate: "2024"
+        },
+        3: {
+            Title: "Bulletin System using Raspberry Pi",
+            imageLink: "/img/RaspBul.jpg",
+            imageText: "Bulletin System using Raspberry Pi",
+            Description: "Designed and developed a Raspberry Pi-based bulletin management system for a client, enabling real-time announcement management via a web interface connected to an LCD display. Independently handled requirements gathering, database design, full-stack development, and technical documentation.<br><br>Major responsibilities:<br>● Front-end and back-end development<br>● Database design and optimization<br>● End-to-end testing and hardware integration<br>● Technical documentation<br>Technologies: PHP, JavaScript, jQuery, Angular, HTML, CSS, .NET Core, MySQL",
+            Skills: "PHP, JavaScript, jQuery, Angular, HTML, CSS, .NET Core, MySQL",
             projectLink: "https://github.com/jomielenriquez/kiosk",
-            projectDate: "2019 - 2020"
+            projectDate: "Oct 2022 – Nov 2022"
+        },
+        4: {
+            Title: "Traffic Violation Management System",
+            imageLink: "/img/Traffic.gif",
+            imageText: "Traffic Violation Management System with Android Electronic Ticketing",
+            Description: "Built a dual-platform traffic citation system comprising a web application for violation data management and an Android app for on-field ticketing with thermal printer integration. Responsible for end-to-end development including UI design, database architecture, cloud deployment, and writing all technical documentation.<br><br>Major responsibilities:<br>● Full-stack web and Android development<br>● Database design and SQL Server management<br>● Cloud deployment<br>● Technical documentation<br>Technologies: C# MVC .NET Framework, Xamarin, JavaScript, jQuery, HTML, CSS, SQL Server, ADO.NET",
+            Skills: "C#, MVC .NET Framework, Xamarin, JavaScript, jQuery, HTML, CSS, SQL Server, ADO.NET",
+            projectLink: "https://github.com/jomielenriquez/CAPSTONE_Web",
+            projectDate: "Sep 2022 – Oct 2022"
+        },
+        5: {
+            Title: "Accounting Integrated Management System (AIMS)",
+            imageLink: "",
+            imageText: "Accounting Integrated Management System",
+            Description: "Delivered an Accounting Integrated Management System for EPPI's procurement and accounting teams, digitizing the full purchase order lifecycle from quotation requests to order approval. Improved financial visibility and reduced manual overhead for over 100 internal users across departments.<br><br>Major responsibilities:<br>● Full-stack web development<br>● Database design and stored procedure authoring<br>● User acceptance testing coordination<br>● Technical documentation<br>Technologies: C#, JavaScript, jQuery, HTML, CSS, .NET Core, SQL Server, ADO.NET",
+            Skills: "C#, JavaScript, jQuery, HTML, CSS, .NET Core, SQL Server, ADO.NET",
+            projectLink: "",
+            projectDate: "Jan 2021 – Oct 2021"
+        },
+        6: {
+            Title: "Drowsiness Detection System",
+            imageLink: "/img/Cam1.jfif",
+            imageText: "Drowsiness Detection using Raspberry Pi",
+            Description: "Developed an IoT-based driver drowsiness detection prototype using a Raspberry Pi, night-vision camera, and Python with OpenCV for real-time facial and eye tracking. Integrated a custom Arduino wristband for heart rate monitoring and built a web dashboard to visualize and log telemetry data.<br><br>Major responsibilities:<br>● Algorithm development and hardware wiring<br>● IoT device programming (Raspberry Pi + Arduino)<br>● Web dashboard development<br>● Data collection and testing<br>Technologies: Python, OpenCV, Raspberry Pi, Arduino, Angular, C#, JavaScript, jQuery, HTML, CSS, .NET Core, SQL Server, ADO.NET",
+            Skills: "Python, OpenCV, Raspberry Pi, Arduino, Angular, C#, JavaScript, jQuery, HTML, CSS, .NET Core, SQL Server, ADO.NET",
+            projectLink: "",
+            projectDate: "Oct 2019 – Jan 2020"
+        }
+    },
+    otherProjects: {
+        0: {
+            Title: "Drums",
+            Description: "Interactive drum machine built with vanilla HTML, CSS, and JavaScript — plays drum sounds on keyboard press or mouse click.",
+            imageLink: "/img/Drums.png",
+            ProjectRepoLink: "https://github.com/jomielenriquez/DrumsRepo",
+            ProjectLink: "https://jomielenriquez.github.io/DrumsRepo/",
+            projectDate: "Dec 2, 2022"
+        },
+        1: {
+            Title: "JS Calculator",
+            Description: "Fully functional calculator built with HTML, CSS, and JavaScript, supporting standard arithmetic operations and keyboard input.",
+            imageLink: "/img/JSCalculator.png",
+            ProjectRepoLink: "https://github.com/jomielenriquez/JSCalculator",
+            ProjectLink: "https://jomielenriquez.github.io/JSCalculator/",
+            projectDate: "Dec 4, 2022"
+        },
+        2: {
+            Title: "25 + 5 Countdown Timer",
+            Description: "Pomodoro-style countdown timer built with HTML, CSS, and JavaScript, featuring configurable work and break session lengths.",
+            imageLink: "/img/CountDownTimer.png",
+            ProjectRepoLink: "https://github.com/jomielenriquez/CountdownTimer",
+            ProjectLink: "https://jomielenriquez.github.io/CountdownTimer/",
+            projectDate: "Dec 4, 2022"
+        },
+        3: {
+            Title: "Random Quote Machine",
+            Description: "Web app that fetches and displays random quotes with a tweet-to-Twitter feature, built with HTML, CSS, and JavaScript.",
+            imageLink: "/img/RandomQuoteMachine.png",
+            ProjectRepoLink: "https://github.com/jomielenriquez/RandomQuoteMachine",
+            ProjectLink: "https://jomielenriquez.github.io/RandomQuoteMachine/",
+            projectDate: "Dec 4, 2022"
+        },
+        4: {
+            Title: "Markdown Previewer",
+            Description: "Real-time Markdown editor and preview tool built with React, rendering formatted output as the user types.",
+            imageLink: "/img/MarkDownPreviewer.png",
+            ProjectRepoLink: "https://github.com/jomielenriquez/ReactMarkdownPreviewer",
+            ProjectLink: "https://jomielenriquez.github.io/ReactMarkdownPreviewer/",
+            projectDate: "Nov 28, 2022"
         }
     },
     certificates: {
         0: {
-            Title: "Foundational C# Certification",
-            issueDate: "May 21, 2024",
-            issuedBy: "Microsoft & freeCodeCamp",
-            imageLoc: "/img/FoundationalCsharpWithMicrosoft.png",
-            link: "https://www.freecodecamp.org/certification/jomiel/foundational-c-sharp-with-microsoft"
-        },
-        1: {
-            Title: "Full Stack Developer Certification",
+            Title: "Legacy Full Stack Developer Certification",
             issueDate: "June 24, 2024",
             issuedBy: "freeCodeCamp",
             imageLoc: "/img/LegacyFullStackDeveloper.png",
             link: "https://www.freecodecamp.org/certification/jomiel/full-stack"
         },
-        2: {
+        1: {
             Title: "Back End Development and APIs",
             issueDate: "June 23, 2023",
             issuedBy: "freeCodeCamp",
             imageLoc: "/img/BackEndDevelopmentAPIs.png",
             link: "https://www.freecodecamp.org/certification/jomiel/back-end-development-and-apis"
         },
+        2: {
+            Title: "Data Visualization",
+            issueDate: "June 9, 2024",
+            issuedBy: "freeCodeCamp",
+            imageLoc: "/img/DataVisualization.png",
+            link: "https://www.freecodecamp.org/certification/jomiel/data-visualization"
+        },
         3: {
-            Title: "Quality Assurance & Information Security",
+            Title: "Foundational C# with Microsoft",
+            issueDate: "May 21, 2024",
+            issuedBy: "freeCodeCamp & Microsoft",
+            imageLoc: "/img/FoundationalCsharpWithMicrosoft.png",
+            link: "https://www.freecodecamp.org/certification/jomiel/foundational-c-sharp-with-microsoft"
+        },
+        4: {
+            Title: "Quality Assurance",
             issueDate: "June 24, 2024",
             issuedBy: "freeCodeCamp",
             imageLoc: "/img/QualityAssurance.png",
             link: "https://www.freecodecamp.org/certification/jomiel/quality-assurance-v7"
+        },
+        5: {
+            Title: "Information Security",
+            issueDate: "June 24, 2024",
+            issuedBy: "freeCodeCamp",
+            imageLoc: "",
+            link: "https://www.freecodecamp.org/certification/jomiel/information-security-v7"
+        },
+        6: {
+            Title: "Legacy Information Security and Quality Assurance",
+            issueDate: "June 24, 2024",
+            issuedBy: "freeCodeCamp",
+            imageLoc: "/img/LegacyInformationSecurityAndQualityAssurance.png",
+            link: "https://www.freecodecamp.org/certification/jomiel/information-security-and-quality-assurance"
+        },
+        7: {
+            Title: "JavaScript Algorithms and Data Structures",
+            issueDate: "November 24, 2022",
+            issuedBy: "freeCodeCamp",
+            imageLoc: "/img/Cert2.png",
+            link: "https://www.freecodecamp.org/certification/jomiel/javascript-algorithms-and-data-structures"
+        },
+        8: {
+            Title: "Legacy JavaScript Algorithms and Data Structures",
+            issueDate: "November 24, 2022",
+            issuedBy: "freeCodeCamp",
+            imageLoc: "/img/LegacyJavaScripAlgorithmsAndDataStructure.png",
+            link: "https://www.freecodecamp.org/certification/jomiel/javascript-algorithms-and-data-structures"
+        },
+        9: {
+            Title: "Front End Development Libraries",
+            issueDate: "December 24, 2022",
+            issuedBy: "freeCodeCamp",
+            imageLoc: "/img/Cert3.png",
+            link: "https://www.freecodecamp.org/certification/jomiel/front-end-development-libraries"
+        },
+        10: {
+            Title: "Responsive Web Design",
+            issueDate: "July 21, 2022",
+            issuedBy: "freeCodeCamp",
+            imageLoc: "/img/Cert1.png",
+            link: "https://www.freecodecamp.org/certification/jomiel/responsive-web-design"
+        },
+        11: {
+            Title: "Python OOP: Four Pillars of OOP in Python 3",
+            issueDate: "November 12, 2021",
+            issuedBy: "Udemy",
+            imageLoc: "/img/Cert4.png",
+            link: ""
+        },
+        12: {
+            Title: "Clean Code",
+            issueDate: "September 14, 2021",
+            issuedBy: "Udemy",
+            imageLoc: "/img/Cert5.png",
+            link: ""
+        },
+        13: {
+            Title: "Productivity and Time Management for the Overwhelmed",
+            issueDate: "July 20, 2021",
+            issuedBy: "Udemy",
+            imageLoc: "/img/Cert6.png",
+            link: ""
         }
     }
 }
