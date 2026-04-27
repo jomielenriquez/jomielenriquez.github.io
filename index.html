@@ -1100,8 +1100,8 @@
 
   // ── Certificate gallery ──
   const galleryEl = document.getElementById("cert-gallery");
-  Object.keys(about.certificates).forEach(key => {
-    const c = about.certificates[key];
+  Object.keys(about.certificate_galery).forEach(key => {
+    const c = about.certificate_galery[key];
     if (!c.imageLoc) return;
     const card = document.createElement("div");
     card.className = "cert-card";
