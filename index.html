@@ -1152,20 +1152,30 @@
 
   document.addEventListener("keydown", e => { if (e.key === "Escape") closeLightbox(); });
 
-  // ── Generate & download ATS-friendly Resume PDF via pdfmake ──
+  // ── Generate & download Resume PDF via pdfmake ──
   function generateResume() {
 
-    function stripHtml(s) {
+    function stripHtmlLocal(s) {
       if (!s) return "";
       return s.replace(/<br\s*\/?>/gi, "\n").replace(/<[^>]+>/g, "");
     }
 
-    function sectionDivider() {
-      return {
-        canvas: [{ type: 'line', x1: 0, y1: 0, x2: 515, y2: 0, lineWidth: 0.5, lineColor: '#94a3b8' }],
-        margin: [0, 2, 0, 7]
-      };
+    function sectionHeader(title) {
+      return [
+        { text: title, style: 'sectionTitle' },
+        {
+          canvas: [{ type: 'line', x1: 0, y1: 0, x2: 515, y2: 0, lineWidth: 0.8, lineColor: '#1155CC' }],
+          margin: [0, 1, 0, 5]
+        }
+      ];
     }
+
+    // ── Skills ──
+    const skillsContent = (about.skills || []).map(line => ({
+      text: '• ' + line,
+      style: 'bodyText',
+      margin: [0, 0, 0, 2]
+    }));
 
     // ── Experience ──
     const expContent = [];
@@ -1174,149 +1184,128 @@
       Object.keys(work).forEach(key => {
         const item = work[key];
         if (!item.title) return;
-
         const startDate = fmtDate(item.StartDate);
         const endDate   = item.EndDate ? fmtDate(item.EndDate) : "Present";
-        const dur       = duration(item.StartDate, item.EndDate);
-
         expContent.push({
-          stack: [
-            {
-              columns: [
-                { text: item.title,                   style: 'jobTitle',  width: '*'    },
-                { text: `${startDate} – ${endDate}`,  style: 'dateText',  width: 'auto' }
-              ]
-            },
-            {
-              text: `${item.companyname}${item.status ? ' · ' + item.status : ''} · ${item.location} · ${item.RO} · ${dur}`,
-              style: 'jobMeta',
-              margin: [0, 2, 0, 4]
-            }
-          ]
+          columns: [
+            { text: item.title,        bold: true,  fontSize: 10, width: 'auto'                        },
+            { text: item.companyname,  bold: true,  fontSize: 10, decoration: 'underline', width: '*', alignment: 'center' },
+            { text: item.location,     italics: true, fontSize: 10, width: '*',            alignment: 'center' },
+            { text: `${startDate} to ${endDate}`, bold: true, fontSize: 10, width: 'auto'              }
+          ],
+          columnGap: 4,
+          margin: [0, 8, 0, 3]
         });
-
         if (item.Description) {
-          const bullets = stripHtml(item.Description)
+          const bullets = stripHtmlLocal(item.Description)
             .split("\n").map(l => l.trim()).filter(Boolean)
             .map(l => l.replace(/^[●\-\*]\s*/, ""));
           if (bullets.length) {
-            expContent.push({ ul: bullets, style: 'bodyText', margin: [0, 0, 0, 10] });
+            expContent.push({ ul: bullets, style: 'bodyText', margin: [0, 0, 0, 4] });
           }
-        } else {
-          expContent.push({ text: '', margin: [0, 0, 0, 8] });
         }
       });
     });
 
-    // ── Projects ──
+    // ── Education ──
+    const eduContent = (about.education || []).map(e => ({
+      columns: [
+        { text: e.degree,              bold: true, fontSize: 10, width: '*'    },
+        { text: e.school,              bold: true, fontSize: 10, width: '*',   alignment: 'center' },
+        { text: `${e.from} - ${e.to}`, bold: true, fontSize: 10, width: 'auto'                    }
+      ],
+      margin: [0, 0, 0, 5]
+    }));
+
+    // ── Key Projects ──
     const projContent = [];
     Object.keys(about.Projects).forEach(key => {
       const p = about.Projects[key];
-      const shortDesc = stripHtml(p.Description).split("Major responsibilities:")[0].trim();
+      const desc = stripHtmlLocal(p.Description).split("Major responsibilities:")[0].trim();
       projContent.push({
         stack: [
           {
-            columns: [
-              { text: p.Title,         style: 'jobTitle', width: '*'    },
-              { text: p.projectDate,   style: 'dateText', width: 'auto' }
-            ]
+            text: `${p.Title}  (${p.projectDate})`,
+            bold: true, fontSize: 10, decoration: 'underline',
+            margin: [0, 8, 0, 2]
           },
-          { text: shortDesc,           style: 'bodyText', margin: [0, 2, 0, 2] },
-          { text: `Stack: ${p.Skills}`, style: 'skillMeta', margin: [0, 0, 0, 9] }
+          { text: desc, style: 'bodyText', margin: [0, 0, 0, 2] },
+          {
+            text: [
+              { text: 'Technologies: ', fontSize: 10, decoration: 'underline' },
+              { text: p.Skills,         fontSize: 10 }
+            ],
+            margin: [0, 0, 0, 0]
+          }
         ]
       });
     });
 
-    // ── Certifications ──
-    const certsContent = [];
-    Object.keys(about.certificates).forEach(key => {
-      const c = about.certificates[key];
-      certsContent.push({
-        columns: [
-          {
-            stack: [
-              { text: c.Title,     style: 'certName'   },
-              { text: c.issuedBy,  style: 'certIssuer' }
-            ],
-            width: '*'
-          },
-          { text: c.issueDate, style: 'dateText', width: 'auto' }
-        ],
-        margin: [0, 0, 0, 6]
-      });
-    });
+    // ── Contact helpers ──
+    const emailLink   = about.email;
+    const linkedInUrl = about.linkedIn || '';
+    const githubUrl   = about.gitHub   || '';
+    const websiteUrl  = about.website  || '';
+    const linkedInShort = linkedInUrl.replace('https://www.', '').replace('https://', '');
+    const githubShort   = githubUrl.replace('https://', '');
+    const websiteShort  = websiteUrl.replace('https://', '');
 
-    // ── Document definition ──
     const dd = {
       pageSize: 'A4',
       pageMargins: [42, 42, 42, 42],
 
       content: [
-        // Header
-        { text: 'Jomiel L. Enriquez', style: 'name' },
-        { text: 'Senior Software Engineer  ·  Full-Stack  ·  .NET / React / Vue / AWS', style: 'headline' },
+        // ── Name ──
+        { text: about.name.toUpperCase(), style: 'name' },
+
+        // ── Contact row 1: email · phone · LinkedIn ──
         {
           text: [
-            { text: 'enriquez.jliquigan@gmail.com', link: 'mailto:enriquez.jliquigan@gmail.com' },
-            '  |  ',
-            { text: 'linkedin.com/in/jomiel-enriquez-75643614a', link: 'https://www.linkedin.com/in/jomiel-enriquez-75643614a/' },
-            '  |  ',
-            { text: 'github.com/jomielenriquez', link: 'https://github.com/jomielenriquez' },
-            '  |  Tanauan City, Batangas, Philippines'
+            { text: emailLink,     link: `mailto:${emailLink}` },
+            '  •  ',
+            { text: about.phone || '' },
+            '  •  ',
+            { text: linkedInShort, link: linkedInUrl }
           ],
           style: 'contactRow',
-          margin: [0, 0, 0, 6]
+          alignment: 'center',
+          margin: [0, 4, 0, 1]
         },
+
+        // ── Contact row 2: website · GitHub ──
         {
-          canvas: [{ type: 'line', x1: 0, y1: 0, x2: 511, y2: 0, lineWidth: 2, lineColor: '#0f172a' }],
-          margin: [0, 0, 0, 12]
+          text: [
+            { text: websiteShort, link: websiteUrl },
+            '  •  ',
+            { text: githubShort,  link: githubUrl  }
+          ],
+          style: 'contactRow',
+          alignment: 'center',
+          margin: [0, 0, 0, 10]
         },
 
-        // Summary
-        { text: 'SUMMARY', style: 'sectionTitle' },
-        sectionDivider(),
-        {
-          text: 'Analytical software engineer with 5+ years building full-stack enterprise applications. Strong background in C# / .NET, modern JavaScript frameworks, cloud infrastructure, and SQL/NoSQL databases. Fast learner with a track record of delivering reliable, maintainable systems across remote and hybrid environments.',
-          style: 'bodyText',
-          margin: [0, 0, 0, 13]
-        },
+        // ── Skills ──
+        ...sectionHeader('Skills'),
+        ...skillsContent,
 
-        // Tech Stack
-        { text: 'TECH STACK', style: 'sectionTitle' },
-        sectionDivider(),
-        { columns: [ { text: 'Languages:',    bold: true, fontSize: 10, width: 90 }, { text: 'C#, JavaScript, TypeScript, Python, HTML, CSS, SQL',              fontSize: 10, width: '*' } ], margin: [0, 0, 0, 3] },
-        { columns: [ { text: 'Frameworks:',   bold: true, fontSize: 10, width: 90 }, { text: '.NET / ASP.NET MVC, React, Vue 3, Angular, Node.js, jQuery',     fontSize: 10, width: '*' } ], margin: [0, 0, 0, 3] },
-        { columns: [ { text: 'Cloud & Ops:',  bold: true, fontSize: 10, width: 90 }, { text: 'AWS, Azure, Azure DevOps, CI/CD, Git / GitHub',                  fontSize: 10, width: '*' } ], margin: [0, 0, 0, 3] },
-        { columns: [ { text: 'Databases:',    bold: true, fontSize: 10, width: 90 }, { text: 'MS SQL Server, Oracle SQL, MySQL, PostgreSQL',                   fontSize: 10, width: '*' } ], margin: [0, 0, 0, 13] },
-
-        // Experience
-        { text: 'EXPERIENCE', style: 'sectionTitle' },
-        sectionDivider(),
+        // ── Experience ──
+        ...sectionHeader('Experience'),
         ...expContent,
 
-        // Projects
-        { text: 'PROJECTS', style: 'sectionTitle' },
-        sectionDivider(),
-        ...projContent,
+        // ── Education ──
+        ...sectionHeader('Education'),
+        ...eduContent,
 
-        // Certifications
-        { text: 'CERTIFICATIONS', style: 'sectionTitle' },
-        sectionDivider(),
-        ...certsContent
+        // ── Key Projects ──
+        ...sectionHeader('Key Projects'),
+        ...projContent
       ],
 
       styles: {
-        name:        { fontSize: 24, bold: true,  color: '#0f172a', margin: [0, 0, 0, 4] },
-        headline:    { fontSize: 11,               color: '#475569', margin: [0, 0, 0, 5] },
-        contactRow:  { fontSize: 10,               color: '#334155' },
-        sectionTitle:{ fontSize: 9,  bold: true,  color: '#0e7490', characterSpacing: 1.4, margin: [0, 0, 0, 0] },
-        jobTitle:    { fontSize: 11, bold: true,  color: '#0f172a' },
-        jobMeta:     { fontSize: 10,               color: '#475569' },
-        dateText:    { fontSize: 10,               color: '#64748b', alignment: 'right' },
-        bodyText:    { fontSize: 10,               color: '#1e293b', lineHeight: 1.4 },
-        skillMeta:   { fontSize: 9,                color: '#64748b' },
-        certName:    { fontSize: 10, bold: true,  color: '#0f172a' },
-        certIssuer:  { fontSize: 9,                color: '#64748b' }
+        name:        { fontSize: 20, bold: true, alignment: 'center', margin: [0, 0, 0, 0] },
+        contactRow:  { fontSize: 9,  color: '#333333' },
+        sectionTitle:{ fontSize: 11, bold: true, color: '#1155CC', margin: [0, 10, 0, 0] },
+        bodyText:    { fontSize: 10, lineHeight: 1.3 }
       },
 
       defaultStyle: { font: 'Roboto' }

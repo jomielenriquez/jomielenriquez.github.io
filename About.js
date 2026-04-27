@@ -10,8 +10,14 @@ const about = {
     birthDate: "02/25/1998",
     address: "Tanauan City, Batangas, Philippines",
     email: "enriquez.jliquigan@gmail.com",
+    phone: "+639953637231",
+    website: "https://jomielenriquez.github.io/",
     linkedIn: "https://www.linkedin.com/in/jomiel-enriquez-75643614a/",
     gitHub: "https://github.com/jomielenriquez",
+    skills: [
+        "C# | .NET | ASP.NET | MVC | React | Vue 3 | Angular | Node.js | React Native | Python | JavaScript | TypeScript | HTML | CSS | SQL | Git | GitHub | TensorFlow | Unity",
+        "AWS | Azure | Azure DevOps | CI/CD | MS SQL Server | Oracle | PostgreSQL | MySQL | REST API | Microservices | Clean Architecture | OOP | Agile | Jira | Arduino | Raspberry Pi"
+    ],
     education: [
         { 
             degree: "Bachelor of Science in Computer Engineering", 
