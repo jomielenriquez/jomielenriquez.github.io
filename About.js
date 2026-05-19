@@ -69,20 +69,8 @@ const about = {
                     EndDate: "",
                     location: "New Zealand",
                     RO: "Remote",
-                    Description: "● Spearheaded the design and delivery of high-priority insurance features using C#, .NET Core, and React, maintaining 100% adherence to delivery timelines.<br>● Modernized engineering workflows by migrating legacy SVN repositories to GitHub, improving team development velocity by an estimated 30%.<br>● Engineered automated CI/CD pipelines via Azure DevOps, reducing production deployment errors and streamlining release cycles.<br>● Authored comprehensive technical documentation in Confluence to accelerate onboarding and knowledge sharing.",
+                    Description: "● Contributed the design and delivery of high-priority insurance features using C#, .NET Core, and React, maintaining 100% adherence to delivery timelines.<br>● Modernized engineering workflows by migrating legacy SVN repositories to GitHub, improving team development velocity by an estimated 30%.<br>● Authored comprehensive technical documentation in Confluence to accelerate onboarding and knowledge sharing.",
                     Skills: "csharp,dotnetcore,react,aws,ssms,git,azuredevops,microservices,restapi,javascript,typescript,sqlserver"
-                },
-                2: {
-                    logo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABqElEQVR4AYXSAWQCYRwF8AVotE0iDJkwMSMMkRAQFmSENCZgBYOYBMAQgosai4KNFUQCGWAZFDObDckRiiWJrby9P45v17Y9ftC97/lytwZgzZRtOqVLuqMBjSlrLspZ84CVdILT6YTf70csFoPP55OSOCDJ+m8DMUKlUoGa0WgEq9UqxWuS2H4baDocDiwWC5iTSCSk+EFbtG6xWFYGNukzlUrhp7TbbSmKY9qw2WwrA0eEVqsFI7PZDEaWyyXsdruUNdpxuVwrA5r8z/l8DiOlUglqotGolB8p5PV6Vwaew+Ew1GiaBjW1Wk3KSzoJhULfBvYJ+Xwef4W3M95GOR6Pfxs4JzSbTfyXQCAgB96TyeSWOnBL6Ha7UNPr9TAYDKAmnU5Dutls9lAdeCT0+30YmUwm4LtGJpOBmnq9DunmcrkzdWBKGA6HMDIej+UBIpEI1Oi6Dvm9UCgU1YFn8w2m06k8gMfjgTlutxvFYvFGHXgjVKtVyBXL5bJcXR5AyPfQ6XTQaDTkIPgRIRgMXqgDu1SnV3qiB7qjJFVJpyG90D1d0Z6c/QKv8S9ALkvbLQAAAABJRU5ErkJggg==",
-                    title: "Full Stack Developer",
-                    companyname: "Anotoys Labs",
-                    status: "Contract",
-                    StartDate: "11/01/2025",
-                    EndDate: "",
-                    location: "Remote",
-                    RO: "Remote",
-                    Description: "● Developed a cross-platform React Native application (Android/iOS) with complex image processing capabilities for real-time analysis.<br>● Translated stakeholder business requirements into production-ready features within a fast-paced startup environment.<br>● Optimized mobile performance and ensured code reusability through modular component-based architecture.",
-                    Skills: "reactnative,javascript,typescript,react,nodejs,git,ai-integration,image-processing"
                 }
             }
         },
