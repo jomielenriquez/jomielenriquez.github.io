@@ -85,7 +85,7 @@ const about = {
                     EndDate: "06/30/2024",
                     location: "Taguig, Metro Manila, Philippines",
                     RO: "Remote",
-                    Description: "● Optimized a global contingent workforce system by leading the Vue 3 migration, resulting in a 25% increase in frontend rendering performance.<br>● Engineered a secure RESTful API for background check integrations, handling sensitive data for global enterprise clients.<br>● Collaborated with cross-functional Agile teams to deliver scalable solutions across a complex Oracle and SQL Server database landscape.",
+                    Description: "● Optimized a global contingent workforce system by contributing to the Vue 3 migration, resulting in a 25% increase in frontend rendering performance.<br>● Engineered a secure RESTful API for background check integrations, handling sensitive data for global enterprise clients.<br>● Collaborated with cross-functional Agile teams to deliver scalable solutions across a complex Oracle and SQL Server database landscape.",
                     Skills: "csharp,aspdotnet,vue,nodejs,oracle,sqlserver,git,azuredevops,api-design,agile"
                 }
             }
