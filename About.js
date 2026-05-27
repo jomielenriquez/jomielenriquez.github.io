@@ -69,8 +69,8 @@ const about = {
                     EndDate: "",
                     location: "New Zealand",
                     RO: "Remote",
-                    Description: "● Contributed the design and delivery of high-priority insurance features using C#, .NET Core, and React, maintaining 100% adherence to delivery timelines.<br>● Modernized engineering workflows by migrating legacy SVN repositories to GitHub, improving team development velocity by an estimated 30%.<br>● Authored comprehensive technical documentation in Confluence to accelerate onboarding and knowledge sharing.",
-                    Skills: "csharp,dotnetcore,react,aws,ssms,git,azuredevops,microservices,restapi,javascript,typescript,sqlserver"
+                    Description: "● Drive end-to-end development, support, and release execution across two core insurance systems: a legacy enterprise application built on .NET Framework and a modern cloud-native ecosystem utilizing a 5-microservice .NET Core backend and React frontend.<br>● Provide technical governance and quality assurance by reviewing the architectural and code contributions of peer Senior Developers to ensure system reliability and alignment with SOLID standards.<br>● Manage cloud infrastructure configurations on AWS, including orchestrating AWS API Gateways and configuring secure configurations using AWS Parameter Store.<br>● Contributed to the migration of legacy codebase repositories from SVN to GitHub and establishing developer guidelines via 'claude.md' to seamlessly integrate agentic AI coding tools into the workflow.<br>● Actively participate in and guide Agile ceremonies, including daily stand-ups, backlog grooming, and sprint refinements to maintain high delivery velocity.",
+                    Skills: "csharp,dotnetcore,react,aws,ssms,git,azuredevops,microservices,restapi,javascript,typescript,sqlserver,aws-api-gateway,parameter-store,dotnetframework,ai-agent"
                 }
             }
         },
