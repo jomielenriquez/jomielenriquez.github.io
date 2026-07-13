@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Admin — Jomiel Enriquez</title>
+<link rel="icon" type="image/x-icon" href="../img/icon_blue.png">
+<style>
+  :root {
+    --primary: #0f172a; --accent: #0e7490; --accent-light: #e0f2fe;
+    --text: #1e293b; --muted: #64748b; --border: #e2e8f0; --bg: #f1f5f9; --card: #ffffff;
+  }
+  [data-theme="dark"] {
+    --primary: #0f172a; --accent: #22d3ee; --accent-light: #164e63;
+    --text: #e2e8f0; --muted: #94a3b8; --border: #334155; --bg: #020617; --card: #0f172a;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg); color: var(--text);
+    min-height: 100vh; display: flex; align-items: center; justify-content: center;
+    padding: 20px;
+  }
+  .card {
+    background: var(--card); border: 1px solid var(--border); border-radius: 12px;
+    padding: 32px; width: 100%; max-width: 360px;
+  }
+  h1 { font-size: 18px; margin-bottom: 6px; }
+  p.sub { color: var(--muted); font-size: 13px; margin-bottom: 20px; }
+  input[type="password"] {
+    width: 100%; padding: 10px 12px; border-radius: 8px; border: 1px solid var(--border);
+    background: var(--bg); color: var(--text); font-size: 14px; margin-bottom: 12px;
+  }
+  button {
+    width: 100%; padding: 10px 12px; border-radius: 8px; border: none;
+    background: var(--accent); color: #fff; font-weight: 600; font-size: 14px; cursor: pointer;
+  }
+  button:hover { opacity: 0.9; }
+  .error { color: #dc2626; font-size: 13px; margin-bottom: 12px; min-height: 16px; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <h1>Admin</h1>
+    <p class="sub">Enter the password to view tailored resumes.</p>
+    <div class="error" id="error"></div>
+    <form id="loginForm">
+      <input type="password" id="password" autocomplete="current-password" autofocus placeholder="Password">
+      <button type="submit">Unlock</button>
+    </form>
+  </div>
+
+  <script>
+    (function () {
+      const saved = localStorage.getItem("theme");
+      const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      if (saved === "dark" || (!saved && prefersDark)) {
+        document.documentElement.setAttribute("data-theme", "dark");
+      }
+    })();
+  </script>
+  <script src="../js/md5.js"></script>
+  <script>
+    document.getElementById("loginForm").addEventListener("submit", async function (e) {
+      e.preventDefault();
+      const errorEl = document.getElementById("error");
+      const password = document.getElementById("password").value;
+      errorEl.textContent = "";
+
+      try {
+        const res = await fetch("auth.json", { cache: "no-store" });
+        const auth = await res.json();
+        if (md5(password) === auth.passwordHash) {
+          sessionStorage.setItem("admin_authed", "1");
+          window.location.href = "resumes.html";
+        } else {
+          errorEl.textContent = "Incorrect password.";
+        }
+      } catch (err) {
+        errorEl.textContent = "Could not verify password. Try again.";
+      }
+    });
+  </script>
+</body>
+</html>

@@ -39,7 +39,7 @@ const about = {
             company: "Anotoys Labs",
             location: "Remote",
             dateFrom: "November 2025",
-            dateTo: "Present",
+            dateTo: "February 2026",
             description: "Architecting a high-performance React Native mobile ecosystem featuring AI-driven image processing and real-time visual data analysis."
         },
         2: {
