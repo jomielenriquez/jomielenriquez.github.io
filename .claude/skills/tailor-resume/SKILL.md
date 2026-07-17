@@ -83,9 +83,14 @@ without the actual text is just guessing.
 7. **Update the manifest** at `resume/tailored/manifest.json` (a JSON array — read it, don't overwrite other
    entries). Append (or replace, if re-running for the same slug):
    ```json
-   { "id": "<slug>", "title": "<Company> — <Role>", "description": "<one sentence on what was emphasized>", "date": "<YYYY-MM-DD>", "dataFile": "resume/tailored/<slug>.json" }
+   { "id": "<slug>", "title": "<Role>", "description": "<one sentence on what was emphasized>", "date": "<YYYY-MM-DD>", "dataFile": "resume/tailored/<slug>.json" }
    ```
-   Use today's date. Keep the description to one sentence — it's shown as subtext in the admin list, not a
+   `title` is the **role/position only** (e.g. ".NET Developer"), not the target company — the whole point is
+   that the same tailored resume is reusable for any other company hiring the same position, so the company
+   name shouldn't be baked into the label the user sees in `/admin`. If the original target company is worth
+   noting for the user's own tracking, work it into `description` instead (e.g. "Tailored from the Acme Corp
+   posting; emphasized..."). Use today's date — `/admin` sorts entries newest-first by this field, so it must
+   be accurate. Keep the description to one sentence — it's shown as subtext in the admin list, not a
    changelog.
 
 8. **Report**: the slug/id, a reminder that the PDF is downloaded from `/admin/resumes.html` (not this

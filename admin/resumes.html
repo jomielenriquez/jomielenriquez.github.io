@@ -95,14 +95,14 @@
         }
 
         listEl.innerHTML = "";
-        entries.slice().reverse().forEach(entry => {
+        entries.slice().sort((a, b) => (b.date || "").localeCompare(a.date || "")).forEach(entry => {
           const row = document.createElement("div");
           row.className = "row";
           row.innerHTML = `
             <div>
               <div class="row-title">${entry.title}</div>
               <div class="row-desc">${entry.description || ""}</div>
-              <div class="row-meta">${entry.date || ""}</div>
+              <div class="row-meta">${entry.date ? "Generated: " + entry.date : ""}</div>
             </div>
             <button class="download-btn">Download</button>
           `;
