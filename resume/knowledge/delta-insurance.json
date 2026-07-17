@@ -1,0 +1,87 @@
+{
+  "company": "Delta Insurance",
+  "companySlug": "delta-insurance",
+  "lastUpdated": "2026-07-17",
+  "roles": [
+    {
+      "title": "Senior Developer",
+      "startDate": "07/01/2024",
+      "endDate": "",
+      "rawNotes": "my experience in delta insurance. I am a senior .net developer. I've listed the things that I do\n1. Maintaining and development an insurance platform created using .net framework, I do the development of new features and also supports the user by addressing their issues (BAUs). I do code review, scheduling of release, doing the actual release. the app is deployed in an AWS EC2 instance. the app is deployed in github (previously in svn) with ci/cd github actions\n2. Maintaining and development of a new insurance platform created in .net core as a backend with multiple microservices like quote microservices, authentication microservices, broker, email, client. It has a react frontend that I also do the development and deployment. I do code review, scheduling of release, doing the actual release. the app is deployed in an AWS EC2 instance. CI/CD uses aws codepipeline, codecommit.\n3. Development and testing of a new insurance platform created using claude caude that uses next.js, tailwind css3, azure msal, jest+testing library for unit tests, express 4, azure cosmos db, azure blob storage, zod for schema validation, jwt/jwks, OpenAI Sdk, pdf-lib, tsup for build, ts-node-dev for local dev. Playwright test with mcp with claude code. I do the testing, creating spec files, doing manual testing on dev, uat and prod.\n4. I do the migration from svn to github setup the pipeline",
+      "skills": [
+        "csharp",
+        "dotnetframework",
+        "dotnetcore",
+        "microservices",
+        "react",
+        "aws",
+        "aws-ec2",
+        "aws-codepipeline",
+        "aws-codecommit",
+        "github",
+        "github-actions",
+        "svn",
+        "nextjs",
+        "tailwindcss",
+        "azure-msal",
+        "jest",
+        "testing-library",
+        "express",
+        "azure-cosmos-db",
+        "azure-blob-storage",
+        "zod",
+        "jwt",
+        "jwks",
+        "openai-sdk",
+        "pdf-lib",
+        "tsup",
+        "ts-node-dev",
+        "playwright",
+        "claude-code",
+        "ci-cd"
+      ],
+      "bullets": [
+        {
+          "text": "Develop and maintain a legacy insurance platform built on .NET Framework, shipping new features while resolving user-reported BAU issues.",
+          "tags": ["dotnetframework", "maintenance", "support"],
+          "source": "Maintaining and development an insurance platform created using .net framework, I do the development of new features and also supports the user by addressing their issues (BAUs)."
+        },
+        {
+          "text": "Own the release lifecycle for a .NET Framework insurance platform — conducting code reviews, scheduling releases, and executing deployments to an AWS EC2 instance.",
+          "tags": ["code-review", "release-management", "aws-ec2"],
+          "source": "I do code review, scheduling of release, doing the actual release. the app is deployed in an AWS EC2 instance."
+        },
+        {
+          "text": "Manage GitHub-based source control and CI/CD via GitHub Actions for a legacy insurance platform migrated from SVN.",
+          "tags": ["github-actions", "ci-cd", "svn"],
+          "source": "the app is deployed in github (previously in svn) with ci/cd github actions"
+        },
+        {
+          "text": "Develop and maintain a new insurance platform built on a .NET Core microservices backend (quote, authentication, broker, email, and client services) paired with a React frontend, owning both frontend development and deployment.",
+          "tags": ["dotnetcore", "microservices", "react"],
+          "source": "Maintaining and development of a new insurance platform created in .net core as a backend with multiple microservices like quote microservices, authentication microservices, broker, email, client. It has a react frontend that I also do the development and deployment."
+        },
+        {
+          "text": "Lead code review, release scheduling, and release execution for the .NET Core microservices platform, deployed to AWS EC2 with CI/CD via AWS CodePipeline and CodeCommit.",
+          "tags": ["code-review", "release-management", "aws-codepipeline", "aws-codecommit"],
+          "source": "I do code review, scheduling of release, doing the actual release. the app is deployed in an AWS EC2 instance. CI/CD uses aws codepipeline, codecommit."
+        },
+        {
+          "text": "Develop and test a new AI-assisted insurance platform using Next.js, Tailwind CSS, Azure MSAL, Express, Azure Cosmos DB, Azure Blob Storage, Zod, JWT/JWKS, the OpenAI SDK, and pdf-lib, built with Claude Code as the primary development tool.",
+          "tags": ["nextjs", "azure", "ai-assisted-development"],
+          "source": "Development and testing of a new insurance platform created using claude caude that uses next.js, tailwind css3, azure msal, jest+testing library for unit tests, express 4, azure cosmos db, azure blob storage, zod for schema validation, jwt/jwks, OpenAI Sdk, pdf-lib, tsup for build, ts-node-dev for local dev."
+        },
+        {
+          "text": "Author automated test coverage with Jest and Testing Library plus Playwright end-to-end tests (via MCP integration with Claude Code), and perform manual testing across dev, UAT, and production environments.",
+          "tags": ["testing", "playwright", "qa"],
+          "source": "Playwright test with mcp with claude code. I do the testing, creating spec files, doing manual testing on dev, uat and prod."
+        },
+        {
+          "text": "Migrate legacy codebase repositories from SVN to GitHub and set up the CI/CD pipeline for the new workflow.",
+          "tags": ["svn", "github", "ci-cd"],
+          "source": "I do the migration from svn to github setup the pipeline"
+        }
+      ]
+    }
+  ]
+}
