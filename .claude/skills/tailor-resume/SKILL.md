@@ -123,7 +123,7 @@ without the actual text is just guessing.
      "id": "<slug>",
      "title": "<Role>",
      "description": "<one sentence on what was emphasized>",
-     "date": "<YYYY-MM-DD>",
+     "date": "<YYYY-MM-DDTHH:mm>",
      "dataFile": "resume/tailored/<slug>.json",
      "coverLetterFile": "resume/tailored/<slug>-cover-letter.json"
    }
@@ -132,10 +132,11 @@ without the actual text is just guessing.
    that the same tailored resume is reusable for any other company hiring the same position, so the company
    name shouldn't be baked into the label the user sees in `/admin`. If the original target company is worth
    noting for the user's own tracking, work it into `description` instead (e.g. "Tailored from the Acme Corp
-   posting; emphasized..."). Use today's date — `/admin` sorts entries newest-first by this field, so it must
-   be accurate. Keep the description to one sentence — it's shown as subtext in the admin list, not a
-   changelog. `coverLetterFile` is what makes `/admin` show the "Download Cover Letter" button — omit it only
-   if the user explicitly says they don't want a cover letter for this run.
+   posting; emphasized..."). Use the current local date and time in `YYYY-MM-DDTHH:mm` form (not just the
+   date) — `/admin` displays and sorts entries newest-first by this field, so it must be accurate. Keep the
+   description to one sentence — it's shown as subtext in the admin list, not a changelog. `coverLetterFile`
+   is what makes `/admin` show the "Download Cover Letter" button — omit it only if the user explicitly says
+   they don't want a cover letter for this run.
 
 9. **Report**: the slug/id, a reminder that both PDFs are downloaded from `/admin/resumes.html` (not this
    session), a short list of what was emphasized/reordered/trimmed in the resume and why, the angle taken in

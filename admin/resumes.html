@@ -88,6 +88,21 @@
       return (entry.title || entry.id).replace(/[^a-z0-9]+/gi, "_") + "_" + suffix + ".pdf";
     }
 
+    function formatEntryDate(dateStr) {
+      if (!dateStr) return "";
+      // Date-only strings ("YYYY-MM-DD") predate timestamped entries; show them without a time.
+      if (/^\d{4}-\d{2}-\d{2}$/.test(dateStr)) {
+        return new Date(dateStr + "T00:00:00").toLocaleDateString(undefined, {
+          year: "numeric", month: "long", day: "numeric"
+        });
+      }
+      const d = new Date(dateStr);
+      if (isNaN(d.getTime())) return dateStr;
+      return d.toLocaleString(undefined, {
+        year: "numeric", month: "long", day: "numeric", hour: "numeric", minute: "2-digit"
+      });
+    }
+
     async function loadResumes() {
       const listEl = document.getElementById("list");
       try {
@@ -107,7 +122,7 @@
             <div>
               <div class="row-title">${entry.title}</div>
               <div class="row-desc">${entry.description || ""}</div>
-              <div class="row-meta">${entry.date ? "Generated: " + entry.date : ""}</div>
+              <div class="row-meta">${entry.date ? "Generated: " + formatEntryDate(entry.date) : ""}</div>
             </div>
             <div class="row-actions">
               <button class="download-btn" data-kind="resume">Download Resume</button>
