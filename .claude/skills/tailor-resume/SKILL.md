@@ -7,9 +7,18 @@ description: Use when the user pastes/links a job description and wants their re
 
 ## Source of truth
 
-[About.js](../../../About.js) at the repo root is the **only** source of factual content: `about`, `skills`,
-`education`, `experience`, `timeline` (per-role bullet points in `Description`, split by `●`), `Projects`,
-`certificates`. Never invent an employer, date, degree, metric, or skill that isn't already there.
+[About.js](../../../About.js) at the repo root is the **canonical** source of factual content: `about`,
+`skills`, `education`, `experience`, `timeline` (per-role bullet points in `Description`, split by `●`),
+`Projects`, `certificates`. Dates, titles, employers, and degrees always come from here — never invent one
+that isn't already in this file.
+
+`resume/knowledge/<company-slug>.json` files (written by the [capture-experience](../capture-experience/SKILL.md)
+skill) are an optional **supplementary** source of pre-vetted bullets for a specific employer — richer or
+alternately-phrased material than what made it onto the public site. If a JD's target company has a matching
+knowledge file, you may draw bullets from its `roles[].bullets` / `projects[].bullets` (each already carries a
+`source` back to something the user actually said, so this doesn't violate the no-fabrication rule) — but the
+role's `title`/dates/`companyname` still come from `About.js`, not the knowledge file. If no knowledge file
+exists for the company, that's fine — just work from `About.js` as before.
 
 **Never edit About.js.** It drives the live site. This skill only ever writes new files under `resume/tailored/`.
 
@@ -37,24 +46,30 @@ without the actual text is just guessing.
 ## Process
 
 1. **Read `About.js`** fully to refresh on the current data (it changes over time as the user updates their
-   site — don't rely on memory from a previous run).
+   site — don't rely on memory from a previous run). Also check whether `resume/knowledge/` contains a file
+   for the JD's company (slugify the company name the same way step 6 does) — if so, read it too.
 
 2. **Extract signal from the JD**: role title, seniority, must-have hard skills/stack, nice-to-haves, domain
    (e.g. insurance, fintech, supply chain), and recurring phrasing an ATS or recruiter would scan for.
 
-3. **Cross-reference against About.js** — for each JD requirement, find the matching evidence already present
-   (a skill in `skills`, a bullet in some `timeline[year].work[n].Description`, a `Projects` entry). If a JD
-   requirement has **no** matching evidence anywhere in About.js, do not paper over it — note it to the user
-   as a gap rather than inventing a bullet.
+3. **Cross-reference against About.js** (and the matching knowledge file, if one exists) — for each JD
+   requirement, find the matching evidence already present (a skill in `skills`, a bullet in some
+   `timeline[year].work[n].Description`, a `Projects` entry, or a tagged bullet in a `resume/knowledge/*.json`
+   role/project). If a JD requirement has **no** matching evidence anywhere in either source, do not paper
+   over it — note it to the user as a gap rather than inventing a bullet.
 
-4. **Draft tailored content**, built only from real About.js material:
+4. **Draft tailored content**, built only from real About.js (and knowledge-file) material:
    - **Skills**: the real skills list from `skills`, reordered so JD-matching items lead each category. Don't
      drop skills, just resequence — this stays truthful and still reads as comprehensive.
    - **Experience**: for each role, pull the `●`-delimited bullets from `Description` and select/reorder the
      ones most relevant to this JD (light rephrasing for keyword alignment is fine; changing facts or numbers
-     is not). Include the roles that best support the JD — usually all of them for a senior-level posting,
-     but trim clearly irrelevant older roles if space/relevance calls for it.
-   - **Projects**: include 0–2 entries from `Projects` only if directly relevant to the JD.
+     is not). If a knowledge file exists for that company, you may also pull in bullets from its matching
+     `roles[].bullets` whose `tags` line up with the JD — use the knowledge file's bullet `text` verbatim or
+     lightly rephrased, never its `source` field (that's internal provenance, not resume copy). Include the
+     roles that best support the JD — usually all of them for a senior-level posting, but trim clearly
+     irrelevant older roles if space/relevance calls for it.
+   - **Projects**: include 0–2 entries from `Projects` (or a knowledge file's `projects[]`, same rule as
+     above) only if directly relevant to the JD.
    - **Education**: include as-is.
 
 5. **Build the tailored data file** — a plain JSON object shaped like the subset of About.js described above
@@ -90,6 +105,8 @@ sensitive than what's already public in About.js (which is the whole site's prem
 - No fabricated employers, titles, dates, degrees, metrics, or skills — ever. Reordering, selecting, and
   light rephrasing of existing content is fine; adding new claims is not.
 - Don't modify `About.js`.
+- Don't modify `resume/knowledge/*.json` — those are owned by the `capture-experience` skill; this skill only
+  reads them.
 - Don't modify `js/resume-pdf.js` or `admin/*` as part of a normal tailoring run — those are site
   infrastructure, not per-application output.
 - `resume/tailored/` is **not** gitignored and must be committed + pushed for `/admin` to see it on the live
