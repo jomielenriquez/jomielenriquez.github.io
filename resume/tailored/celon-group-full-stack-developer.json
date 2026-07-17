@@ -1,0 +1,95 @@
+{
+    "name": "Jomiel L. Enriquez",
+    "email": "enriquez.jliquigan@gmail.com",
+    "phone": "+639953637231",
+    "linkedIn": "https://www.linkedin.com/in/jomiel-enriquez-75643614a/",
+    "gitHub": "https://github.com/jomielenriquez",
+    "website": "https://jomielenriquez.github.io/",
+    "skills": [
+        { "label": "Languages",   "items": "TypeScript, JavaScript, Python, C#, HTML, CSS, SQL" },
+        { "label": "Frameworks",  "items": "React, Node.js, React Native, Vue 3, .NET / ASP.NET MVC, Angular, jQuery" },
+        { "label": "Cloud & Ops", "items": "REST API, Git / GitHub, Azure, AWS, CI/CD, Azure DevOps, Microservices, Agile / Jira" },
+        { "label": "Databases",   "items": "PostgreSQL, MS SQL Server, MySQL, Oracle SQL" }
+    ],
+    "education": [
+        {
+            "degree": "Bachelor of Science in Computer Engineering",
+            "school": "Tanauan City College",
+            "from": "2016",
+            "to": "2020"
+        },
+        {
+            "degree": "Mechatronics Servicing (NC II)",
+            "school": "Tanauan City College",
+            "from": "2014",
+            "to": "2016"
+        }
+    ],
+    "timeline": {
+        "2025": {
+            "work": {
+                "1": {
+                    "title": "Mobile App Developer (Agentic Coding Contractor)",
+                    "companyname": "Anotoys Labs",
+                    "status": "Contract",
+                    "StartDate": "11/01/2025",
+                    "EndDate": "02/01/2026",
+                    "location": "Remote",
+                    "RO": "Remote",
+                    "Description": "● Developed a cross-platform Android and iOS application using Cursor as an AI-assisted coding environment, building a real-time computer-vision tool that automatically counts consecutive kicks of a sipa (a traditional Filipino game) before it hits the ground.<br>● Integrated a Google image-processing model for player detection alongside an in-house ONNX model for object detection, combining both into a single real-time on-device inference pipeline.<br>● Owned implementation of all detection models plus the app's full screen navigation and mobile architecture, as the sole developer on the project.",
+                    "Skills": "cursor,ai-assisted-development,android,ios,onnx,computer-vision,mobile-development"
+                },
+                "2": {
+                    "title": "Senior Developer",
+                    "companyname": "Delta Insurance",
+                    "status": "Full-time",
+                    "StartDate": "07/01/2024",
+                    "EndDate": "",
+                    "location": "New Zealand",
+                    "RO": "Remote",
+                    "Description": "● Developed and tested a new AI-assisted insurance platform using Next.js, TypeScript, Express, Azure Cosmos DB, Azure Blob Storage, Zod, JWT/JWKS, and the OpenAI SDK, built with Claude Code as the primary AI-assisted development tool.<br>● Drive end-to-end development, support, and release execution across two core insurance systems: a legacy enterprise application built on .NET Framework and a modern cloud-native ecosystem utilizing a 5-microservice .NET Core backend and React frontend.<br>● Established developer guidelines via 'claude.md' and led the migration of legacy codebase repositories from SVN to GitHub, integrating agentic AI coding tools into the team's daily workflow.<br>● Authored automated test coverage with Jest and Testing Library plus Playwright end-to-end tests (via MCP integration with Claude Code), alongside manual testing across dev, UAT, and production environments.<br>● Manage cloud infrastructure configurations on AWS, including orchestrating AWS API Gateways and configuring secure configurations using AWS Parameter Store.",
+                    "Skills": "nextjs,typescript,express,azure-cosmos-db,azure-blob-storage,openai-sdk,claude-code,react,dotnetcore,dotnetframework,github,jest,playwright,aws"
+                }
+            }
+        },
+        "2023": {
+            "work": {
+                "1": {
+                    "title": "Software Engineer",
+                    "companyname": "Beeline",
+                    "status": "Full-time",
+                    "StartDate": "12/12/2022",
+                    "EndDate": "06/30/2024",
+                    "location": "Taguig, Metro Manila, Philippines",
+                    "RO": "Remote",
+                    "Description": "● Engineered a secure RESTful API for background check integrations, handling sensitive data for global enterprise clients.<br>● Optimized a global contingent workforce system by contributing to the Vue 3 migration, resulting in a 25% increase in frontend rendering performance.<br>● Collaborated with cross-functional Agile teams to deliver scalable solutions across a complex Oracle and SQL Server database landscape.",
+                    "Skills": "restapi,nodejs,vue,csharp,aspdotnet,oracle,sqlserver,agile"
+                }
+            }
+        },
+        "2022": {
+            "work": {
+                "1": {
+                    "title": "C# .NET Developer",
+                    "companyname": "Moreton Bay Technology",
+                    "status": "Full-time",
+                    "StartDate": "4/1/2022",
+                    "EndDate": "12/9/2022",
+                    "location": "Manila, Metro Manila, Philippines",
+                    "RO": "Hybrid",
+                    "Description": "● Developed bug fixes and feature enhancements using HTML, CSS, JavaScript (ES6+), and C#, maintaining high code quality and system stability.<br>● Maintained and troubleshot a supply chain management system, diagnosing and resolving client-reported defects across front-end and back-end layers to ensure business continuity.",
+                    "Skills": "javascript,csharp,dotnetcore,aspdotnet,html,css,git,azuredevops"
+                }
+            }
+        }
+    },
+    "Projects": {
+        "0": {
+            "Title": "Higher Education Digital Transformation Ecosystem",
+            "Description": "Directed the end-to-end digital overhaul for Colegio De Laurel, designing three interconnected systems (Admission, Enrollment, and Public Portal). Migrated the institution from manual, paper-based processes to a secure, cloud-native infrastructure on AWS with automated CI/CD pipelines.",
+            "Skills": "React, .NET Core, AWS, GitHub Actions, MSSQL, REST API",
+            "projectLink": "https://enrollment.colegiodelaurel.edu.ph/",
+            "projectDate": "2024 - 2026"
+        }
+    }
+}

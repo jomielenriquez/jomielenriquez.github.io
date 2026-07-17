@@ -5,5 +5,12 @@
         "description": "Tailored from the Offshore 247 (AU Health Tech) posting; led with React Native/TypeScript SDK evidence (Anotoys Labs) and API/architecture governance (Delta Insurance, Beeline), reordered skills to front-load TS/RN/REST.",
         "date": "2026-07-13",
         "dataFile": "resume/tailored/offshore247-react-native-typescript-sdk.json"
+    },
+    {
+        "id": "celon-group-full-stack-developer",
+        "title": "Full Stack Developer",
+        "description": "Tailored from the Celon Group Limited posting; led with AI-assisted development evidence (Claude Code at Delta Insurance, Cursor at Anotoys Labs) and React/Next.js/Node.js full-stack work, reordered skills to front-load TS/React/Node/REST/PostgreSQL.",
+        "date": "2026-07-17",
+        "dataFile": "resume/tailored/celon-group-full-stack-developer.json"
     }
 ]
