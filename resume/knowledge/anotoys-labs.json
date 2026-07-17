@@ -1,0 +1,36 @@
+{
+  "company": "Anotoys Labs",
+  "companySlug": "anotoys-labs",
+  "lastUpdated": "2026-07-17",
+  "roles": [
+    {
+      "title": "Mobile App Developer (Agentic Coding Contractor)",
+      "startDate": "November 2025",
+      "endDate": "February 2026",
+      "rawNotes": "I am a agentic coding contractor in Anotoys labs until now. what I do is I develop an android and ios app using cursor. I am developing this app which that is use to monitor a sipa, a game in the philippines. the app count how many times the player kicks the sipa maintaining it in the air until it hits the ground. it uses a google image processing model to detect the player and a onnx file created by a in house ai developer to the detect the sipa. as the app developer, I make sure that all the models, including the onnx file, is implemented in the mobile app. I maintain the screen navigation and ALL stuffs related to mobile development.",
+      "skills": ["cursor", "android", "ios", "onnx", "computer-vision", "google-image-processing", "mobile-development", "navigation"],
+      "bullets": [
+        {
+          "text": "Developed a cross-platform Android and iOS application, using Cursor as an AI-assisted coding environment, to monitor sipa (a traditional Filipino game), automatically counting how many consecutive times a player kicks the sipa to keep it airborne before it hits the ground.",
+          "tags": ["mobile", "android", "ios", "ai-assisted-development"],
+          "source": "I develop an android and ios app using cursor. I am developing this app which that is use to monitor a sipa, a game in the philippines. the app count how many times the player kicks the sipa maintaining it in the air until it hits the ground."
+        },
+        {
+          "text": "Integrated a Google image processing model for player detection alongside an ONNX model, built by an in-house AI developer, for sipa detection, combining both into a single real-time on-device inference pipeline.",
+          "tags": ["onnx", "computer-vision", "model-integration"],
+          "source": "it uses a google image processing model to detect the player and a onnx file created by a in house ai developer to the detect the sipa."
+        },
+        {
+          "text": "Owned implementation of all detection models, including the ONNX sipa detector, within the mobile app as the sole app developer on the project.",
+          "tags": ["onnx", "mobile", "ml-integration"],
+          "source": "as the app developer, I make sure that all the models, including the onnx file, is implemented in the mobile app."
+        },
+        {
+          "text": "Built and maintained the app's screen navigation and all other mobile development concerns end-to-end.",
+          "tags": ["mobile", "navigation", "app-architecture"],
+          "source": "I maintain the screen navigation and ALL stuffs related to mobile development."
+        }
+      ]
+    }
+  ]
+}
