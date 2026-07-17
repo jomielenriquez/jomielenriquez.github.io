@@ -1,0 +1,24 @@
+{
+    "applicant": {
+        "name": "Jomiel L. Enriquez",
+        "email": "enriquez.jliquigan@gmail.com",
+        "phone": "+639953637231",
+        "linkedIn": "https://www.linkedin.com/in/jomiel-enriquez-75643614a/",
+        "website": "https://jomielenriquez.github.io/"
+    },
+    "date": "July 17, 2026",
+    "recipient": {
+        "name": "Hiring Manager",
+        "company": "Celon Group Limited",
+        "roleTitle": "Lead Full Stack Developer"
+    },
+    "salutation": "Dear Hiring Manager,",
+    "paragraphs": [
+        "I'm excited to apply for the Lead Full Stack Developer role at Celon. Your AI-first approach to development is exactly how I already work — Claude Code and Cursor are part of my daily toolkit, not an add-on, and I bring the engineering judgement to review, test, and take responsibility for everything that tooling produces.",
+        "At Delta Insurance, I own end-to-end delivery across two insurance platforms — a legacy .NET system and a modern microservices backend with a React frontend — and built a new AI-assisted platform on Next.js and Node.js with JWT/JWKS authentication, Zod-validated APIs, and OpenAI SDK integration for LLM-powered features, using Claude Code as the primary development tool throughout. I also authored our 'claude.md' developer guidelines so the wider team could adopt Claude Code and GitHub Copilot consistently, and I review the architecture and code of peer Senior Developers as part of that ownership. Separately, as the sole developer on a mobile project at Anotoys Labs, I used Cursor to build and ship a full computer-vision application end-to-end.",
+        "My commercial experience runs shorter than the 10 years you've listed, but the scope I've owned — architecture decisions, cloud infrastructure, release management, and setting the team's AI-assisted workflow standards — reflects the technical ownership this role calls for, and it's scaled quickly each year.",
+        "I'm fully remote-ready and comfortable working aligned to UK hours, and I'd welcome the chance to talk through how I could contribute to Celon's client and internal application work. Thank you for your consideration — I'm available to speak at your convenience."
+    ],
+    "closing": "Sincerely,",
+    "signatureName": "Jomiel L. Enriquez"
+}

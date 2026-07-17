@@ -20,5 +20,13 @@
         "date": "2026-07-17",
         "dataFile": "resume/tailored/expansea-lead-full-stack-developer.json",
         "coverLetterFile": "resume/tailored/expansea-lead-full-stack-developer-cover-letter.json"
+    },
+    {
+        "id": "celon-group-lead-full-stack-developer",
+        "title": "Lead Full Stack Developer",
+        "description": "Tailored from a second, Lead-level Celon Group Limited posting (10+ years, PostgreSQL/Supabase/Firebase, LLM API integration); led with Claude Code/Cursor/GitHub Copilot fluency and secure API design (JWT/JWKS, Zod) at Delta Insurance, kept full role history to support the seniority bar.",
+        "date": "2026-07-17",
+        "dataFile": "resume/tailored/celon-group-lead-full-stack-developer.json",
+        "coverLetterFile": "resume/tailored/celon-group-lead-full-stack-developer-cover-letter.json"
     }
 ]
