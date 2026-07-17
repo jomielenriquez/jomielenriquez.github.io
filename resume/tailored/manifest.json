@@ -12,5 +12,13 @@
         "description": "Tailored from the Celon Group Limited posting; led with AI-assisted development evidence (Claude Code at Delta Insurance, Cursor at Anotoys Labs) and React/Next.js/Node.js full-stack work, reordered skills to front-load TS/React/Node/REST/PostgreSQL.",
         "date": "2026-07-17",
         "dataFile": "resume/tailored/celon-group-full-stack-developer.json"
+    },
+    {
+        "id": "expansea-lead-full-stack-developer",
+        "title": "Lead Full Stack Developer",
+        "description": "Tailored from the Expansea Philippines Inc posting; emphasized ownership/technical-governance evidence and AWS + Next.js/Node.js + AI-assisted development (Claude Code, claude.md guidelines) at Delta Insurance, kept full role history to support the seniority bar.",
+        "date": "2026-07-17",
+        "dataFile": "resume/tailored/expansea-lead-full-stack-developer.json",
+        "coverLetterFile": "resume/tailored/expansea-lead-full-stack-developer-cover-letter.json"
     }
 ]

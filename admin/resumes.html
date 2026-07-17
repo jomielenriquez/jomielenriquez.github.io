@@ -37,6 +37,7 @@
   .row-title { font-weight: 600; font-size: 15px; margin-bottom: 3px; }
   .row-desc { color: var(--muted); font-size: 13px; margin-bottom: 4px; }
   .row-meta { color: var(--muted); font-size: 11.5px; }
+  .row-actions { flex-shrink: 0; display: flex; flex-direction: column; gap: 8px; }
   .download-btn {
     flex-shrink: 0; background: var(--accent); color: #fff; border: none;
     padding: 8px 16px; border-radius: 8px; font-size: 13px; font-weight: 600; cursor: pointer;
@@ -44,6 +45,9 @@
   }
   .download-btn:hover { opacity: 0.9; }
   .download-btn:disabled { opacity: 0.6; cursor: wait; }
+  .download-btn.secondary {
+    background: none; border: 1px solid var(--accent); color: var(--accent);
+  }
 </style>
 </head>
 <body>
@@ -72,6 +76,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.10/pdfmake.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.10/vfs_fonts.js"></script>
   <script src="../js/resume-pdf.js"></script>
+  <script src="../js/cover-letter-pdf.js"></script>
 
   <script>
     document.getElementById("logoutBtn").addEventListener("click", function () {
@@ -79,8 +84,8 @@
       window.location.href = "index.html";
     });
 
-    function slugToFilename(entry) {
-      return (entry.title || entry.id).replace(/[^a-z0-9]+/gi, "_") + "_Resume.pdf";
+    function slugToFilename(entry, suffix) {
+      return (entry.title || entry.id).replace(/[^a-z0-9]+/gi, "_") + "_" + suffix + ".pdf";
     }
 
     async function loadResumes() {
@@ -104,23 +109,46 @@
               <div class="row-desc">${entry.description || ""}</div>
               <div class="row-meta">${entry.date ? "Generated: " + entry.date : ""}</div>
             </div>
-            <button class="download-btn">Download</button>
+            <div class="row-actions">
+              <button class="download-btn" data-kind="resume">Download Resume</button>
+              ${entry.coverLetterFile ? '<button class="download-btn secondary" data-kind="cover-letter">Download Cover Letter</button>' : ""}
+            </div>
           `;
-          row.querySelector(".download-btn").addEventListener("click", async (e) => {
+          row.querySelector('[data-kind="resume"]').addEventListener("click", async (e) => {
             const btn = e.currentTarget;
+            const original = btn.textContent;
             btn.disabled = true;
             btn.textContent = "Preparing…";
             try {
               const dataRes = await fetch("../" + entry.dataFile, { cache: "no-store" });
               const aboutData = await dataRes.json();
-              generateResumePdf(aboutData, slugToFilename(entry));
+              generateResumePdf(aboutData, slugToFilename(entry, "Resume"));
             } catch (err) {
               alert("Could not load resume data for this entry.");
             } finally {
               btn.disabled = false;
-              btn.textContent = "Download";
+              btn.textContent = original;
             }
           });
+          const coverBtn = row.querySelector('[data-kind="cover-letter"]');
+          if (coverBtn) {
+            coverBtn.addEventListener("click", async (e) => {
+              const btn = e.currentTarget;
+              const original = btn.textContent;
+              btn.disabled = true;
+              btn.textContent = "Preparing…";
+              try {
+                const dataRes = await fetch("../" + entry.coverLetterFile, { cache: "no-store" });
+                const letterData = await dataRes.json();
+                generateCoverLetterPdf(letterData, slugToFilename(entry, "CoverLetter"));
+              } catch (err) {
+                alert("Could not load cover letter data for this entry.");
+              } finally {
+                btn.disabled = false;
+                btn.textContent = original;
+              }
+            });
+          }
           listEl.appendChild(row);
         });
       } catch (err) {

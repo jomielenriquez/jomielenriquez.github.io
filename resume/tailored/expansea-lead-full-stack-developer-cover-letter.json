@@ -1,0 +1,24 @@
+{
+    "applicant": {
+        "name": "Jomiel L. Enriquez",
+        "email": "enriquez.jliquigan@gmail.com",
+        "phone": "+639953637231",
+        "linkedIn": "https://www.linkedin.com/in/jomiel-enriquez-75643614a/",
+        "website": "https://jomielenriquez.github.io/"
+    },
+    "date": "July 17, 2026",
+    "recipient": {
+        "name": "Hiring Manager",
+        "company": "Expansea Philippines Inc",
+        "roleTitle": "Lead Full Stack Developer (Next.js / React / Node)"
+    },
+    "salutation": "Dear Hiring Manager,",
+    "paragraphs": [
+        "I'm excited to apply for the Lead Full Stack Developer role at Expansea Philippines Inc. Across my time at Delta Insurance and Beeline, I've taken ownership of full-stack systems end-to-end — from legacy platforms to modern microservice and Next.js/Node.js architectures — which lines up closely with what you're looking for: someone who can own architecture, set standards, and drive a multi-product codebase forward.",
+        "At Delta Insurance, I drive development, support, and release execution across two insurance platforms — a legacy .NET system and a modern 5-microservice backend with a React frontend — while owning our AWS infrastructure (API Gateway, Parameter Store, EC2, CodePipeline) and reviewing the architecture and code of peer Senior Developers. I've also led our adoption of AI-assisted development, building a new Next.js/Node.js platform with Claude Code as our primary tool and authoring the 'claude.md' guidelines that brought agentic coding tools into the team's daily workflow — the same fluency with tools like Claude Code that this role is asking for.",
+        "My professional experience runs a little under the 8 years you've listed, but the scope of ownership has scaled quickly — from reviewing peer developers' architecture and code, to owning release cycles and cloud infrastructure independently, to leading my team's shift toward AI-assisted workflows. I'd welcome the chance to bring that same ownership to mentoring your existing developer and shaping the technical direction across your platforms.",
+        "I'm fully remote-ready and comfortable working async across time zones, and I'd love to talk through how I could help take Expansea's product suite to the next level. Thank you for your consideration — I'm available to speak at your convenience."
+    ],
+    "closing": "Sincerely,",
+    "signatureName": "Jomiel L. Enriquez"
+}
