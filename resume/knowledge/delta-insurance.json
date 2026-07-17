@@ -7,7 +7,7 @@
       "title": "Senior Developer",
       "startDate": "07/01/2024",
       "endDate": "",
-      "rawNotes": "my experience in delta insurance. I am a senior .net developer. I've listed the things that I do\n1. Maintaining and development an insurance platform created using .net framework, I do the development of new features and also supports the user by addressing their issues (BAUs). I do code review, scheduling of release, doing the actual release. the app is deployed in an AWS EC2 instance. the app is deployed in github (previously in svn) with ci/cd github actions\n2. Maintaining and development of a new insurance platform created in .net core as a backend with multiple microservices like quote microservices, authentication microservices, broker, email, client. It has a react frontend that I also do the development and deployment. I do code review, scheduling of release, doing the actual release. the app is deployed in an AWS EC2 instance. CI/CD uses aws codepipeline, codecommit.\n3. Development and testing of a new insurance platform created using claude caude that uses next.js, tailwind css3, azure msal, jest+testing library for unit tests, express 4, azure cosmos db, azure blob storage, zod for schema validation, jwt/jwks, OpenAI Sdk, pdf-lib, tsup for build, ts-node-dev for local dev. Playwright test with mcp with claude code. I do the testing, creating spec files, doing manual testing on dev, uat and prod.\n4. I do the migration from svn to github setup the pipeline",
+      "rawNotes": "my experience in delta insurance. I am a senior .net developer. I've listed the things that I do\n1. Maintaining and development an insurance platform created using .net framework, I do the development of new features and also supports the user by addressing their issues (BAUs). I do code review, scheduling of release, doing the actual release. the app is deployed in an AWS EC2 instance. the app is deployed in github (previously in svn) with ci/cd github actions\n2. Maintaining and development of a new insurance platform created in .net core as a backend with multiple microservices like quote microservices, authentication microservices, broker, email, client. It has a react frontend that I also do the development and deployment. I do code review, scheduling of release, doing the actual release. the app is deployed in an AWS EC2 instance. CI/CD uses aws codepipeline, codecommit.\n3. Development and testing of a new insurance platform created using claude caude that uses next.js, tailwind css3, azure msal, jest+testing library for unit tests, express 4, azure cosmos db, azure blob storage, zod for schema validation, jwt/jwks, OpenAI Sdk, pdf-lib, tsup for build, ts-node-dev for local dev. Playwright test with mcp with claude code. I do the testing, creating spec files, doing manual testing on dev, uat and prod.\n4. I do the migration from svn to github setup the pipeline\n5. I also use github copilot when I was in delta insurance. I used it when developing new feature for our .net systems",
       "skills": [
         "csharp",
         "dotnetframework",
@@ -38,6 +38,7 @@
         "ts-node-dev",
         "playwright",
         "claude-code",
+        "github-copilot",
         "ci-cd"
       ],
       "bullets": [
@@ -80,6 +81,11 @@
           "text": "Migrate legacy codebase repositories from SVN to GitHub and set up the CI/CD pipeline for the new workflow.",
           "tags": ["svn", "github", "ci-cd"],
           "source": "I do the migration from svn to github setup the pipeline"
+        },
+        {
+          "text": "Use GitHub Copilot to accelerate development of new features across .NET systems.",
+          "tags": ["github-copilot", "dotnet", "ai-assisted-development"],
+          "source": "I also use github copilot when I was in delta insurance. I used it when developing new feature for our .net systems"
         }
       ]
     }
