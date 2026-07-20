@@ -1,0 +1,24 @@
+{
+    "applicant": {
+        "name": "Jomiel L. Enriquez",
+        "email": "enriquez.jliquigan@gmail.com",
+        "phone": "+639953637231",
+        "linkedIn": "https://www.linkedin.com/in/jomiel-enriquez-75643614a/",
+        "website": "https://jomielenriquez.github.io/"
+    },
+    "date": "July 20, 2026",
+    "recipient": {
+        "name": "Hiring Manager",
+        "company": "Lewis Personnel Management",
+        "roleTitle": "Senior Software Engineer (Fullstack)"
+    },
+    "salutation": "Dear Hiring Manager,",
+    "paragraphs": [
+        "I'm writing to apply for the Senior Software Engineer (Fullstack) role. My background is built almost entirely on the stack this role calls for — C# and .NET/.NET Core enterprise applications, RESTful APIs, SQL, and Microsoft Azure — across more than five years in the financial services space, which lines up closely with what you're looking for.",
+        "At Delta Insurance, I drive end-to-end development, support, and release execution across two core insurance systems: a legacy .NET Framework application and a modern .NET Core microservices backend with a React frontend, while managing cloud infrastructure across AWS and Azure (including Azure MSAL authentication, Cosmos DB, and Blob Storage) with CI/CD via GitHub Actions and AWS CodePipeline. At Beeline, I engineered a secure RESTful API for background check integrations against an Oracle and SQL Server database landscape, and earlier, at Punongbayan & Araullo, I built internal ASP.NET/C# applications and Oracle PL/SQL reporting for the firm's audit and advisory practice. I've also been an early adopter of AI-assisted development tools — using Claude Code and GitHub Copilot day to day at Delta Insurance — which maps directly to the productivity practices you're looking to bring in.",
+        "My direct domain experience is in insurance and professional/financial-services audit rather than retail or business banking specifically, though the regulatory and data-sensitivity concerns are closely related. I'm confident that experience transfers quickly, and I'd welcome the chance to discuss how it applies to your banking client's systems.",
+        "I'm fully remote-ready and comfortable working across time zones, and I'd love to talk through how I could contribute to your team. Thank you for your consideration — I'm available to speak at your convenience."
+    ],
+    "closing": "Sincerely,",
+    "signatureName": "Jomiel L. Enriquez"
+}

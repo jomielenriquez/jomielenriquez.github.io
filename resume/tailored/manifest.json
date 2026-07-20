@@ -28,5 +28,13 @@
         "date": "2026-07-17",
         "dataFile": "resume/tailored/celon-group-lead-full-stack-developer.json",
         "coverLetterFile": "resume/tailored/celon-group-lead-full-stack-developer-cover-letter.json"
+    },
+    {
+        "id": "lewis-personnel-management-senior-software-engineer-fullstack",
+        "title": "Senior Software Engineer (Fullstack)",
+        "description": "Tailored from the Lewis Personnel Management posting (banking client via JAC); led with enterprise C#/.NET/Azure evidence (Delta Insurance, Moreton Bay, Punongbayan & Araullo) and full role history to support the 5+ years bar, reordered skills to front-load C#/SQL/Python/Azure.",
+        "date": "2026-07-20T08:27",
+        "dataFile": "resume/tailored/lewis-personnel-management-senior-software-engineer-fullstack.json",
+        "coverLetterFile": "resume/tailored/lewis-personnel-management-senior-software-engineer-fullstack-cover-letter.json"
     }
 ]
