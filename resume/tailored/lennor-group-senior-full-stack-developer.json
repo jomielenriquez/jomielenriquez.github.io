@@ -1,0 +1,129 @@
+{
+    "name": "Jomiel L. Enriquez",
+    "email": "enriquez.jliquigan@gmail.com",
+    "phone": "+639953637231",
+    "linkedIn": "https://www.linkedin.com/in/jomiel-enriquez-75643614a/",
+    "gitHub": "https://github.com/jomielenriquez",
+    "website": "https://jomielenriquez.github.io/",
+    "skills": [
+        { "label": "Frameworks",  "items": ".NET / ASP.NET Core, Angular, React, Vue 3, Node.js, React Native, jQuery" },
+        { "label": "Cloud & Ops", "items": "Microservices, AWS, Azure, Azure DevOps, CI/CD, REST API, Git / GitHub, Agile / Jira" },
+        { "label": "Languages",   "items": "C#, SQL, JavaScript, TypeScript, HTML, CSS, Python" },
+        { "label": "Databases",   "items": "MS SQL Server, Oracle SQL, MySQL, PostgreSQL" }
+    ],
+    "education": [
+        {
+            "degree": "Bachelor of Science in Computer Engineering",
+            "school": "Tanauan City College",
+            "from": "2016",
+            "to": "2020"
+        },
+        {
+            "degree": "Mechatronics Servicing (NC II)",
+            "school": "Tanauan City College",
+            "from": "2014",
+            "to": "2016"
+        }
+    ],
+    "timeline": {
+        "2025": {
+            "work": {
+                "1": {
+                    "title": "Senior Developer",
+                    "companyname": "Delta Insurance",
+                    "status": "Full-time",
+                    "StartDate": "07/01/2024",
+                    "EndDate": "",
+                    "location": "New Zealand",
+                    "RO": "Remote",
+                    "Description": "● Drive end-to-end development, support, and release execution across two core insurance systems: a legacy enterprise application built on .NET Framework and a modern cloud-native ecosystem utilizing a 5-microservice .NET Core backend and React frontend.<br>● Provide technical governance and quality assurance by reviewing the architectural and code contributions of peer Senior Developers to ensure system reliability and alignment with SOLID standards.<br>● Manage cloud infrastructure configurations on AWS, including orchestrating AWS API Gateways and configuring secure configurations using AWS Parameter Store.<br>● Migrated legacy codebase repositories from SVN to GitHub, authored 'claude.md' developer guidelines to integrate Claude Code into the workflow, and used GitHub Copilot to accelerate feature development across .NET systems.<br>● Actively participate in and guide Agile ceremonies, including daily stand-ups, backlog grooming, and sprint refinements to maintain high delivery velocity.",
+                    "Skills": "csharp,dotnetcore,dotnetframework,microservices,aws,aws-api-gateway,parameter-store,react,git,github,svn,claude-code,github-copilot,agile,sqlserver,ssms,azuredevops,restapi,javascript,typescript"
+                }
+            }
+        },
+        "2023": {
+            "work": {
+                "1": {
+                    "title": "Software Engineer",
+                    "companyname": "Beeline",
+                    "status": "Full-time",
+                    "StartDate": "12/12/2022",
+                    "EndDate": "06/30/2024",
+                    "location": "Taguig, Metro Manila, Philippines",
+                    "RO": "Remote",
+                    "Description": "● Engineered a secure RESTful API for background check integrations, handling sensitive data for global enterprise clients.<br>● Collaborated with cross-functional Agile teams to deliver scalable solutions across a complex Oracle and SQL Server database landscape.",
+                    "Skills": "csharp,aspdotnet,oracle,sqlserver,restapi,git,azuredevops,agile"
+                }
+            }
+        },
+        "2022": {
+            "work": {
+                "1": {
+                    "title": "C# .NET Developer",
+                    "companyname": "Moreton Bay Technology",
+                    "status": "Full-time",
+                    "StartDate": "4/1/2022",
+                    "EndDate": "12/9/2022",
+                    "location": "Manila, Metro Manila, Philippines",
+                    "RO": "Hybrid",
+                    "Description": "● Maintained and troubleshot a supply chain management system, diagnosing and resolving client-reported defects across front-end and back-end layers to ensure business continuity.<br>● Managed source code versioning and branching strategies using TFS, Azure DevOps, and Git.<br>● Maintained and optimized client databases in SQL Server and Oracle DB, authoring queries and stored procedures to ensure data integrity and performance.",
+                    "Skills": "csharp,dotnetcore,aspdotnet,git,azure,azuredevops,ssms,oracle,sqlserver,dotnetframework"
+                }
+            }
+        },
+        "2021": {
+            "work": {
+                "1": {
+                    "title": "C# .NET Developer",
+                    "companyname": "Punongbayan & Araullo",
+                    "status": "Contractual",
+                    "StartDate": "10/1/2021",
+                    "EndDate": "3/1/2022",
+                    "location": "Makati, Metro Manila, Philippines",
+                    "RO": "Remote",
+                    "Description": "● Developed and maintained internal web applications using ASP.NET, C#, Angular, and Oracle SQL, supporting the firm's audit and advisory practice operations.<br>● Built and optimized database stored procedures and complex queries using Oracle PL/SQL and SQL Server to support reporting and data management requirements.<br>● Utilized Azure DevOps for source control, branch management, code reviews, and CI/CD pipeline execution.<br>● Collaborated with senior engineers to deliver bug fixes and feature enhancements within defined sprint timelines.",
+                    "Skills": "csharp,dotnetcore,aspdotnet,angular,oracle,ssms,sqlserver,git,azuredevops,azure,dotnetframework"
+                }
+            }
+        },
+        "2020": {
+            "work": {
+                "1": {
+                    "title": "Application Specialist",
+                    "companyname": "Epson Precision Philippines",
+                    "status": "Full-time",
+                    "StartDate": "10/19/2020",
+                    "EndDate": "11/19/2021",
+                    "location": "Lipa City, Philippines",
+                    "RO": "Onsite",
+                    "Description": "● Developed and launched the 'Accounting Integrated Management System' (AIMS), fully digitizing the procurement lifecycle for 100+ internal users.<br>● Reduced manual financial processing errors by 40% through automated validation logic and optimized SQL stored procedures.",
+                    "Skills": "csharp,aspdotnet,ssms,postgresql,ado.net"
+                }
+            }
+        },
+        "2019": {
+            "work": {
+                "1": {
+                    "title": "Information Technology Specialist",
+                    "companyname": "R Caldo Technical Consultancy Services",
+                    "status": "Part-time",
+                    "StartDate": "6/1/2019",
+                    "EndDate": "6/30/2020",
+                    "location": "Santo Tomas, Calabarzon, Philippines",
+                    "RO": "Remote",
+                    "Description": "● Led front-end and back-end development for a web application using Agile methodology, coordinating with a cross-functional development team to meet client milestones.<br>● Built a Traffic Violation Management System with an Android electronic ticketing module using C# MVC .NET Framework, Xamarin, SQL Server, and thermal printer integration.",
+                    "Skills": "csharp,dotnetframework,aspdotnet,sqlserver,agile"
+                }
+            }
+        }
+    },
+    "Projects": {
+        "0": {
+            "Title": "Higher Education Digital Transformation Ecosystem",
+            "Description": "Directed the end-to-end digital overhaul for Colegio De Laurel, designing three interconnected systems (Admission, Enrollment, and Public Portal). Migrated the institution from manual, paper-based processes to a secure, cloud-native infrastructure on AWS with automated CI/CD pipelines.",
+            "Skills": "React, .NET Core, AWS, GitHub Actions, MSSQL, REST API",
+            "projectLink": "https://enrollment.colegiodelaurel.edu.ph/",
+            "projectDate": "2024 - 2026"
+        }
+    }
+}

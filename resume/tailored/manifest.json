@@ -100,5 +100,21 @@
         "date": "2026-07-20T13:20",
         "dataFile": "resume/tailored/cloud-bridge-senior-engineer-csharp-net.json",
         "coverLetterFile": "resume/tailored/cloud-bridge-senior-engineer-csharp-net-cover-letter.json"
+    },
+    {
+        "id": "lennor-group-senior-full-stack-developer",
+        "title": "Senior Full Stack Developer",
+        "description": "Tailored from a Lennor Metier Consulting posting (recruiting for an undisclosed multinational tech client; Microsoft stack + Angular + AWS + microservices, onsite Taguig); led with Angular/ASP.NET/Oracle SQL evidence (Punongbayan & Araullo), AWS/microservices governance (Delta Insurance), and named-tool AI-assisted development (Claude Code, GitHub Copilot), kept full role history back to 2019 to narrow the experience-years gap.",
+        "date": "2026-07-20T14:10",
+        "dataFile": "resume/tailored/lennor-group-senior-full-stack-developer.json",
+        "coverLetterFile": "resume/tailored/lennor-group-senior-full-stack-developer-cover-letter.json"
+    },
+    {
+        "id": "ourassistants-senior-software-engineer",
+        "title": "Senior Software Engineer",
+        "description": "Tailored from the OurAssistants posting (remote, PHP100k-200k/mo, at-scale public cloud + C#/Java + JS/React); led with AWS EC2/CodePipeline/CodeCommit/API Gateway evidence and code-review technical governance at Delta Insurance plus PostgreSQL/SQL Server/Oracle database work across Epson, Beeline, and Punongbayan & Araullo, reordered skills to front-load C#/JS/React and AWS/PostgreSQL/MySQL.",
+        "date": "2026-07-20T14:35",
+        "dataFile": "resume/tailored/ourassistants-senior-software-engineer.json",
+        "coverLetterFile": "resume/tailored/ourassistants-senior-software-engineer-cover-letter.json"
     }
 ]

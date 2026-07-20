@@ -1,0 +1,24 @@
+{
+    "applicant": {
+        "name": "Jomiel L. Enriquez",
+        "email": "enriquez.jliquigan@gmail.com",
+        "phone": "+639953637231",
+        "linkedIn": "https://www.linkedin.com/in/jomiel-enriquez-75643614a/",
+        "website": "https://jomielenriquez.github.io/"
+    },
+    "date": "July 20, 2026",
+    "recipient": {
+        "name": "Hiring Manager",
+        "company": "OurAssistants",
+        "roleTitle": "Senior Software Engineer"
+    },
+    "salutation": "Dear Hiring Manager,",
+    "paragraphs": [
+        "I'm writing to apply for the Senior Software Engineer role with OurAssistants. My background as a senior full-stack engineer building enterprise-scale, cloud-hosted systems in C# and React on AWS lines up well with your mission of delivering scalable software solutions on the world's leading public clouds.",
+        "At Delta Insurance, I develop and support a .NET Core microservices backend paired with a React frontend, manage its AWS infrastructure (EC2, CodePipeline, CodeCommit, API Gateway, and Parameter Store), and provide technical governance by reviewing the architectural and code contributions of peer Senior Developers. I also author automated test coverage with Jest, Testing Library, and Playwright, validating releases across dev, UAT, and production environments. Earlier roles add relational database depth: at Epson Precision Philippines I cut manual financial processing errors by 40% through optimized PostgreSQL and SQL Server stored procedures, and at Beeline and Punongbayan & Araullo I worked across Oracle SQL and SQL Server database landscapes supporting global enterprise clients.",
+        "I'm based in Tanauan City, Batangas, work fully remote with a stable setup suited to US/UK business hours, and I'm comfortable operating independently with minimal supervision, which has been the norm across every remote role I've held since 2022.",
+        "I'd welcome the opportunity to bring that experience to OurAssistants' engineering team. Thank you for your time and consideration."
+    ],
+    "closing": "Sincerely,",
+    "signatureName": "Jomiel L. Enriquez"
+}

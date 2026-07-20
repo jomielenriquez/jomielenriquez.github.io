@@ -1,0 +1,24 @@
+{
+    "applicant": {
+        "name": "Jomiel L. Enriquez",
+        "email": "enriquez.jliquigan@gmail.com",
+        "phone": "+639953637231",
+        "linkedIn": "https://www.linkedin.com/in/jomiel-enriquez-75643614a/",
+        "website": "https://jomielenriquez.github.io/"
+    },
+    "date": "July 20, 2026",
+    "recipient": {
+        "name": "Hiring Manager",
+        "company": "Lennor Metier Consulting",
+        "roleTitle": "Senior Full Stack Developer"
+    },
+    "salutation": "Dear Hiring Manager,",
+    "paragraphs": [
+        "I'm writing to apply for the Senior Full Stack Developer role you're recruiting for on behalf of your multinational tech client. My background is built almost entirely on the Microsoft stack you're hiring for — C#, .NET Core/ASP.NET Core, Angular, and SQL Server — paired with hands-on AWS experience, which lines up closely with what the role calls for.",
+        "At Delta Insurance, I develop and support both a legacy .NET Framework application and a modern .NET Core backend split across five microservices with a React frontend, and I manage the AWS infrastructure behind it, including API Gateway and Parameter Store configuration. Earlier, at Punongbayan & Araullo, I built and maintained ASP.NET/C#/Angular applications backed by Oracle SQL, and at Epson Precision Philippines I cut manual financial processing errors by 40% through optimized SQL stored procedures and automated validation logic — the kind of database optimization work this role emphasizes. I've also directly integrated AI-assisted development into daily work at Delta Insurance, authoring the team's 'claude.md' guidelines for Claude Code and using GitHub Copilot to speed up feature delivery, which maps directly onto the AI-assisted development tooling you mentioned.",
+        "My professional experience runs a bit under the 8-10 years you've listed, though my technical depth in this exact stack — .NET Core, Angular, microservices, SQL, and AWS — is well established across five consecutive Microsoft-stack roles, and I've been quick to pick up adjacent tools and platforms (Entity Framework, containerization, Jenkins) as each role has required.",
+        "I'd welcome the chance to bring that experience to the team and am available to start on short notice. Thank you for your time and consideration."
+    ],
+    "closing": "Sincerely,",
+    "signatureName": "Jomiel L. Enriquez"
+}
