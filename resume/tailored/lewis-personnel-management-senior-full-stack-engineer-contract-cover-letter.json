@@ -1,0 +1,24 @@
+{
+    "applicant": {
+        "name": "Jomiel L. Enriquez",
+        "email": "enriquez.jliquigan@gmail.com",
+        "phone": "+639953637231",
+        "linkedIn": "https://www.linkedin.com/in/jomiel-enriquez-75643614a/",
+        "website": "https://jomielenriquez.github.io/"
+    },
+    "date": "July 20, 2026",
+    "recipient": {
+        "name": "Hiring Manager",
+        "company": "Lewis Personnel Management",
+        "roleTitle": "Senior Full-Stack Engineer"
+    },
+    "salutation": "Dear Hiring Manager,",
+    "paragraphs": [
+        "I'm writing to apply for the Senior Full-Stack Engineer role. With over 7 years of cumulative technical experience (5+ years professional) building enterprise applications in C#/.NET, I've spent my career in domains — Insurance, Audit & Advisory, Supply Chain — that carry the same regulatory rigor and data-integrity demands as Financial Services and Asset Management, which aligns closely with what this role is looking for.",
+        "As Senior Developer at Delta Insurance, I drive end-to-end development across a .NET Framework legacy system and a .NET Core microservices platform with a React frontend and REST APIs, while managing cloud infrastructure on both Azure and AWS. Earlier, at Punongbayan & Araullo, I built internal ASP.NET/C#/Oracle SQL applications supporting audit and advisory operations, and used Azure DevOps for source control and CI/CD — direct experience with the enterprise-application, SQL, and Azure requirements this posting calls for.",
+        "I also actively use AI-assisted development tools — GitHub Copilot and Claude Code at Delta Insurance — to accelerate feature delivery and testing, which the posting specifically values. My Python experience is rooted in automation tooling (a Raspberry Pi/OpenCV telemetry system) rather than large-scale cloud-native services, and I don't have hands-on Java experience, but my depth across the rest of the .NET/Azure/SQL stack should more than offset that gap.",
+        "I'd welcome the chance to discuss how my background fits this role. Thank you for your consideration — I'm available to start on short notice given the contract timeline."
+    ],
+    "closing": "Sincerely,",
+    "signatureName": "Jomiel L. Enriquez"
+}

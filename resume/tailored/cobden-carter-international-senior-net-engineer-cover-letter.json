@@ -1,0 +1,24 @@
+{
+    "applicant": {
+        "name": "Jomiel L. Enriquez",
+        "email": "enriquez.jliquigan@gmail.com",
+        "phone": "+639953637231",
+        "linkedIn": "https://www.linkedin.com/in/jomiel-enriquez-75643614a/",
+        "website": "https://jomielenriquez.github.io/"
+    },
+    "date": "July 20, 2026",
+    "recipient": {
+        "name": "Hiring Manager",
+        "company": "Cobden & Carter International",
+        "roleTitle": "Senior .NET Engineer"
+    },
+    "salutation": "Dear Hiring Manager,",
+    "paragraphs": [
+        "I'm writing to apply for the Senior .NET Engineer role with Cobden & Carter International. With several years of professional experience building enterprise .NET applications across insurance, fintech, and supply chain environments, and hands-on ownership of Azure-hosted platforms in my current role, I'm well-positioned to take on the architecture ownership and cloud-native delivery this position calls for.",
+        "At Delta Insurance, I currently split my time across a legacy .NET Framework insurance platform and a modern .NET Core microservices ecosystem (quote, authentication, broker, email, and client services) with a React frontend. I've also built and tested a newer AI-assisted insurance platform on Azure, using Azure MSAL for authentication and Azure Cosmos DB and Blob Storage for data and file storage. Beyond hands-on development, I provide technical governance for the team — reviewing the architecture and code of peer Senior Developers against SOLID principles, and leading the SVN-to-GitHub migration along with the CI/CD pipeline and developer guidelines that came with it.",
+        "Azure DevOps and CI/CD have been a constant across my roles — from managing source control, code reviews, and pipeline execution at Punongbayan & Araullo and Moreton Bay Technology, to owning release scheduling end-to-end at Delta Insurance. I've also worked extensively with SQL Server and Oracle, REST API design, and led a full digital-transformation project (admissions, enrollment, and public portal systems) architected on a cloud-native, CI/CD-driven infrastructure.",
+        "I'd welcome the chance to bring that combination of deep .NET expertise, growing Azure platform experience, and technical leadership to your team. I'm available to start on short notice and happy to discuss further at your convenience."
+    ],
+    "closing": "Sincerely,",
+    "signatureName": "Jomiel L. Enriquez"
+}

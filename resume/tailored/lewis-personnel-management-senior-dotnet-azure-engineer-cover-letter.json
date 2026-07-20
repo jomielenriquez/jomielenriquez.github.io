@@ -1,0 +1,24 @@
+{
+    "applicant": {
+        "name": "Jomiel L. Enriquez",
+        "email": "enriquez.jliquigan@gmail.com",
+        "phone": "+639953637231",
+        "linkedIn": "https://www.linkedin.com/in/jomiel-enriquez-75643614a/",
+        "website": "https://jomielenriquez.github.io/"
+    },
+    "date": "July 20, 2026",
+    "recipient": {
+        "name": "Hiring Manager",
+        "company": "Lewis Personnel Management",
+        "roleTitle": "Senior .NET/Azure Fullstack Engineer"
+    },
+    "salutation": "Dear Hiring Manager,",
+    "paragraphs": [
+        "I'm writing to apply for the Senior .NET/Azure Fullstack Engineer role supporting the modernisation of enterprise applications and integration services for your global asset manager client. With over 7 years of cumulative technical experience (5+ years professional) in C#/.NET, I've built my career in domains — Insurance, Audit & Advisory, Supply Chain — that carry the same regulatory rigor and data-integrity demands as Financial Services and Asset Management.",
+        "As Senior Developer at Delta Insurance, I drive end-to-end development across a legacy .NET Framework system and a modular, cloud-native .NET Core microservices platform with a React frontend and REST APIs, managing infrastructure entirely on Microsoft Azure and contributing to the modular decomposition of legacy enterprise applications. At Beeline, I engineered a secure RESTful API for background-check integrations serving global enterprise clients, and at Punongbayan & Araullo I built internal ASP.NET/C#/Oracle SQL applications with Azure DevOps CI/CD — direct experience with the API-first integration work, SQL depth, and Azure delivery this role calls for.",
+        "I've also pioneered AI-assisted development tools throughout my recent work — Claude Code as my primary development environment at Delta Insurance, GitHub Copilot for accelerating .NET feature delivery, and Cursor for a separate mobile engineering engagement — which lines up directly with the AI-Enabled Software Engineering focus of this role. I don't have hands-on Java experience, and my Python work has been automation-focused rather than cloud-native scripting, but my depth across the rest of the .NET/Azure/SQL stack and my track record modernising enterprise systems should offset that gap.",
+        "I'd welcome the opportunity to discuss how my background fits this role. Thank you for your consideration — I'm available to start on short notice."
+    ],
+    "closing": "Sincerely,",
+    "signatureName": "Jomiel L. Enriquez"
+}

@@ -1,0 +1,109 @@
+{
+    "name": "Jomiel L. Enriquez",
+    "title": ["Senior Software Engineer", "C#/.NET & Azure Fullstack Engineer", "AI-Assisted Cloud Integrations Specialist"],
+    "about": [
+        "Senior Software Engineer with over 7 years of cumulative technical experience (5+ years professional) designing, building, and supporting enterprise-scale applications and integration services within the Insurance, Audit & Advisory, and Supply Chain sectors — domains that carry the same regulatory rigor and data-integrity demands as Financial Services and Asset Management.",
+        "Deep expertise across the .NET ecosystem (Core, Framework, ASP.NET MVC) building resilient REST APIs, microservices-based integration layers, and modular decomposition of legacy applications, deployed cloud-natively on Microsoft Azure with automated CI/CD pipelines via Azure DevOps and GitHub Actions. Strong relational database background across SQL Server and Oracle, plus Python for automation scripting.",
+        "Actively pioneers AI-assisted development tools — Claude Code, GitHub Copilot, and Cursor — throughout the engineering lifecycle to accelerate coding, testing, and troubleshooting, while contributing to code reviews, technical governance, and Agile ceremonies."
+    ],
+    "email": "enriquez.jliquigan@gmail.com",
+    "phone": "+639953637231",
+    "linkedIn": "https://www.linkedin.com/in/jomiel-enriquez-75643614a/",
+    "gitHub": "https://github.com/jomielenriquez",
+    "website": "https://jomielenriquez.github.io/",
+    "skills": [
+        { "label": "Languages",   "items": "C#, SQL, Python, JavaScript, TypeScript, HTML, CSS" },
+        { "label": "Cloud & Ops", "items": "Microsoft Azure, CI/CD, Git / GitHub, Azure DevOps, REST API, Microservices, AWS, Agile / Jira" },
+        { "label": "Frameworks",  "items": ".NET / ASP.NET MVC, React, Vue 3, Angular, Node.js, React Native, jQuery" },
+        { "label": "Databases",   "items": "MS SQL Server, Oracle SQL, MySQL, PostgreSQL" }
+    ],
+    "education": [
+        {
+            "degree": "Bachelor of Science in Computer Engineering",
+            "school": "Tanauan City College",
+            "from": "2016",
+            "to": "2020"
+        },
+        {
+            "degree": "Mechatronics Servicing (NC II)",
+            "school": "Tanauan City College",
+            "from": "2014",
+            "to": "2016"
+        }
+    ],
+    "timeline": {
+        "2025": {
+            "work": {
+                "1": {
+                    "logo": "https://deltainsurance.co.nz/hs-fs/hubfs/Photos%20-%20hero%20images/0238_Delta_WebsiteGraphics_HeroForeground_1.png?width=1674&height=1419&name=0238_Delta_WebsiteGraphics_HeroForeground_1.png",
+                    "title": "Senior Developer",
+                    "companyname": "Delta Insurance",
+                    "status": "Full-time",
+                    "StartDate": "07/01/2024",
+                    "EndDate": "",
+                    "location": "New Zealand",
+                    "RO": "Remote",
+                    "Description": "● Drive end-to-end development, support, and release execution across two core insurance systems: a legacy enterprise application built on .NET Framework and a modular, cloud-native ecosystem utilizing a 5-microservice .NET Core backend and React frontend with REST APIs.<br>● Develop and test a new insurance platform using Next.js, Azure MSAL, Azure Cosmos DB, Azure Blob Storage, Express, Zod, and JWT/JWKS for secure API authentication, built with Claude Code as the primary AI-assisted development tool and GitHub Copilot for accelerating .NET feature delivery.<br>● Manage cloud infrastructure configurations on Microsoft Azure to support secure, reliable service delivery across enterprise systems.<br>● Provide technical governance and quality assurance by reviewing the architectural and code contributions of peer Senior Developers to ensure system reliability and alignment with SOLID standards.<br>● Actively participate in and guide Agile ceremonies, including daily stand-ups, backlog grooming, and sprint refinements to maintain high delivery velocity.",
+                    "Skills": "csharp,dotnetcore,dotnetframework,react,azure,azure-cosmos-db,azure-blob-storage,restapi,microservices,git,azuredevops,javascript,typescript,sqlserver,ai-agent,github-copilot"
+                }
+            }
+        },
+        "2023": {
+            "work": {
+                "1": {
+                    "logo": "https://media.glassdoor.com/sqll/217914/beeline-squarelogo-1594411934878.png",
+                    "title": "Software Engineer",
+                    "companyname": "Beeline",
+                    "status": "Full-time",
+                    "StartDate": "12/12/2022",
+                    "EndDate": "06/30/2024",
+                    "location": "Taguig, Metro Manila, Philippines",
+                    "RO": "Remote",
+                    "Description": "● Engineered a secure RESTful API for background check integrations, handling sensitive data for global enterprise clients.<br>● Optimized a global contingent workforce system by contributing to the Vue 3 migration, resulting in a 25% increase in frontend rendering performance.<br>● Collaborated with cross-functional Agile teams to deliver scalable solutions across a complex Oracle and SQL Server database landscape.",
+                    "Skills": "csharp,aspdotnet,restapi,vue,nodejs,oracle,sqlserver,git,azuredevops,agile"
+                }
+            }
+        },
+        "2022": {
+            "work": {
+                "1": {
+                    "logo": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxIHEhMIEhMWFhUWGRUaFxYWGBcfIRsgGxYYHRkWHhgeHSkgHSAxHhoYIz0tMSsuOi4uGyA3ODMtNykuOi4BCgoKDQwNGg8PGjUlHyUvNjc1NzM1NTUrNC03NS8tLTUtLS0rNTc4MS0tLTU1NS0tNS01LS01NTYtNS0tNzU1Nf/AABEIAFAAUAMBIgACEQEDEQH/xAAbAAACAwEBAQAAAAAAAAAAAAAGBwAEBQMCAf/EADoQAAECBAIGBwYEBwAAAAAAAAECAwAEBREGIRITMUFRgSJCYXGhsdEUMpHB4fAVI1JyggIhcpMzUbTBFf/EABkBAAIDAQAAAAAAAAAAAAAAAAABAgMEBf/EAB8RAAIDAAIDAQEAAAAAAAAAAAABAgMREiExQVEiE//aAAwDAQACEQMRAD8AeMSJAJizEhdKpBk2SLhaxv4pHZ5xOEHN4gNetYsakLtN/mLHA5DvO/lAjPYlmZza4Ujgjo+O3xjIiRvhRCIzRpMgutOhjSPFSjnYcY61umroTurSpWic0KGRI5bxBD/DtsaLzu8lI8/WN3ENLFVZLPWGaDwP12RVK7LMfgADkcSzMnscKhwXn47YLqLitqoEMr/LX2nI9x9YXSklHRORG6PkWTphNdAOmJAPhLEhSUyDxuDkhZ3f0n7+hxGCcHB4xA/jGqmnM6tJsty4HYOsfvjC2jdxnN+1TKkbkAJHmfGMKN9EOMBkiRItU+RXUViXbTc7e4ZZmLm87Yws/h27k8z2oPmD8oMoX9AYcoM2hh0WDgKb3uDfZbmBDBjnX5z1eyIuMbU/2R/XgdFwX59b5HnGXSaW5VV6hA71HYnvgzx+xpsJe3pWPgQb+Nov4Vpwp8ugW6SwFK57ByGUWq7jUvozzScNMU4BWiFrHWUPIbBGmzNJdW5Lj3kaN/7hcHz+EWIC5eo6uqOC/RX+XzCR/sLc4zpSnrEDipc1KaUzcJK3F5nd0jBzI4UlpYWKNM71K9NkL2ojVPOJ3hax/lBrhXEom7Sbxs5sSo9bs/d5xqvU+KcfAy7NYTlZgWCNA8Uk+RuPCMyTpLuGXDNoBebIsoJHSAve+jvgxiRlVksx+BAexMt4rmE3CkoZBUBeylElO3gMoL4w6xQg+r21hWqeF+kMgr93rA/RcSuSJcMxprSb2UM+kOqCMrHsifDmtj69AamPZgBpuUvmtY+A+pEE6Roi0KucqpqEwmdd90EdEbkg+6I0Z/EkzVzqGUlI/S3cqPefSLJUSxIYTYhxGimJLSSFO7gOr2q9IAJB065t6+esSbnedIGLRw5NkaepV4X+EV5GWWl9uXUkpVpoFiLEdIbourjCEXjAv4ylPZZlaty7KHPb4gxhwyMZUr8QZ1yR027kdo6w+fKFvDompQwAmo+L3JMBl0axI336Q57/ALzghTjGVI07rB/SU5+njC4jXoNBcrBuOigHNZ8hxMRsprX6fQF2u4ncqn8q0ClByt1ldn0EdZyvo9k/Ci0pLgSlJBFgLW6XG+XCC+l0dmljRbTnvUcyecAc80J6oKZ3Kd0TyNleRiuDhJ4l0uwM5tj2VaNeheibEgZEg8IZtELC2krlwkI7B4HffvjniCkJqzRa2LFyg8Dw7jAThapmkv6heSFHRWDuO48oUn/aOrygGXFV+RbmFIfUkFSDdJ3iLUSMoiQC4rw0WyqeZF0nNaBu4qHZ5eR1EicJuD1AKnD9KNWdDGxIzWeA9TDRlmEyyQwgWSkWAEcpaRblVLdQkJK7FVt9v+xaiVtrsYFaozYkW1zKtiQT38B8YXGGF62cacVtKlE34lJ+ca2O6rpqFNTsFis8TuH38oHKS6qXebfSknRUCQBc9o+EX015W39GNyFxjiS9lmNcBk4NLnsPrzhjA3zivMyLc0pDy0hRRfRvuvb0jPXPhLRFHC7rzsugvJsRkCdpG4kfeyNiJEiDevQP/9k=",
+                    "title": "C# .NET Developer",
+                    "companyname": "Moreton Bay Technology",
+                    "status": "Full-time",
+                    "StartDate": "4/1/2022",
+                    "EndDate": "12/9/2022",
+                    "location": "Manila, Metro Manila, Philippines",
+                    "RO": "Hybrid",
+                    "Description": "● Contributed to modular decomposition and refactoring of a supply chain management system, diagnosing and resolving client-reported defects across front-end and back-end layers to reduce technical debt and ensure business continuity.<br>● Developed bug fixes and feature enhancements using HTML, CSS, JavaScript (ES6+), and C#, maintaining high code quality and system stability.<br>● Managed source code versioning and branching strategies using TFS, Azure DevOps, and Git.<br>● Maintained and optimized client databases in SQL Server and Oracle DB, authoring queries and stored procedures to ensure data integrity and performance.",
+                    "Skills": "csharp,dotnetcore,aspdotnet,git,azure,azuredevops,ssms,oracle,sqlserver,javascript,html,css,bootstrap,jquery,dotnetframework,visualstudio,vscode"
+                }
+            }
+        },
+        "2021": {
+            "work": {
+                "1": {
+                    "logo": "data:image/jpeg;base64,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",
+                    "title": "C# .NET Developer",
+                    "companyname": "Punongbayan & Araullo",
+                    "status": "Contractual",
+                    "StartDate": "10/1/2021",
+                    "EndDate": "3/1/2022",
+                    "location": "Makati, Metro Manila, Philippines",
+                    "RO": "Remote",
+                    "Description": "● Developed and maintained internal enterprise web applications using ASP.NET, C#, Angular, and Oracle SQL, supporting the firm's audit and advisory practice operations.<br>● Built and optimized database stored procedures and complex queries using Oracle PL/SQL and SQL Server to support reporting and data management requirements.<br>● Utilized Azure DevOps for source control, branch management, code reviews, and CI/CD pipeline execution.<br>● Collaborated with senior engineers to deliver bug fixes and feature enhancements within defined sprint timelines using Agile methodology.",
+                    "Skills": "csharp,dotnetcore,aspdotnet,angular,oracle,sqlserver,ssms,git,azuredevops,azure,javascript,html,css,dotnetframework,visualstudio,vscode,agile"
+                }
+            }
+        }
+    },
+    "Projects": {
+        "0": {
+            "Title": "Higher Education Digital Transformation Ecosystem",
+            "Description": "Directed the end-to-end digital overhaul for Colegio De Laurel, designing three interconnected systems (Admission, Enrollment, and Public Portal). Migrated the institution from manual, paper-based processes to a secure, cloud-native infrastructure with automated CI/CD pipelines and REST APIs.",
+            "Skills": "React, .NET Core, AWS, GitHub Actions, MSSQL, REST API",
+            "projectLink": "https://enrollment.colegiodelaurel.edu.ph/",
+            "projectDate": "2024 - 2026"
+        }
+    }
+}

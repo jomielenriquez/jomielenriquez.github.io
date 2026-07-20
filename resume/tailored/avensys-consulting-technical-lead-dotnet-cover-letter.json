@@ -1,0 +1,24 @@
+{
+    "applicant": {
+        "name": "Jomiel L. Enriquez",
+        "email": "enriquez.jliquigan@gmail.com",
+        "phone": "+639953637231",
+        "linkedIn": "https://www.linkedin.com/in/jomiel-enriquez-75643614a/",
+        "website": "https://jomielenriquez.github.io/"
+    },
+    "date": "July 20, 2026",
+    "recipient": {
+        "name": "Hiring Manager",
+        "company": "Avensys Consulting Inc.",
+        "roleTitle": "Technical Lead (.NET / ASP.NET MVC)"
+    },
+    "salutation": "Dear Hiring Manager,",
+    "paragraphs": [
+        "I'm writing to apply for the Technical Lead (.NET / ASP.NET MVC) role with Avensys Consulting Inc. I'm a Senior Software Engineer with over 5 years of professional experience across the .NET stack, most recently leading day-to-day technical governance on a two-system insurance platform that spans a legacy .NET Framework application and a modern .NET Core microservices backend with a React frontend — the same C#, ASP.NET, and React combination this role is built around.",
+        "At Delta Insurance, I review the architectural and code contributions of peer Senior Developers to keep the codebase aligned with SOLID principles, and I own release scheduling and execution across both systems. Earlier, at Moreton Bay Technology and Punongbayan & Araullo, I used Azure DevOps for source control, code reviews, and CI/CD pipelines while maintaining SQL Server and Oracle databases — the same enterprise Microsoft-stack discipline (architecture, RESTful APIs, Agile delivery) this role calls for.",
+        "My day-to-day leadership so far has centered on architectural governance and code review rather than a formal people-management title, but that governance work — holding a team to a shared architectural standard — is the core of what a technical lead does, and I'm ready to take on that title formally, including mentoring and coaching engineers directly.",
+        "I'd welcome the chance to discuss how I can contribute to your team and am available to start on short notice. Thank you for your consideration."
+    ],
+    "closing": "Sincerely,",
+    "signatureName": "Jomiel L. Enriquez"
+}

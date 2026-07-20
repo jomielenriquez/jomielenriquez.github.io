@@ -1,0 +1,24 @@
+{
+    "applicant": {
+        "name": "Jomiel L. Enriquez",
+        "email": "enriquez.jliquigan@gmail.com",
+        "phone": "+639953637231",
+        "linkedIn": "https://www.linkedin.com/in/jomiel-enriquez-75643614a/",
+        "website": "https://jomielenriquez.github.io/"
+    },
+    "date": "July 20, 2026",
+    "recipient": {
+        "name": "Hiring Manager",
+        "company": "ShareSource Australia",
+        "roleTitle": "Senior Full Stack Software Engineer (.NET)"
+    },
+    "salutation": "Dear Hiring Manager,",
+    "paragraphs": [
+        "I'm writing to apply for the Senior Full Stack Software Engineer (.NET) role at ShareSource. As a Senior Developer at Delta Insurance, a New Zealand insurance provider, I already work in the exact shape of role you're describing: I own features end-to-end across a legacy .NET Framework system and a modern .NET Core microservices backend with a React frontend, for a remote client team I never sit next to in person.",
+        "Two things from that role map directly onto what you need. First, I operate without a dedicated QA team — I write my own Jest and Testing Library unit tests, Playwright end-to-end coverage, and run manual verification across dev, UAT, and production before every release, alongside leading code review for peer Senior Developers to keep the codebase production-ready. Second, I've led the AI-assisted development shift on our team: I helped migrate our repositories from SVN to GitHub and authored the 'claude.md' guidelines that brought Claude Code and GitHub Copilot into our daily workflow, which is squarely the kind of AI-enhanced development ShareSource is asking for. Earlier in my career at Punongbayan & Araullo I also built and maintained ASP.NET/C#/Angular applications against Oracle SQL, so moving between an older Angular codebase and a current one isn't unfamiliar territory.",
+        "I haven't worked with Elasticsearch or Ruby specifically, but my relational database work spans MySQL, SQL Server, and Oracle, and I've picked up new stacks quickly throughout my career — from Vue 3 at Beeline to Next.js and Azure Cosmos DB in a recent Delta Insurance project — so I'd expect to ramp on either within the first few sprints.",
+        "I'm based in Batangas, Philippines, and comfortable with the hybrid/onsite expectations in Makati when needed. I'd welcome the chance to talk through how I could contribute to ShareSource's client teams — thank you for your time and consideration."
+    ],
+    "closing": "Sincerely,",
+    "signatureName": "Jomiel L. Enriquez"
+}

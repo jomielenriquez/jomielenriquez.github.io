@@ -1,0 +1,24 @@
+{
+    "applicant": {
+        "name": "Jomiel L. Enriquez",
+        "email": "enriquez.jliquigan@gmail.com",
+        "phone": "+639953637231",
+        "linkedIn": "https://www.linkedin.com/in/jomiel-enriquez-75643614a/",
+        "website": "https://jomielenriquez.github.io/"
+    },
+    "date": "July 20, 2026",
+    "recipient": {
+        "name": "Hiring Manager",
+        "company": "Doneverse",
+        "roleTitle": "Senior Full-Stack Engineer"
+    },
+    "salutation": "Dear Hiring Manager,",
+    "paragraphs": [
+        "I'm writing to apply for the Senior Full-Stack Engineer role at Doneverse. Your posting describes a high-autonomy engineer who owns features end-to-end across web and mobile, working in React, React Native, Node.js, and TypeScript — that combination matches how I've spent the last several years of my career, most recently shipping a production React Native app and a Node.js/TypeScript insurance platform.",
+        "At Anotoys Labs, I built and shipped a production React Native application for Android and iOS, used by real players, that runs real-time on-device inference by integrating a Google image-processing model with a custom ONNX detection model — end-to-end ownership as the sole app developer, from architecture through screen navigation. At Delta Insurance, I've developed and tested a new insurance platform built with Next.js, TypeScript, and Express, and I own the release lifecycle (code review, AWS deployment, GitHub Actions/CodePipeline CI/CD) for a 5-service .NET Core microservices backend paired with a React frontend, backed by Jest, Testing Library, and Playwright test coverage.",
+        "I've also spent the past year working directly with AI-assisted tools like Claude Code and Cursor as part of my day-to-day development workflow, including establishing team guidelines for integrating them responsibly — directly relevant to your work hardening AI-generated and prototype applications into production-grade systems. Reviewing and improving code written by other engineers has been a constant across my roles, from peer code review at Delta Insurance to maintaining systems I didn't originally build at Moreton Bay Technology.",
+        "I'm based in the Philippines and set up for permanent remote work, and I'd welcome the chance to talk about how I can contribute to Doneverse's product and engineering standards. Thank you for your consideration."
+    ],
+    "closing": "Sincerely,",
+    "signatureName": "Jomiel L. Enriquez"
+}

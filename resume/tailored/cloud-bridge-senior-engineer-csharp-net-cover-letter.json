@@ -1,0 +1,24 @@
+{
+    "applicant": {
+        "name": "Jomiel L. Enriquez",
+        "email": "enriquez.jliquigan@gmail.com",
+        "phone": "+639953637231",
+        "linkedIn": "https://www.linkedin.com/in/jomiel-enriquez-75643614a/",
+        "website": "https://jomielenriquez.github.io/"
+    },
+    "date": "July 20, 2026",
+    "recipient": {
+        "name": "Hiring Manager",
+        "company": "Cloud Bridge",
+        "roleTitle": "Senior Engineer (C# .Net)"
+    },
+    "salutation": "Dear Hiring Manager,",
+    "paragraphs": [
+        "I'm writing to apply for the Senior Engineer (C# .Net) role you're recruiting for on behalf of your financial services client. My background is a close match for this opening: over 7 years of cumulative technical experience building and supporting enterprise C#/.NET applications, with recent work sitting squarely in regulated financial-adjacent domains — insurance and audit/advisory — alongside the AWS cloud infrastructure and CI/CD discipline the role calls for.",
+        "At Delta Insurance, I own the release lifecycle for both a legacy .NET Framework platform and a .NET Core microservices ecosystem deployed on AWS EC2, including code reviews, release scheduling, and CI/CD via GitHub Actions and AWS CodePipeline/CodeCommit — while also reviewing peer Senior Developers' architectural and code contributions to keep the systems aligned with SOLID principles. Earlier, at Punongbayan & Araullo, I built and optimized SQL Server and Oracle PL/SQL stored procedures and complex queries supporting the firm's audit and advisory operations, using Azure DevOps for source control, code reviews, and CI/CD execution — direct experience with the enterprise-scale, financial-domain application work this role centers on.",
+        "I haven't worked directly with Java, post-trade affirmation/confirmation messaging, or FIX/Solace/Tibco, so I want to be upfront about that rather than overstate it. What I bring instead is a strong C#/.NET foundation, hands-on SQL Server and cloud/CI-CD experience in financial-adjacent enterprise systems, and a track record of ramping quickly on new stacks and domains across five roles in five years.",
+        "I'd welcome the chance to discuss how my background fits this position and am available to start on short notice. Thank you for your consideration."
+    ],
+    "closing": "Sincerely,",
+    "signatureName": "Jomiel L. Enriquez"
+}

@@ -1,0 +1,24 @@
+{
+    "applicant": {
+        "name": "Jomiel L. Enriquez",
+        "email": "enriquez.jliquigan@gmail.com",
+        "phone": "+639953637231",
+        "linkedIn": "https://www.linkedin.com/in/jomiel-enriquez-75643614a/",
+        "website": "https://jomielenriquez.github.io/"
+    },
+    "date": "July 20, 2026",
+    "recipient": {
+        "name": "Hiring Manager",
+        "company": "Lewis Personnel Management",
+        "roleTitle": "C#/.NET Senior Full-Stack Engineer (Applications & Integrations)"
+    },
+    "salutation": "Dear Hiring Manager,",
+    "paragraphs": [
+        "I'm writing to apply for the C#/.NET Senior Full-Stack Engineer (Applications & Integrations) role. I bring over 5 years of professional experience building and modernizing enterprise applications on the .NET stack, most of it within insurance and audit/advisory settings closely aligned with the financial-services focus of this position.",
+        "As Senior Developer at Delta Insurance, a New Zealand insurance provider, I drive end-to-end development across a legacy .NET Framework platform and a modern .NET Core microservices backend with a React frontend and REST APIs, while also building a newer platform on Azure (Azure MSAL, Cosmos DB, Blob Storage) with JWT/JWKS-secured integrations. I provide technical governance by reviewing peer developers' code against SOLID standards, and I use GitHub Copilot and Claude Code daily to accelerate coding, testing, and documentation. Earlier, at Punongbayan & Araullo, I built internal applications on ASP.NET, C#, and Oracle SQL for the firm's audit and advisory practice, and used Azure DevOps for CI/CD and code reviews — direct experience with enterprise integration work in a financial-services-adjacent environment.",
+        "My exposure to Java is limited, but my C#/.NET depth, hands-on Azure and REST API integration work, and consistent use of AI-assisted engineering tools should translate well to your stack.",
+        "I'd welcome the opportunity to discuss how my background fits your team. Thank you for your consideration — I'm available for a conversation at your convenience."
+    ],
+    "closing": "Sincerely,",
+    "signatureName": "Jomiel L. Enriquez"
+}

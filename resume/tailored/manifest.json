@@ -36,5 +36,69 @@
         "date": "2026-07-20T08:27",
         "dataFile": "resume/tailored/lewis-personnel-management-senior-software-engineer-fullstack.json",
         "coverLetterFile": "resume/tailored/lewis-personnel-management-senior-software-engineer-fullstack-cover-letter.json"
+    },
+    {
+        "id": "cobden-carter-international-senior-net-engineer",
+        "title": "Senior .NET Engineer",
+        "description": "Tailored from the Cobden & Carter International posting (Azure-focused .NET role); led with Azure DevOps/Azure PaaS evidence (Delta Insurance, Moreton Bay, Punongbayan & Araullo) and technical-governance/leadership bullets, reordered skills to front-load Azure/CI-CD.",
+        "date": "2026-07-20T10:30",
+        "dataFile": "resume/tailored/cobden-carter-international-senior-net-engineer.json",
+        "coverLetterFile": "resume/tailored/cobden-carter-international-senior-net-engineer-cover-letter.json"
+    },
+    {
+        "id": "avensys-consulting-technical-lead-dotnet",
+        "title": "Technical Lead (.NET / ASP.NET MVC)",
+        "description": "Tailored from the Avensys Consulting Inc. posting (Technical Lead, hybrid Mandaluyong); led with technical-governance/code-review evidence and ASP.NET/.NET Core/React/Azure DevOps/SQL Server across Delta Insurance, Moreton Bay, and Punongbayan & Araullo, reordered skills to front-load .NET/ASP.NET MVC, React, and Azure.",
+        "date": "2026-07-20T11:15",
+        "dataFile": "resume/tailored/avensys-consulting-technical-lead-dotnet.json",
+        "coverLetterFile": "resume/tailored/avensys-consulting-technical-lead-dotnet-cover-letter.json"
+    },
+    {
+        "id": "doneverse-senior-full-stack-engineer",
+        "title": "Senior Full-Stack Engineer",
+        "description": "Tailored from the Doneverse posting (React/React Native/Node.js/TypeScript/PostgreSQL, high-autonomy remote); led with the production React Native app at Anotoys Labs and Node.js/TypeScript/React work at Delta Insurance, reordered skills to front-load TypeScript/React/React Native/Node.js/PostgreSQL, and dropped the earliest role to keep focus on modern full-stack evidence.",
+        "date": "2026-07-20T10:53",
+        "dataFile": "resume/tailored/doneverse-senior-full-stack-engineer.json",
+        "coverLetterFile": "resume/tailored/doneverse-senior-full-stack-engineer-cover-letter.json"
+    },
+    {
+        "id": "lewis-personnel-management-net-fullstack-integrations",
+        "title": "C#/.NET Senior Full-Stack Engineer (Applications & Integrations)",
+        "description": "Tailored from a second Lewis Personnel Management posting (applications/integrations focus, finance/banking preferred); led with Azure, REST API, and SQL evidence across Delta Insurance, Beeline, Moreton Bay, and Punongbayan & Araullo, and AI-assisted engineering tools (GitHub Copilot, Claude Code), kept full role history to support the 5+ years bar.",
+        "date": "2026-07-20T11:14",
+        "dataFile": "resume/tailored/lewis-personnel-management-net-fullstack-integrations.json",
+        "coverLetterFile": "resume/tailored/lewis-personnel-management-net-fullstack-integrations-cover-letter.json"
+    },
+    {
+        "id": "lewis-personnel-management-senior-full-stack-engineer-contract",
+        "title": "Senior Full-Stack Engineer",
+        "description": "Tailored from a third Lewis Personnel Management posting (contract, ₱160k–190k/mo, Financial Services/Asset Management preferred, Java/Python/AI-tools mentioned); led with Azure, REST API, and audit/advisory-domain evidence (Delta Insurance, Punongbayan & Araullo) plus AI-assisted tooling and a Python automation project, kept full role history to support the 5+ years bar.",
+        "date": "2026-07-20T12:52",
+        "dataFile": "resume/tailored/lewis-personnel-management-senior-full-stack-engineer-contract.json",
+        "coverLetterFile": "resume/tailored/lewis-personnel-management-senior-full-stack-engineer-contract-cover-letter.json"
+    },
+    {
+        "id": "sharesource-senior-full-stack-net-engineer",
+        "title": "Senior Full Stack Software Engineer (.NET)",
+        "description": "Tailored from the ShareSource Australia posting (Angular 14/15 + .NET 7/8, MySQL, Elasticsearch, no-QA ownership, AI-assisted dev); led with Delta Insurance's testing/QA ownership (Jest, Playwright), Claude Code/GitHub Copilot adoption, and Punongbayan & Araullo's Angular/Oracle work, reordered skills to front-load .NET/Angular/TypeScript/MySQL/CI-CD.",
+        "date": "2026-07-20T11:23",
+        "dataFile": "resume/tailored/sharesource-senior-full-stack-net-engineer.json",
+        "coverLetterFile": "resume/tailored/sharesource-senior-full-stack-net-engineer-cover-letter.json"
+    },
+    {
+        "id": "lewis-personnel-management-senior-dotnet-azure-engineer",
+        "title": "Senior .NET/Azure Fullstack Engineer",
+        "description": "Tailored from a fourth Lewis Personnel Management posting (Azure-only cloud-native, AI-Enabled Software Engineering focus, global asset manager client); led with Azure infrastructure, REST API/integration, and modular-decomposition evidence (Delta Insurance, Beeline) plus Claude Code/GitHub Copilot/Cursor AI-tooling fluency, kept full role history to support the 5+ years bar.",
+        "date": "2026-07-20T13:05",
+        "dataFile": "resume/tailored/lewis-personnel-management-senior-dotnet-azure-engineer.json",
+        "coverLetterFile": "resume/tailored/lewis-personnel-management-senior-dotnet-azure-engineer-cover-letter.json"
+    },
+    {
+        "id": "cloud-bridge-senior-engineer-csharp-net",
+        "title": "Senior Engineer (C# .NET)",
+        "description": "Tailored from the Cloud Bridge posting (recruiting for a financial services client; post-trade/banking domain, Java/XML/Jenkins/GitLab/FIX not evidenced); led with AWS EC2/CI-CD and code-review governance at Delta Insurance and SQL Server/audit-advisory domain work at Punongbayan & Araullo, reordered skills to front-load C#/SQL/AWS/CI-CD/Agile.",
+        "date": "2026-07-20T13:20",
+        "dataFile": "resume/tailored/cloud-bridge-senior-engineer-csharp-net.json",
+        "coverLetterFile": "resume/tailored/cloud-bridge-senior-engineer-csharp-net-cover-letter.json"
     }
 ]
