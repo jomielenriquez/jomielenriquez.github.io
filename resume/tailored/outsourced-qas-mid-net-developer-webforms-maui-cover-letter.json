@@ -1,0 +1,24 @@
+{
+    "applicant": {
+        "name": "Jomiel L. Enriquez",
+        "email": "enriquez.jliquigan@gmail.com",
+        "phone": "+639953637231",
+        "linkedIn": "https://www.linkedin.com/in/jomiel-enriquez-75643614a/",
+        "website": "https://jomielenriquez.github.io/"
+    },
+    "date": "July 28, 2026",
+    "recipient": {
+        "name": "Hiring Manager",
+        "company": "Outsourced Quality Assured Services Inc.",
+        "roleTitle": "Mid C#/.NET Developer (WebForms & MAUI)"
+    },
+    "salutation": "Dear Hiring Manager,",
+    "paragraphs": [
+        "I'm writing to apply for the Mid C#/.NET Developer role supporting your WebForms and MAUI applications. My background covers the same Microsoft stack this role calls for — ASP.NET, C#, T-SQL, jQuery, and cross-platform mobile development.",
+        "At Moreton Bay Technology, I maintained and troubleshot a supply chain management system across front-end and back-end layers, optimized SQL Server and Oracle databases with stored procedures and queries, built fixes using HTML, CSS, and JavaScript alongside C#, and managed source control with TFS, Azure DevOps, and Git. Earlier, at R Caldo Technical Consultancy Services, I built a Traffic Violation Management System with an Android electronic ticketing module using C# MVC .NET Framework, Xamarin, and SQL Server — hands-on experience with the exact mobile framework .NET MAUI evolved from.",
+        "I haven't shipped a production WebForms or .NET MAUI application specifically, but my ASP.NET and Xamarin background maps directly onto both, and I pick up framework-specific conventions quickly.",
+        "I'd welcome the opportunity to bring that experience to your team. Thank you for considering my application."
+    ],
+    "closing": "Sincerely,",
+    "signatureName": "Jomiel L. Enriquez"
+}

@@ -116,5 +116,53 @@
         "date": "2026-07-20T14:35",
         "dataFile": "resume/tailored/ourassistants-senior-software-engineer.json",
         "coverLetterFile": "resume/tailored/ourassistants-senior-software-engineer-cover-letter.json"
+    },
+    {
+        "id": "nuvinno-ph-senior-backend-full-stack-developer-net",
+        "title": "Senior Backend / Full-Stack Developer (.NET)",
+        "description": "Tailored from the NuvInno PH posting (multi-tenant SaaS, Azure-focused, PHP90k-150k/mo); led with technical-governance/architecture evidence and Azure Cosmos DB/Blob Storage/MSAL work at Delta Insurance plus SQL Server/Oracle optimization across Moreton Bay's supply chain platform and Punongbayan & Araullo's audit/advisory systems, reordered skills to front-load Azure and Azure DevOps.",
+        "date": "2026-07-20T15:10",
+        "dataFile": "resume/tailored/nuvinno-ph-senior-backend-full-stack-developer-net.json",
+        "coverLetterFile": "resume/tailored/nuvinno-ph-senior-backend-full-stack-developer-net-cover-letter.json"
+    },
+    {
+        "id": "cloudstaff-product-engineer-full-stack-ai-assisted",
+        "title": "Product Engineer (Full-stack, AI-assisted)",
+        "description": "Tailored from the Cloudstaff posting (WFH, morning shift, .NET/React + Playwright + Claude Code/Copilot); led with Delta Insurance's AI-assisted development (Claude Code, GitHub Copilot, claude.md guidelines), Playwright/Jest testing, and .NET Core + React ownership, plus Beeline's Agile/REST API work, trimmed older .NET-only roles to keep focus on modern full-stack + AI-tooling evidence.",
+        "date": "2026-07-20T14:24",
+        "dataFile": "resume/tailored/cloudstaff-product-engineer-full-stack-ai-assisted.json",
+        "coverLetterFile": "resume/tailored/cloudstaff-product-engineer-full-stack-ai-assisted-cover-letter.json"
+    },
+    {
+        "id": "microsourcing-net-cms-tech-lead",
+        "title": ".NET CMS Tech Lead",
+        "description": "Tailored from the MicroSourcing posting (WFH, day shift, PHP200k-270k/mo, enterprise .NET CMS + client-facing technical leadership); led with Delta Insurance's architectural governance/code-review of peer developers and the Higher Education Digital Transformation project's end-to-end solution ownership on AWS, kept full role history to support the 7+ years bar.",
+        "date": "2026-07-28T20:24",
+        "dataFile": "resume/tailored/microsourcing-net-cms-tech-lead.json",
+        "coverLetterFile": "resume/tailored/microsourcing-net-cms-tech-lead-cover-letter.json"
+    },
+    {
+        "id": "yempo-senior-developer-net-core",
+        "title": "Senior Developer (.NET Core)",
+        "description": "Tailored from the Yempo posting (Australian commercial property client, PHP150k-170k/mo, Angular 17+/.NET Core/Azure); led with Delta Insurance's .NET Core microservices/AWS work and Punongbayan & Araullo's Angular + ASP.NET + Azure DevOps evidence, reordered skills to front-load TypeScript/Angular/.NET Core/Azure.",
+        "date": "2026-07-28T20:24",
+        "dataFile": "resume/tailored/yempo-senior-developer-net-core.json",
+        "coverLetterFile": "resume/tailored/yempo-senior-developer-net-core-cover-letter.json"
+    },
+    {
+        "id": "intogreat-senior-csharp-vbnet-engineer",
+        "title": "Senior C# / VB.NET Engineer",
+        "description": "Tailored from the Intogreat Solutions posting (WFH, insurance application, C#/.NET + Vue/Angular/React + testing coaching); led with Delta Insurance's live insurance-platform ownership, code-review governance, and Jest/Testing Library/Playwright testing, plus Beeline's Vue.js/REST API work, kept full role history to support the 7+ years bar.",
+        "date": "2026-07-28T20:24",
+        "dataFile": "resume/tailored/intogreat-senior-csharp-vbnet-engineer.json",
+        "coverLetterFile": "resume/tailored/intogreat-senior-csharp-vbnet-engineer-cover-letter.json"
+    },
+    {
+        "id": "outsourced-qas-mid-net-developer-webforms-maui",
+        "title": "Mid C#/.NET Developer (WebForms & MAUI)",
+        "description": "Tailored from the Outsourced Quality Assured Services Inc. posting (homebased, 4pm-1am PH shift, ASP.NET WebForms + T-SQL + jQuery + .NET MAUI); led with Moreton Bay's ASP.NET/HTML/CSS/JS/TFS-Git/SQL Server-Oracle evidence and R Caldo's Xamarin mobile app work, kept full role history to show well beyond the 2+ years bar; no direct WebForms or MAUI production experience, noted as a gap.",
+        "date": "2026-07-28T20:56",
+        "dataFile": "resume/tailored/outsourced-qas-mid-net-developer-webforms-maui.json",
+        "coverLetterFile": "resume/tailored/outsourced-qas-mid-net-developer-webforms-maui-cover-letter.json"
     }
 ]

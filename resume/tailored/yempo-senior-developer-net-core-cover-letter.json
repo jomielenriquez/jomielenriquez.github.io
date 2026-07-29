@@ -1,0 +1,23 @@
+{
+    "applicant": {
+        "name": "Jomiel L. Enriquez",
+        "email": "enriquez.jliquigan@gmail.com",
+        "phone": "+639953637231",
+        "linkedIn": "https://www.linkedin.com/in/jomiel-enriquez-75643614a/",
+        "website": "https://jomielenriquez.github.io/"
+    },
+    "date": "July 28, 2026",
+    "recipient": {
+        "name": "Hiring Manager",
+        "company": "Your Employee Offshore (Yempo)",
+        "roleTitle": "Senior Developer (.NET Core)"
+    },
+    "salutation": "Dear Hiring Manager,",
+    "paragraphs": [
+        "I'm applying for the Senior Developer role supporting Yempo's Australian commercial property client. My day-to-day work already sits at the intersection this role needs: .NET Core/Web API backends, Angular frontends, and Azure cloud services.",
+        "At Delta Insurance, I drive end-to-end development and release execution across a 5-microservice .NET Core backend paired with a React frontend, alongside managing cloud infrastructure on AWS (API Gateways, Parameter Store). Earlier, at Punongbayan & Araullo, I built and maintained internal web applications using ASP.NET, C#, and Angular, and used Azure DevOps for source control, code reviews, and CI/CD pipelines — the same Angular + .NET Core + Azure DevOps combination this role is built around.",
+        "I'd be glad to bring that same ownership to your client's intranet and internal tooling. Thank you for considering my application — I'm available to start on short notice."
+    ],
+    "closing": "Sincerely,",
+    "signatureName": "Jomiel L. Enriquez"
+}

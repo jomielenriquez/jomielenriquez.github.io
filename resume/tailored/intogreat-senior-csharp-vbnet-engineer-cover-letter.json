@@ -1,0 +1,23 @@
+{
+    "applicant": {
+        "name": "Jomiel L. Enriquez",
+        "email": "enriquez.jliquigan@gmail.com",
+        "phone": "+639953637231",
+        "linkedIn": "https://www.linkedin.com/in/jomiel-enriquez-75643614a/",
+        "website": "https://jomielenriquez.github.io/"
+    },
+    "date": "July 28, 2026",
+    "recipient": {
+        "name": "Hiring Manager",
+        "company": "Intogreat Solutions",
+        "roleTitle": "Senior C# / VB.NET Engineer | WFH"
+    },
+    "salutation": "Dear Hiring Manager,",
+    "paragraphs": [
+        "I'm applying for the Senior C# / VB.NET Engineer role at Intogreat Solutions. The insurance-application focus of this role lines up directly with what I do today: I'm a Senior Developer building and scaling a live insurance platform.",
+        "At Delta Insurance, I drive end-to-end development across a legacy .NET Framework application and a modern 5-microservice .NET Core backend, while providing technical governance by reviewing peer developers' architecture and code. I also author automated test coverage with Jest, Testing Library, and Playwright, and mentor through code review — matching the coaching and quality-ownership this role expects. Earlier, at Beeline, I worked with Vue.js and REST APIs across an Oracle and SQL Server database landscape, and I've used JIRA and Git-based Agile workflows throughout my career.",
+        "I'd welcome the opportunity to bring that same combination of hands-on .NET development and quality-focused mentorship to your insurance application team. Thank you for your time and consideration."
+    ],
+    "closing": "Sincerely,",
+    "signatureName": "Jomiel L. Enriquez"
+}

@@ -1,0 +1,24 @@
+{
+    "applicant": {
+        "name": "Jomiel L. Enriquez",
+        "email": "enriquez.jliquigan@gmail.com",
+        "phone": "+639953637231",
+        "linkedIn": "https://www.linkedin.com/in/jomiel-enriquez-75643614a/",
+        "website": "https://jomielenriquez.github.io/"
+    },
+    "date": "July 20, 2026",
+    "recipient": {
+        "name": "Hiring Manager",
+        "company": "Cloudstaff",
+        "roleTitle": "Product Engineer (Full-stack, AI-assisted)"
+    },
+    "salutation": "Dear Hiring Manager,",
+    "paragraphs": [
+        "I'm writing to apply for the Product Engineer (Full-stack, AI-assisted) role at Cloudstaff. I'm a full-stack .NET/React engineer who already works the way this role is scoped — owning features end-to-end from planning through testing and handover, and using AI coding tools like Claude Code and GitHub Copilot as part of my daily workflow rather than as an experiment.",
+        "At Delta Insurance, I own end-to-end feature development on a .NET Core microservices backend paired with a React frontend, from implementation through deployment, and provide technical governance by reviewing peer Senior Developers' architecture and code for SOLID alignment. I use Claude Code and GitHub Copilot to accelerate development, and helped establish developer guidelines via 'claude.md' to integrate agentic AI tools into the team's workflow. I also author automated test coverage — Jest and Testing Library unit tests plus Playwright end-to-end tests run via MCP integration with Claude Code — and run manual testing across dev, UAT, and production environments.",
+        "Earlier, at Beeline, I collaborated with cross-functional Agile teams to ship scalable full-stack solutions and built a secure RESTful API for background check integrations handling sensitive data for global enterprise clients — experience that maps directly to the PR-based, Git/CI-CD workflow and Agile delivery cadence your team runs on.",
+        "I've worked fully remote with Philippines-based teams throughout my career, so the work-from-home, morning-shift arrangement fits my existing routine. I'd welcome the chance to discuss how I can contribute to Cloudstaff's product team and am available to start on short notice. Thank you for your time and consideration."
+    ],
+    "closing": "Sincerely,",
+    "signatureName": "Jomiel L. Enriquez"
+}

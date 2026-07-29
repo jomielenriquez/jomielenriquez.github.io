@@ -1,0 +1,24 @@
+{
+    "applicant": {
+        "name": "Jomiel L. Enriquez",
+        "email": "enriquez.jliquigan@gmail.com",
+        "phone": "+639953637231",
+        "linkedIn": "https://www.linkedin.com/in/jomiel-enriquez-75643614a/",
+        "website": "https://jomielenriquez.github.io/"
+    },
+    "date": "July 28, 2026",
+    "recipient": {
+        "name": "Hiring Manager",
+        "company": "MicroSourcing",
+        "roleTitle": ".NET CMS Tech Lead"
+    },
+    "salutation": "Dear Hiring Manager,",
+    "paragraphs": [
+        "I'm writing to apply for the .NET CMS Tech Lead role at MicroSourcing. As a Senior Developer currently leading technical delivery on enterprise .NET systems for a New Zealand insurance provider, I'm used to owning solution architecture end-to-end while guiding the engineers around me toward it.",
+        "At Delta Insurance, I provide technical governance and quality assurance by reviewing the architectural and code contributions of peer Senior Developers, driving development, support, and release execution across two core systems: a legacy .NET Framework application and a modern 5-microservice .NET Core backend with a React frontend. Outside that role, I directed the end-to-end digital transformation of a higher-education client, designing three interconnected systems and migrating them onto a secure, cloud-native AWS infrastructure with automated CI/CD — the kind of solution architecture and client-facing technical ownership this role calls for.",
+        "I haven't worked directly with Sitecore, Kentico, or Optimizely, but my background is squarely in the enterprise ASP.NET Core architecture, RESTful API design, and Azure/AWS cloud delivery that sit underneath CMS platforms like these, and I pick up new platform-specific tooling quickly.",
+        "I'd welcome the chance to talk through how my governance and delivery experience could apply to your client engagements. Thank you for your consideration."
+    ],
+    "closing": "Sincerely,",
+    "signatureName": "Jomiel L. Enriquez"
+}

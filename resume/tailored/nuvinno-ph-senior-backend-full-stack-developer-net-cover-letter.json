@@ -1,0 +1,24 @@
+{
+    "applicant": {
+        "name": "Jomiel L. Enriquez",
+        "email": "enriquez.jliquigan@gmail.com",
+        "phone": "+639953637231",
+        "linkedIn": "https://www.linkedin.com/in/jomiel-enriquez-75643614a/",
+        "website": "https://jomielenriquez.github.io/"
+    },
+    "date": "July 20, 2026",
+    "recipient": {
+        "name": "Hiring Manager",
+        "company": "NuvInno PH",
+        "roleTitle": "Senior Backend / Full-Stack Developer (.NET)"
+    },
+    "salutation": "Dear Hiring Manager,",
+    "paragraphs": [
+        "I'm writing to apply for the Senior Backend / Full-Stack Developer (.NET) role at NuvInno PH. Across more than five years building enterprise .NET systems in insurance, financial audit/advisory, and supply chain domains, I've consistently taken ownership of backend architecture, cloud infrastructure, and API design rather than just closing tickets — the technical-leadership posture your posting describes.",
+        "At Delta Insurance, I drive end-to-end development and release management across a .NET Framework legacy platform and a .NET Core microservices backend with a React frontend, while reviewing the architecture and code of peer Senior Developers to enforce SOLID standards. On a newer platform there, I built JWT/JWKS-secured REST APIs and used Azure Cosmos DB, Azure Blob Storage, and Azure MSAL for data, storage, and authentication. Earlier, at Moreton Bay Technology and Punongbayan & Araullo, I optimized SQL Server and Oracle databases — writing and tuning stored procedures — for a supply chain platform and an audit/advisory firm's internal systems respectively, giving me direct exposure to both logistics and financial business workflows.",
+        "My hands-on Azure work so far centers on Cosmos DB, Blob Storage, and MSAL rather than App Services, Functions, or Service Bus specifically, but I've built and maintained CI/CD pipelines on both Azure DevOps and GitHub Actions and pick up new managed services quickly once the underlying architecture is in place.",
+        "I'd welcome the chance to discuss how I can contribute to NuvInno PH's multi-tenant SaaS platform and am available to start on short notice. Thank you for your time and consideration."
+    ],
+    "closing": "Sincerely,",
+    "signatureName": "Jomiel L. Enriquez"
+}

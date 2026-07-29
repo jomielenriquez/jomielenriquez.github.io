@@ -1,0 +1,69 @@
+{
+    "name": "Jomiel L. Enriquez",
+    "email": "enriquez.jliquigan@gmail.com",
+    "phone": "+639953637231",
+    "linkedIn": "https://www.linkedin.com/in/jomiel-enriquez-75643614a/",
+    "gitHub": "https://github.com/jomielenriquez",
+    "website": "https://jomielenriquez.github.io/",
+    "skills": [
+        { "label": "Languages",   "items": "C#, TypeScript, JavaScript, SQL, Python, HTML, CSS" },
+        { "label": "Frameworks",  "items": ".NET / ASP.NET MVC, React, Node.js, Vue 3, Angular, React Native, jQuery" },
+        { "label": "Cloud & Ops", "items": "Git / GitHub, CI/CD, Azure DevOps, REST API, Microservices, Agile / Jira, AWS, Azure" },
+        { "label": "Databases",   "items": "MS SQL Server, PostgreSQL, Oracle SQL, MySQL" }
+    ],
+    "education": [
+        {
+            "degree": "Bachelor of Science in Computer Engineering",
+            "school": "Tanauan City College",
+            "from": "2016",
+            "to": "2020"
+        },
+        {
+            "degree": "Mechatronics Servicing (NC II)",
+            "school": "Tanauan City College",
+            "from": "2014",
+            "to": "2016"
+        }
+    ],
+    "timeline": {
+        "2025": {
+            "work": {
+                "1": {
+                    "title": "Senior Developer",
+                    "companyname": "Delta Insurance",
+                    "status": "Full-time",
+                    "StartDate": "07/01/2024",
+                    "EndDate": "",
+                    "location": "New Zealand",
+                    "RO": "Remote",
+                    "Description": "● Own end-to-end feature development — from implementation through deployment — on a .NET Core microservices backend (quote, authentication, broker, email, and client services) paired with a React frontend for a cloud-native insurance platform.<br>● Use Claude Code and GitHub Copilot to accelerate development, and helped establish developer guidelines via 'claude.md' to integrate agentic AI coding tools into the team's workflow.<br>● Author automated test coverage — Jest and Testing Library unit tests plus Playwright end-to-end tests (via MCP integration with Claude Code) — and perform manual testing across dev, UAT, and production environments.<br>● Provide technical governance by reviewing the architecture and code contributions of peer Senior Developers to ensure system reliability and SOLID alignment, and own release scheduling and execution via CI/CD (GitHub Actions, AWS CodePipeline).<br>● Actively participate in and guide Agile ceremonies, including daily stand-ups, backlog grooming, and sprint refinements, to break work into deliverable increments and maintain high delivery velocity.",
+                    "Skills": "csharp,dotnetcore,dotnetframework,microservices,react,typescript,javascript,playwright,jest,testing-library,claude-code,github-copilot,ai-agent,git,github,github-actions,aws,aws-codepipeline,agile,restapi"
+                }
+            }
+        },
+        "2023": {
+            "work": {
+                "1": {
+                    "title": "Software Engineer",
+                    "companyname": "Beeline",
+                    "status": "Full-time",
+                    "StartDate": "12/12/2022",
+                    "EndDate": "06/30/2024",
+                    "location": "Taguig, Metro Manila, Philippines",
+                    "RO": "Remote",
+                    "Description": "● Collaborated with cross-functional Agile teams to deliver scalable full-stack solutions across a complex Oracle and SQL Server database landscape.<br>● Engineered a secure RESTful API for background check integrations, handling sensitive data for global enterprise clients.<br>● Optimized a global contingent workforce system by contributing to the Vue 3 migration, resulting in a 25% increase in frontend rendering performance.",
+                    "Skills": "csharp,aspdotnet,restapi,oracle,sqlserver,vue,nodejs,git,azuredevops,agile"
+                }
+            }
+        }
+    },
+    "Projects": {
+        "0": {
+            "Title": "Higher Education Digital Transformation Ecosystem",
+            "Description": "Directed the end-to-end digital overhaul for Colegio De Laurel, designing three interconnected systems (Admission, Enrollment, and Public Portal). Migrated the institution from manual, paper-based processes to a secure, cloud-native infrastructure on AWS with automated CI/CD pipelines.",
+            "Skills": "React, .NET Core, AWS, GitHub Actions, MSSQL, REST API",
+            "projectLink": "https://enrollment.colegiodelaurel.edu.ph/",
+            "projectDate": "2024 - 2026"
+        }
+    }
+}

@@ -1,0 +1,25 @@
+{
+  "company": "Beeline",
+  "companySlug": "beeline",
+  "lastUpdated": "2026-07-20",
+  "roles": [
+    {
+      "title": "Software Engineer",
+      "startDate": "12/12/2022",
+      "endDate": "06/30/2024",
+      "rawNotes": "during my time in Delta Insurance and Beeline, I've used Azure DevOps heavily to deploy code to Dev, UAT and Prod.",
+      "skills": [
+        "azure-devops",
+        "deployment",
+        "release-management"
+      ],
+      "bullets": [
+        {
+          "text": "Deploy code to Dev, UAT, and Production environments using Azure DevOps as a core part of the release workflow.",
+          "tags": ["azure-devops", "deployment", "release-management"],
+          "source": "during my time in Delta Insurance and Beeline, I've used Azure DevOps heavily to deploy code to Dev, UAT and Prod."
+        }
+      ]
+    }
+  ]
+}
